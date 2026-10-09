@@ -86,7 +86,7 @@ p { margin: 0 0 1em; }
 
 /* ---------- Kopfzeile ---------- */
 .site-header {
-  position: sticky; top: 0; z-index: 50;
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50;
   background: rgba(239, 231, 220, .94);
   backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px);
   border-bottom: 1px solid transparent; transition: border-color .2s;
@@ -310,5 +310,5 @@ p { margin: 0 0 1em; }
 .footer-unten { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; border-top: 1px solid rgba(255,255,255,.14); margin-top: 64px; padding-top: 24px; font-size: 14px; color: #b8ab9b; }
 
 /* ---------- Einblend-Animation ---------- */
-.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s cubic-bezier(.2, .7, .2, 1); }
+.js .reveal { transform: translateY(18px); transition: transform .8s cubic-bezier(.2, .7, .2, 1); }
 .js .reveal.is-visible { opacity: 1; transform: none; }

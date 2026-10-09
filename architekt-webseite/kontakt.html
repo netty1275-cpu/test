@@ -2,15 +2,16 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Kontakt | Atelier Weiss Architekten München</title>
   <meta name="description" content="Kontakt zu Atelier Weiss Architekten in München. Vereinbaren Sie ein kostenloses Erstgespräch für Ihren Umbau, Neubau oder Ihre Sanierung.">
   <meta property="og:title" content="Kontakt | Atelier Weiss Architekten München">
   <meta property="og:description" content="Kontakt zu Atelier Weiss Architekten in München. Vereinbaren Sie ein kostenloses Erstgespräch für Ihren Umbau, Neubau oder Ihre Sanierung.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="de_DE">
-  <meta name="theme-color" content="#efe7dc">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f5f45'/%3E%3Cpath d='M14 46V30L32 16l18 14v16' fill='none' stroke='%23efe7dc' stroke-width='4' stroke-linejoin='round'/%3E%3Cpath d='M26 46V34a6 6 0 0 1 12 0v12' fill='none' stroke='%23efe7dc' stroke-width='4'/%3E%3C/svg%3E">
+  <meta name="theme-color" content="#172f4a">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23172f4a'/%3E%3Cpath d='M18 44V30l14-11 14 11v14' fill='none' stroke='white' stroke-width='3.5' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preload" href="schriften/outfit-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
 {
@@ -50,56 +51,78 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="index.html" aria-label="Atelier Weiss Architekten – zur Startseite">
-        <span class="logo__name">Atelier Weiss</span>
-        <span class="logo__zusatz">Architekten</span>
-      </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hauptnavigation">
-        <span class="nav-toggle__icon" aria-hidden="true"></span> Menü
-      </button>
-      <nav class="site-nav" id="hauptnavigation" aria-label="Hauptnavigation">
-        <ul>
+      <nav aria-label="Schnellzugriff">
+        <ul class="header-links">
           <li><a href="projekte.html">Projekte</a></li>
           <li><a href="buero.html">Büro</a></li>
           <li><a href="leistungen.html">Leistungen</a></li>
-          <li class="nav-cta"><a href="kontakt.html" aria-current="page">Erstgespräch vereinbaren</a></li>
         </ul>
       </nav>
+      <a class="logo" href="index.html" aria-label="Atelier Weiss Architekten – zur Startseite">
+        <span class="logo__name">Atelier <em>Weiss</em></span>
+        <span class="logo__zusatz">Architekten</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menue">
+        <span class="nav-toggle__icon" aria-hidden="true"></span><span class="nav-toggle__text">Menü</span>
+      </button>
     </div>
   </header>
 
+  <div class="menue" id="menue" hidden>
+    <div class="menue__grid">
+      <nav aria-label="Hauptmenü">
+        <ul class="menue__haupt">
+          <li><a href="index.html">Start</a></li>
+          <li><a href="projekte.html">Projekte</a></li>
+          <li><a href="buero.html">Büro</a></li>
+          <li><a href="leistungen.html">Leistungen</a></li>
+          <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+        </ul>
+      </nav>
+      <div class="menue__info">
+        <h2>Kontakt</h2>
+        <p>Musterstraße 12<br>80331 München</p>
+        <p><a href="tel:+498912345670">089 123 456 70</a><br><a href="mailto:info@atelier-weiss.de">info@atelier-weiss.de</a></p>
+        <p>Mo–Fr 9–18 Uhr<br>und nach Vereinbarung</p>
+      </div>
+    </div>
+  </div>
+
   <main id="inhalt">
-    <section class="page-hero" aria-labelledby="seiten-titel">
-      <div class="container">
-        <p class="kicker">Kontakt</p>
-        <h1 id="seiten-titel">Lassen Sie uns über Ihr <em>Zuhause</em> sprechen.</h1>
-        <p class="lead">Beschreiben Sie kurz Ihr Vorhaben. Wir melden uns innerhalb von zwei Werktagen und vereinbaren ein kostenloses Erstgespräch.</p>
+    <section class="hero hero--unterseite" aria-labelledby="seiten-titel">
+      <img class="hero__bild" src="bilder/projekt-holzpavillon.svg" alt="Holzhaus mit Satteldach in einer Wiese" width="1600" height="1000">
+      <div class="hero__inhalt">
+        <div class="container">
+          <h1 id="seiten-titel">Lassen Sie uns über Ihr <span class="kursiv">Zuhause sprechen.</span></h1>
+          <p class="hero__unterzeile">Beschreiben Sie kurz Ihr Vorhaben. Wir melden uns innerhalb von zwei Werktagen und vereinbaren ein kostenloses Erstgespräch.</p>
+        </div>
       </div>
     </section>
 
     <section class="section" aria-label="Kontaktformular und Kontaktdaten">
       <div class="container kontakt-grid">
         <form class="formular" id="kontaktformular" data-empfaenger="info@atelier-weiss.de" novalidate>
-          <div class="feld"><label for="name">Name <span class="pflicht" aria-hidden="true">*</span></label><input id="name" name="name" type="text" autocomplete="name" required></div>
-          <div class="feld"><label for="email">E-Mail <span class="pflicht" aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          <h2 class="voll">Ihre Anfrage</h2>
+          <div class="feld"><label for="name">Name <span aria-hidden="true">*</span></label><input id="name" name="name" type="text" autocomplete="name" required></div>
+          <div class="feld"><label for="email">E-Mail <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" required></div>
           <div class="feld"><label for="telefon">Telefon (optional)</label><input id="telefon" name="telefon" type="tel" autocomplete="tel"></div>
-          <div class="feld"><label for="vorhaben">Art des Vorhabens <span class="pflicht" aria-hidden="true">*</span></label>
+          <div class="feld"><label for="vorhaben">Art des Vorhabens <span aria-hidden="true">*</span></label>
             <select id="vorhaben" name="vorhaben" required>
               <option value="">Bitte wählen</option>
               <option>Wohnungsumbau</option><option>Neubau Einfamilienhaus</option><option>Sanierung / Modernisierung</option><option>Dachausbau / Anbau</option><option>Innenarchitektur</option><option>Etwas anderes</option>
             </select></div>
           <div class="feld voll"><label for="ort">Ort des Objekts (optional)</label><input id="ort" name="ort" type="text" autocomplete="address-level2"></div>
-          <div class="feld voll"><label for="nachricht">Ihre Nachricht <span class="pflicht" aria-hidden="true">*</span></label><textarea id="nachricht" name="nachricht" required placeholder="z. B. Wohnfläche, gewünschter Zeitrahmen, ungefähres Budget"></textarea></div>
-          <p class="formular__hinweis voll">Mit <span aria-hidden="true">*</span><span class="visually-hidden">Stern</span> markierte Felder sind Pflichtfelder. Ihre Angaben verwenden wir ausschließlich zur Bearbeitung Ihrer Anfrage. Mehr dazu in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
-          <div class="voll"><button class="btn btn--primaer" type="submit">Anfrage senden <span class="pfeil" aria-hidden="true">→</span></button></div>
+          <div class="feld voll"><label for="nachricht">Ihre Nachricht <span aria-hidden="true">*</span></label><textarea id="nachricht" name="nachricht" required placeholder="z. B. Wohnfläche, gewünschter Zeitrahmen, ungefähres Budget"></textarea></div>
+          <p class="formular__hinweis voll">Mit * markierte Felder sind Pflichtfelder. Ihre Angaben verwenden wir ausschließlich zur Bearbeitung Ihrer Anfrage. Mehr dazu in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+          <div class="voll"><button class="btn btn--voll" type="submit">Anfrage senden</button></div>
           <p class="formular__status voll" id="formular-status" role="status" aria-live="polite"></p>
         </form>
 
         <aside class="kontakt-info" aria-labelledby="kontaktdaten-titel">
-          <h2 id="kontaktdaten-titel">Atelier Weiss</h2>
+          <h2 id="kontaktdaten-titel" class="visually-hidden">Kontaktdaten</h2>
           <dl>
             <dt>Adresse</dt>
-            <dd>Musterstraße 12<br>80331 München<br><a href="https://www.openstreetmap.org/search?query=Musterstraße%2012%2C%2080331%20München" rel="noopener">Auf der Karte anzeigen</a></dd>
+            <dd>Atelier Weiss Architekten<br>Musterstraße 12<br>80331 München<br><a href="https://www.openstreetmap.org/search?query=Musterstraße%2012%2C%2080331%20München" rel="noopener">Auf der Karte anzeigen</a></dd>
             <dt>Telefon</dt>
             <dd><a href="tel:+498912345670">089 123 456 70</a></dd>
             <dt>E-Mail</dt>
@@ -114,41 +137,54 @@
     </section>
   </main>
 
+  <div class="kontakt-pille" role="group" aria-label="Schnellkontakt">
+    <a href="kontakt.html">Kontakt</a><a href="tel:+498912345670">Anrufen</a>
+  </div>
+
   <footer class="site-footer">
     <div class="container">
+      <a class="logo" href="index.html" aria-label="Atelier Weiss Architekten – zur Startseite">
+        <span class="logo__name">Atelier <em>Weiss</em></span>
+        <span class="logo__zusatz">Architekten</span>
+      </a>
       <div class="footer-grid">
         <div>
-          <a class="logo" href="index.html" aria-label="Atelier Weiss Architekten – zur Startseite">
-            <span class="logo__name">Atelier Weiss</span>
-            <span class="logo__zusatz">Architekten</span>
-          </a>
-          <p>Architektur für Wohnungen und Einfamilienhäuser.<br>Für private Bauherren in München und Oberbayern.</p>
+          <h2>Leistungen</h2>
+          <ul>
+            <li><a href="leistungen.html#umbau">Wohnungsumbau</a></li>
+            <li><a href="leistungen.html#neubau">Einfamilienhaus</a></li>
+            <li><a href="leistungen.html#sanierung">Sanierung</a></li>
+            <li><a href="leistungen.html#dachausbau">Dachausbau</a></li>
+          </ul>
         </div>
         <div>
-          <h2>Seiten</h2>
+          <h2>Über uns</h2>
           <ul>
             <li><a href="projekte.html">Projekte</a></li>
-            <li><a href="buero.html">Büro</a></li>
-            <li><a href="leistungen.html">Leistungen</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="buero.html">Büro &amp; Team</a></li>
+            <li><a href="leistungen.html#ablauf">Ablauf</a></li>
           </ul>
         </div>
         <div>
           <h2>Kontakt</h2>
+          <ul>
+            <li><a href="kontakt.html">Erstgespräch vereinbaren</a></li>
+            <li><a href="tel:+498912345670">Anrufen</a></li>
+            <li><a href="mailto:info@atelier-weiss.de">E-Mail schreiben</a></li>
+          </ul>
+        </div>
+        <div class="footer-adresse">
+          <h2>Adresse</h2>
           <address style="font-style:normal">
-            Musterstraße 12<br>80331 München<br>
-            <a href="tel:+498912345670">089 123 456 70</a><br>
+            Atelier Weiss Architekten<br>Musterstraße 12<br>80331 München<br>
+            T. <a href="tel:+498912345670">089 123 456 70</a><br>
             <a href="mailto:info@atelier-weiss.de">info@atelier-weiss.de</a>
           </address>
         </div>
-        <div>
-          <h2>Bürozeiten</h2>
-          <p>Mo–Fr 9–18 Uhr<br>und nach Vereinbarung</p>
-        </div>
       </div>
       <div class="footer-unten">
+        <span><a href="impressum.html">Impressum</a> &nbsp;·&nbsp; <a href="datenschutz.html">Datenschutz</a></span>
         <span>© <span data-jahr>2026</span> Atelier Weiss Architekten</span>
-        <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
       </div>
     </div>
   </footer>

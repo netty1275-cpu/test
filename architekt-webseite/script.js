@@ -1,28 +1,27 @@
 /* Atelier Weiss Architekten – gemeinsames Skript */
 document.documentElement.classList.add('js');
 
-// Mobiles Menü
+// Menü (Vollbild-Overlay)
 const toggle = document.querySelector('.nav-toggle');
-const nav = document.getElementById('hauptnavigation');
-if (toggle && nav) {
-  const schliessen = () => {
-    toggle.setAttribute('aria-expanded', 'false');
-    nav.classList.remove('is-open');
+const menue = document.getElementById('menue');
+if (toggle && menue) {
+  const setzen = (offen) => {
+    toggle.setAttribute('aria-expanded', String(offen));
+    toggle.querySelector('.nav-toggle__text').textContent = offen ? 'Schließen' : 'Menü';
+    menue.hidden = !offen;
+    document.body.classList.toggle('menue-offen', offen);
+    if (offen) menue.querySelector('a').focus();
   };
-  toggle.addEventListener('click', () => {
-    const offen = toggle.getAttribute('aria-expanded') === 'true';
-    toggle.setAttribute('aria-expanded', String(!offen));
-    nav.classList.toggle('is-open', !offen);
-  });
+  toggle.addEventListener('click', () => setzen(toggle.getAttribute('aria-expanded') !== 'true'));
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && nav.classList.contains('is-open')) { schliessen(); toggle.focus(); }
+    if (e.key === 'Escape' && !menue.hidden) { setzen(false); toggle.focus(); }
   });
 }
 
-// Linie unter der Kopfzeile beim Scrollen
+// Kopfzeile wird beim Scrollen weiß
 const header = document.querySelector('.site-header');
 if (header) {
-  const pruefen = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
+  const pruefen = () => header.classList.toggle('is-scrolled', window.scrollY > 40);
   window.addEventListener('scroll', pruefen, { passive: true });
   pruefen();
 }

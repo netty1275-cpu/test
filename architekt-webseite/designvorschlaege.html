@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Designvorschläge Architekturbüro</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#ecebe8;color:#1b1b1b;line-height:1.5}
+.intro{max-width:1180px;margin:0 auto;padding:56px 20px 24px}
+.intro p.k{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#6a6862}
+.intro h1{font-size:clamp(30px,5vw,48px);font-weight:500;letter-spacing:-.02em;margin:8px 0 12px}
+.intro p{max-width:640px;color:#45433f}
+.v{max-width:1180px;margin:0 auto 64px;padding:0 20px}
+.meta{display:grid;gap:16px;grid-template-columns:1fr;margin:28px 0 16px;align-items:end}
+@media(min-width:860px){.meta{grid-template-columns:1.2fr 1fr}}
+.meta h2{font-size:28px;font-weight:600;letter-spacing:-.01em}
+.meta .n{font-size:13px;color:#6a6862;letter-spacing:.12em;text-transform:uppercase}
+.meta p{color:#45433f;font-size:15px}
+.sw{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.sw span{display:flex;align-items:center;gap:6px;font-size:12px;font-family:ui-monospace,Menlo,monospace;background:#fff;border-radius:99px;padding:4px 10px 4px 4px}
+.sw i{width:18px;height:18px;border-radius:50%;border:1px solid rgba(0,0,0,.12)}
+.frame{border-radius:12px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.35),0 0 0 1px rgba(0,0,0,.06);background:#fff}
+.bar{height:34px;background:#dcdad5;display:flex;align-items:center;gap:6px;padding:0 14px}
+.bar i{width:10px;height:10px;border-radius:50%;background:#bdbab3}
+.bar span{margin-left:12px;font-size:11px;color:#6a6862;background:#eceae6;border-radius:6px;padding:2px 12px}
+.pros{display:grid;gap:8px;grid-template-columns:1fr;margin-top:16px;font-size:14px;color:#45433f}
+@media(min-width:700px){.pros{grid-template-columns:1fr 1fr 1fr}}
+.pros div b{display:block;color:#1b1b1b;font-weight:600}
+
+/* A Minimal-Galerie */
+.a{background:#fff;color:#111}
+.a nav{display:flex;justify-content:space-between;align-items:center;padding:22px 32px;font-size:13px}
+.a nav b{font-weight:600;letter-spacing:.02em} .a nav b em{color:#c8102e;font-style:normal}
+.a nav ul{display:none;list-style:none;gap:28px;color:#555}
+@media(min-width:760px){.a nav ul{display:flex}}
+.a .hero{display:grid;grid-template-columns:1fr;gap:0}
+@media(min-width:760px){.a .hero{grid-template-columns:1fr 2fr}}
+.a .txt{padding:40px 32px;display:flex;flex-direction:column;justify-content:flex-end}
+.a h3{font-size:clamp(30px,4vw,46px);font-weight:300;letter-spacing:-.03em;line-height:1.05}
+.a .txt p{margin-top:16px;font-size:14px;color:#555;max-width:300px}
+.a .txt a{margin-top:24px;font-size:13px;color:#111;text-decoration:none;border-bottom:1px solid #c8102e;align-self:flex-start;padding-bottom:4px}
+.a .img{aspect-ratio:16/10;background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIHNsaWNlIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2t5IiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2NmZDZkOCIvPjxzdG9wIG9mZnNldD0iLjU1IiBzdG9wLWNvbG9yPSIjZTllMmQ2Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZjFlNmQ0Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJoaWxsIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzdkOGE2YyIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzRmNWE0NSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iaGlsbDIiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjYTdhZDk3Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjOGQ5NTdlIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJnbGFzcyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyYTMyMzYiLz48c3RvcCBvZmZzZXQ9Ii41IiBzdG9wLWNvbG9yPSIjM2U0YTRmIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMWMyMjI1Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJnbG93IiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2U4Yjg3OCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2I5ODI0YSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2xhYiIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNmNGYxZWMiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNkOWQ0Y2IiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9InVybCgjc2t5KSIvPgogIDxwYXRoIGQ9Ik0wIDY0MCBDIDMwMCA1NjAgNTIwIDYwMCA3NjAgNTYwIFMgMTI1MCA0NzAgMTYwMCA1MjAgVjEwMDAgSDBaIiBmaWxsPSJ1cmwoI2hpbGwyKSIvPgogIDxwYXRoIGQ9Ik0wIDc2MCBDIDI2MCA3MDAgNTIwIDcyMCA4MDAgNjkwIFMgMTMwMCA2NDAgMTYwMCA2ODAgVjEwMDAgSDBaIiBmaWxsPSJ1cmwoI2hpbGwpIi8+CiAgPCEtLSBIYXVzIC0tPgogIDxnPgogICAgPHJlY3QgeD0iNDMwIiB5PSI0NzAiIHdpZHRoPSI3NjAiIGhlaWdodD0iMjIiIGZpbGw9InVybCgjc2xhYikiLz4KICAgIDxyZWN0IHg9IjQ3MCIgeT0iNDkyIiB3aWR0aD0iNTYwIiBoZWlnaHQ9IjE3MCIgZmlsbD0idXJsKCNnbGFzcykiLz4KICAgIDxyZWN0IHg9IjQ3MCIgeT0iNDkyIiB3aWR0aD0iNTYwIiBoZWlnaHQ9IjE3MCIgZmlsbD0idXJsKCNnbG93KSIgb3BhY2l0eT0iLjM1Ii8+CiAgICA8ZyBzdHJva2U9IiMxNDE5MWIiIHN0cm9rZS13aWR0aD0iNSIgb3BhY2l0eT0iLjgiPgogICAgICA8bGluZSB4MT0iNjEwIiB5MT0iNDkyIiB4Mj0iNjEwIiB5Mj0iNjYyIi8+PGxpbmUgeDE9Ijc1MCIgeTE9IjQ5MiIgeDI9Ijc1MCIgeTI9IjY2MiIvPjxsaW5lIHgxPSI4OTAiIHkxPSI0OTIiIHgyPSI4OTAiIHkyPSI2NjIiLz4KICAgIDwvZz4KICAgIDxyZWN0IHg9IjEwMzAiIHk9IjQ5MiIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIxNzAiIGZpbGw9IiNjZmM4YmMiLz4KICAgIDxyZWN0IHg9IjEwMzAiIHk9IjQ5MiIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIxNzAiIGZpbGw9IiMwMDAiIG9wYWNpdHk9Ii4wOCIvPgogICAgPHJlY3QgeD0iMzYwIiB5PSI2NjIiIHdpZHRoPSI5MDAiIGhlaWdodD0iMjYiIGZpbGw9InVybCgjc2xhYikiLz4KICAgIDxyZWN0IHg9IjUyMCIgeT0iNjg4IiB3aWR0aD0iNjAwIiBoZWlnaHQ9IjExMCIgZmlsbD0iI2I4YjFhNSIvPgogICAgPHJlY3QgeD0iNTYwIiB5PSI3MDgiIHdpZHRoPSIyNDAiIGhlaWdodD0iNzAiIGZpbGw9InVybCgjZ2xhc3MpIi8+CiAgICA8cmVjdCB4PSI1NjAiIHk9IjcwOCIgd2lkdGg9IjI0MCIgaGVpZ2h0PSI3MCIgZmlsbD0idXJsKCNnbG93KSIgb3BhY2l0eT0iLjUiLz4KICAgIDxyZWN0IHg9IjM2MCIgeT0iNjg4IiB3aWR0aD0iOTAwIiBoZWlnaHQ9IjEwIiBmaWxsPSIjMDAwIiBvcGFjaXR5PSIuMTIiLz4KICAgIDxyZWN0IHg9IjQzMCIgeT0iNDkyIiB3aWR0aD0iNzYwIiBoZWlnaHQ9IjEwIiBmaWxsPSIjMDAwIiBvcGFjaXR5PSIuMSIvPgogIDwvZz4KICA8cGF0aCBkPSJNMCA4MjAgQyAzNDAgNzkwIDcwMCA4MDAgMTAwMCA3OTAgUyAxNDAwIDc3MCAxNjAwIDc4MCBWMTAwMCBIMFoiIGZpbGw9IiMzZjQ4MzgiLz4KICA8ZyBmaWxsPSIjMmYzNjI5Ij4KICAgIDxlbGxpcHNlIGN4PSIyNTAiIGN5PSI3MDAiIHJ4PSI3MCIgcnk9IjEyMCIvPjxlbGxpcHNlIGN4PSIxMzgwIiBjeT0iNjUwIiByeD0iODAiIHJ5PSIxNDAiLz48ZWxsaXBzZSBjeD0iMTQ4MCIgY3k9IjY5MCIgcng9IjU1IiByeT0iMTAwIi8+CiAgPC9nPgo8L3N2Zz4K) center/cover}
+.a .cap{display:flex;justify-content:space-between;padding:12px 32px 22px;font-size:12px;color:#666;border-top:1px solid #eee}
+
+/* B Beton-Brutal */
+.b{background:#d9d6d0;color:#2b2b2b}
+.b nav{display:flex;justify-content:space-between;align-items:stretch;border-bottom:2px solid #2b2b2b;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.b nav b{padding:18px 24px;border-right:2px solid #2b2b2b}
+.b nav ul{display:none;list-style:none}
+.b nav ul li{padding:18px 22px;border-left:2px solid #2b2b2b}
+.b nav ul li:last-child{background:#2b2b2b;color:#d9d6d0}
+@media(min-width:760px){.b nav ul{display:flex}}
+.b .hero{display:grid;grid-template-columns:1fr}
+@media(min-width:760px){.b .hero{grid-template-columns:1.1fr 1fr}}
+.b h3{font-size:clamp(40px,7vw,84px);font-weight:900;line-height:.9;text-transform:uppercase;letter-spacing:-.03em;padding:32px 24px}
+.b h3 span{color:#b84500}
+.b .img{background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDkwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgc2xpY2UiPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJzIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjYjljNGM5Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZTNlM2RlIi8+PC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZiIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjAiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2VjZWJlNyIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2NmY2NjNSIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMzYjQ3NGQiLz48c3RvcCBvZmZzZXQ9Ii42IiBzdG9wLWNvbG9yPSIjNmQ3ZDg0Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMmUzODNkIi8+PC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iOTAwIiBmaWxsPSJ1cmwoI3MpIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIyNTAsOTAwIDI1MCw5MCA4MjAsNDAgODIwLDkwMCIgZmlsbD0idXJsKCNmKSIvPgogIDxwb2x5Z29uIHBvaW50cz0iODIwLDQwIDEwMDAsMTIwIDEwMDAsOTAwIDgyMCw5MDAiIGZpbGw9IiNhOWE1OWMiLz4KICA8ZyBmaWxsPSJ1cmwoI2cpIj4KICAgIDxwb2x5Z29uIHBvaW50cz0iMjkwLDE1MCA3ODAsMTEwIDc4MCwxNzAgMjkwLDIwNSIvPjxwb2x5Z29uIHBvaW50cz0iMjkwLDI2MCA3ODAsMjI1IDc4MCwyODUgMjkwLDMxNSIvPjxwb2x5Z29uIHBvaW50cz0iMjkwLDM3MCA3ODAsMzQwIDc4MCw0MDAgMjkwLDQyNSIvPjxwb2x5Z29uIHBvaW50cz0iMjkwLDQ4MCA3ODAsNDU1IDc4MCw1MTUgMjkwLDUzNSIvPjxwb2x5Z29uIHBvaW50cz0iMjkwLDU5MCA3ODAsNTcwIDc4MCw2MzAgMjkwLDY0NSIvPjxwb2x5Z29uIHBvaW50cz0iMjkwLDcwMCA3ODAsNjg1IDc4MCw3NDUgMjkwLDc1NSIvPgogIDwvZz4KICA8ZyBmaWxsPSIjM2Y0NTQ5IiBvcGFjaXR5PSIuODUiPgogICAgPHBvbHlnb24gcG9pbnRzPSI4NDAsMTMwIDk4MCwxODAgOTgwLDIzMCA4NDAsMTg1Ii8+PHBvbHlnb24gcG9pbnRzPSI4NDAsMjUwIDk4MCwyOTAgOTgwLDM0MCA4NDAsMzA1Ii8+PHBvbHlnb24gcG9pbnRzPSI4NDAsMzcwIDk4MCw0MDAgOTgwLDQ1MCA4NDAsNDI1Ii8+PHBvbHlnb24gcG9pbnRzPSI4NDAsNDkwIDk4MCw1MTAgOTgwLDU2MCA4NDAsNTQ1Ii8+PHBvbHlnb24gcG9pbnRzPSI4NDAsNjEwIDk4MCw2MjAgOTgwLDY3MCA4NDAsNjY1Ii8+PHBvbHlnb24gcG9pbnRzPSI4NDAsNzMwIDk4MCw3MzAgOTgwLDc4MCA4NDAsNzg1Ii8+CiAgPC9nPgogIDxyZWN0IHk9Ijg2MCIgd2lkdGg9IjEyMDAiIGhlaWdodD0iNDAiIGZpbGw9IiM4ZDhhODMiLz4KPC9zdmc+Cg==) center/cover;min-height:280px;border-left:2px solid #2b2b2b}
+.b .row{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid #2b2b2b}
+.b .row div{padding:16px 24px;border-right:2px solid #2b2b2b;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.b .row div:last-child{border-right:0}
+.b .row strong{display:block;font-size:30px;font-weight:900;letter-spacing:-.02em}
+
+/* C Warm-Material */
+.c{background:#efe7dc;color:#3b2c21}
+.c nav{display:flex;justify-content:space-between;align-items:center;padding:24px 36px;font-size:14px}
+.c nav b{font-family:Georgia,"Times New Roman",serif;font-size:20px;font-weight:400;font-style:italic}
+.c nav ul{display:none;list-style:none;gap:26px}
+@media(min-width:760px){.c nav ul{display:flex}}
+.c nav ul li:last-child{background:#5d6e52;color:#fff;border-radius:99px;padding:6px 16px;margin-top:-6px}
+.c .hero{display:grid;grid-template-columns:1fr;gap:28px;padding:20px 36px 40px;align-items:center}
+@media(min-width:760px){.c .hero{grid-template-columns:1fr 1fr}}
+.c .k{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#5d6e52}
+.c h3{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(32px,4.4vw,52px);line-height:1.08;margin:10px 0 16px}
+.c h3 em{color:#6b4f3a}
+.c .txt p{font-size:15px;max-width:400px;color:#5a4636}
+.c .imgs{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:12px;min-width:0}
+.c .hero>*{min-width:0}
+.c .imgs div{border-radius:200px 200px 8px 8px;aspect-ratio:3/4;background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDkwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgc2xpY2UiPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJzIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZTZlNGRjIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZDhkNmM4Ii8+PC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0idyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2MzOWE2YiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzljNzQ0OCIvPjwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjkwMCIgZmlsbD0idXJsKCNzKSIvPgogIDxyZWN0IHk9IjY5MCIgd2lkdGg9IjEyMDAiIGhlaWdodD0iMjEwIiBmaWxsPSIjOGM5Mzc4Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSIxODAsNDIwIDYwMCwyMzAgMTAyMCw0MjAiIGZpbGw9IiMzYTNhMzYiLz4KICA8cmVjdCB4PSIyMjAiIHk9IjQyMCIgd2lkdGg9Ijc2MCIgaGVpZ2h0PSIyODAiIGZpbGw9IiMyYzJmMzAiLz4KICA8cmVjdCB4PSIyMjAiIHk9IjQyMCIgd2lkdGg9Ijc2MCIgaGVpZ2h0PSIyODAiIGZpbGw9IiNlM2I3N2IiIG9wYWNpdHk9Ii4yNSIvPgogIDxnIGZpbGw9InVybCgjdykiIGlkPSJsYW0iPgogICAgPHJlY3QgeD0iMjMwIiB5PSI0MjAiIHdpZHRoPSIxNCIgaGVpZ2h0PSIyODAiLz48cmVjdCB4PSIyNjIiIHk9IjQyMCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjI4MCIvPjxyZWN0IHg9IjI5NCIgeT0iNDIwIiB3aWR0aD0iMTQiIGhlaWdodD0iMjgwIi8+PHJlY3QgeD0iMzI2IiB5PSI0MjAiIHdpZHRoPSIxNCIgaGVpZ2h0PSIyODAiLz48cmVjdCB4PSIzNTgiIHk9IjQyMCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjI4MCIvPjxyZWN0IHg9IjM5MCIgeT0iNDIwIiB3aWR0aD0iMTQiIGhlaWdodD0iMjgwIi8+PHJlY3QgeD0iNDIyIiB5PSI0MjAiIHdpZHRoPSIxNCIgaGVpZ2h0PSIyODAiLz48cmVjdCB4PSI0NTQiIHk9IjQyMCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjI4MCIvPgogICAgPHJlY3QgeD0iNzQyIiB5PSI0MjAiIHdpZHRoPSIxNCIgaGVpZ2h0PSIyODAiLz48cmVjdCB4PSI3NzQiIHk9IjQyMCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjI4MCIvPjxyZWN0IHg9IjgwNiIgeT0iNDIwIiB3aWR0aD0iMTQiIGhlaWdodD0iMjgwIi8+PHJlY3QgeD0iODM4IiB5PSI0MjAiIHdpZHRoPSIxNCIgaGVpZ2h0PSIyODAiLz48cmVjdCB4PSI4NzAiIHk9IjQyMCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjI4MCIvPjxyZWN0IHg9IjkwMiIgeT0iNDIwIiB3aWR0aD0iMTQiIGhlaWdodD0iMjgwIi8+PHJlY3QgeD0iOTM0IiB5PSI0MjAiIHdpZHRoPSIxNCIgaGVpZ2h0PSIyODAiLz48cmVjdCB4PSI5NjIiIHk9IjQyMCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjI4MCIvPgogIDwvZz4KICA8cmVjdCB4PSIyMDAiIHk9IjQxMCIgd2lkdGg9IjgwMCIgaGVpZ2h0PSIxNCIgZmlsbD0iI2Q5Y2RiOCIvPgogIDxyZWN0IHg9IjE2MCIgeT0iNzAwIiB3aWR0aD0iODgwIiBoZWlnaHQ9IjE2IiBmaWxsPSIjY2ZjNmI2Ii8+CiAgPGcgZmlsbD0iIzVjNjY1MCI+PGVsbGlwc2UgY3g9IjkwIiBjeT0iNjQwIiByeD0iNjAiIHJ5PSIxMTAiLz48ZWxsaXBzZSBjeD0iMTExMCIgY3k9IjYyMCIgcng9IjcwIiByeT0iMTMwIi8+PC9nPgo8L3N2Zz4K) center/cover}
+.c .imgs div+div{border-radius:8px;background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDE0MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIHNsaWNlIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibCIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2YzZWVlNiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2Q5ZDFjNCIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJlYW0iIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNmZmY2ZTYiIHN0b3Atb3BhY2l0eT0iLjkiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNmZmY2ZTYiIHN0b3Atb3BhY2l0eT0iMCIvPjwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjE0MDAiIGZpbGw9InVybCgjbCkiLz4KICA8cmVjdCB4PSIwIiB5PSIxMDUwIiB3aWR0aD0iMTIwMCIgaGVpZ2h0PSIzNTAiIGZpbGw9IiNiZmI0YTMiLz4KICA8cmVjdCB4PSIxMjAiIHk9IjEyMCIgd2lkdGg9IjM4MCIgaGVpZ2h0PSI3NjAiIGZpbGw9IiM5ZmIwYjYiLz4KICA8cmVjdCB4PSIxMjAiIHk9IjEyMCIgd2lkdGg9IjM4MCIgaGVpZ2h0PSI3NjAiIGZpbGw9IiNmZmYiIG9wYWNpdHk9Ii4zNSIvPgogIDxnIHN0cm9rZT0iIzNhM2EzNiIgc3Ryb2tlLXdpZHRoPSIxMCI+PGxpbmUgeDE9IjMxMCIgeTE9IjEyMCIgeDI9IjMxMCIgeTI9Ijg4MCIvPjxsaW5lIHgxPSIxMjAiIHkxPSI1MDAiIHgyPSI1MDAiIHkyPSI1MDAiLz48L2c+CiAgPHBvbHlnb24gcG9pbnRzPSIxMjAsMTIwIDUwMCwxMjAgMTIwMCwxMDUwIDU2MCwxMDUwIiBmaWxsPSJ1cmwoI2JlYW0pIiBvcGFjaXR5PSIuNTUiLz4KICA8cmVjdCB4PSI2MDAiIHk9IjgyMCIgd2lkdGg9IjQ2MCIgaGVpZ2h0PSIyMiIgZmlsbD0iIzZiNGYzYSIvPgogIDxyZWN0IHg9IjYzMCIgeT0iODQyIiB3aWR0aD0iMTQiIGhlaWdodD0iMjEwIiBmaWxsPSIjM2EzYTM2Ii8+PHJlY3QgeD0iMTAxNiIgeT0iODQyIiB3aWR0aD0iMTQiIGhlaWdodD0iMjEwIiBmaWxsPSIjM2EzYTM2Ii8+CiAgPHJlY3QgeD0iNjYwIiB5PSI3NDAiIHdpZHRoPSIyMDAiIGhlaWdodD0iODAiIGZpbGw9IiNlY2U2ZGEiLz48cmVjdCB4PSI2ODAiIHk9Ijc2MCIgd2lkdGg9IjE2MCIgaGVpZ2h0PSI0IiBmaWxsPSIjYTg1NzJlIi8+CiAgPHJlY3QgeD0iOTAwIiB5PSI3MDAiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxMjAiIGZpbGw9IiMzYTNhMzYiIHRyYW5zZm9ybT0icm90YXRlKC0yMCA5MDkgNzYwKSIvPgogIDxjaXJjbGUgY3g9IjkzMCIgY3k9IjM0MCIgcj0iNzAiIGZpbGw9IiMzYTNhMzYiLz48cmVjdCB4PSI5MjYiIHk9IjAiIHdpZHRoPSI4IiBoZWlnaHQ9IjI3MCIgZmlsbD0iIzNhM2EzNiIvPgo8L3N2Zz4K);margin-top:60px}
+
+/* D Dunkel-Editorial */
+.d{background:#141414;color:#f2efe9}
+.d nav{display:flex;justify-content:space-between;align-items:center;padding:22px 36px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#bdb8ae}
+.d nav b{color:#f2efe9;font-weight:500}
+.d nav ul{display:none;list-style:none;gap:28px}
+@media(min-width:760px){.d nav ul{display:flex}}
+.d .hero{position:relative;padding:20px 36px 40px}
+.d .no{font-family:Georgia,serif;color:#c9a46b;font-size:14px;font-style:italic}
+.d h3{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(40px,7vw,92px);line-height:.95;letter-spacing:-.02em;margin:10px 0 24px;max-width:820px}
+.d h3 em{color:#c9a46b}
+.d .g{display:grid;grid-template-columns:1fr;gap:20px;align-items:end}
+@media(min-width:760px){.d .g{grid-template-columns:2fr 1fr}}
+.d .img{aspect-ratio:16/8;background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDkwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgc2xpY2UiPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJzIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZGZlM2U0Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZWVlYmU1Ii8+PC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYnJpY2siIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIwIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiM5YTVhM2MiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM3ZjQ2MzAiLz48L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMmIzMTM0Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNGI1NTU5Ii8+PC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iOTAwIiBmaWxsPSJ1cmwoI3MpIi8+CiAgPHJlY3QgeD0iMCIgeT0iMjAwIiB3aWR0aD0iMzAwIiBoZWlnaHQ9IjcwMCIgZmlsbD0iI2NiYzZiZCIvPgogIDxyZWN0IHg9IjkwMCIgeT0iMjYwIiB3aWR0aD0iMzAwIiBoZWlnaHQ9IjY0MCIgZmlsbD0iI2JmYjlhZSIvPgogIDxyZWN0IHg9IjMwMCIgeT0iMTIwIiB3aWR0aD0iNjAwIiBoZWlnaHQ9Ijc4MCIgZmlsbD0idXJsKCNicmljaykiLz4KICA8ZyBmaWxsPSJ1cmwoI2cpIj4KICAgIDxyZWN0IHg9IjM2MCIgeT0iMTgwIiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE5MCIvPjxyZWN0IHg9IjUzMCIgeT0iMTgwIiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE5MCIvPjxyZWN0IHg9IjcwMCIgeT0iMTgwIiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE5MCIvPgogICAgPHJlY3QgeD0iMzYwIiB5PSI0MjAiIHdpZHRoPSIxNDAiIGhlaWdodD0iMTkwIi8+PHJlY3QgeD0iNTMwIiB5PSI0MjAiIHdpZHRoPSIxNDAiIGhlaWdodD0iMTkwIi8+PHJlY3QgeD0iNzAwIiB5PSI0MjAiIHdpZHRoPSIxNDAiIGhlaWdodD0iMTkwIi8+CiAgICA8cmVjdCB4PSIzNjAiIHk9IjY2MCIgd2lkdGg9IjMxMCIgaGVpZ2h0PSIyNDAiLz48cmVjdCB4PSI3MDAiIHk9IjY2MCIgd2lkdGg9IjE0MCIgaGVpZ2h0PSIxOTAiLz4KICA8L2c+CiAgPGcgZmlsbD0iI2U5ZTJkNiI+CiAgICA8cmVjdCB4PSIzNTIiIHk9IjM3MCIgd2lkdGg9IjE1NiIgaGVpZ2h0PSIxMCIvPjxyZWN0IHg9IjUyMiIgeT0iMzcwIiB3aWR0aD0iMTU2IiBoZWlnaHQ9IjEwIi8+PHJlY3QgeD0iNjkyIiB5PSIzNzAiIHdpZHRoPSIxNTYiIGhlaWdodD0iMTAiLz4KICAgIDxyZWN0IHg9IjM1MiIgeT0iNjEwIiB3aWR0aD0iMTU2IiBoZWlnaHQ9IjEwIi8+PHJlY3QgeD0iNTIyIiB5PSI2MTAiIHdpZHRoPSIxNTYiIGhlaWdodD0iMTAiLz48cmVjdCB4PSI2OTIiIHk9IjYxMCIgd2lkdGg9IjE1NiIgaGVpZ2h0PSIxMCIvPgogIDwvZz4KICA8cmVjdCB4PSIzMDAiIHk9IjEyMCIgd2lkdGg9IjYwMCIgaGVpZ2h0PSIxOCIgZmlsbD0iIzVlMzIxZiIvPgogIDxnIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9Ii4wNyI+PHJlY3QgeD0iMCIgeT0iMjAwIiB3aWR0aD0iMzAwIiBoZWlnaHQ9IjcwMCIvPjwvZz4KICA8cmVjdCB4PSIwIiB5PSI4ODAiIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjOGY4YTgwIi8+Cjwvc3ZnPgo=) center/cover;filter:saturate(.85)}
+.d .g p{font-size:14px;color:#bdb8ae;border-top:1px solid #3a3a3a;padding-top:14px}
+.d .g p strong{display:block;color:#f2efe9;font-family:Georgia,serif;font-weight:400;font-size:20px;margin-bottom:6px}
+footer{text-align:center;padding:24px 20px 60px;color:#6a6862;font-size:14px}
+</style></head><body>
+<header class="intro">
+<p class="k">Architekturbüro · Startseite</p>
+<h1>Vier Designrichtungen zur Auswahl</h1>
+<p>Jeder Entwurf zeigt den oberen Teil der Startseite: Navigation, Hauptaussage und Bildsprache. Bürotexte und Bilder sind Platzhalter und werden später durch deine eigenen Projekte ersetzt.</p>
+</header>
+
+<section class="v">
+<div class="meta"><div><p class="n">Variante A</p><h2>Minimal-Galerie</h2>
+<div class="sw"><span><i style="background:#ffffff"></i>#FFFFFF</span><span><i style="background:#111111"></i>#111111</span><span><i style="background:#c8102e"></i>#C8102E</span></div></div>
+<p>Die Projekte stehen im Mittelpunkt, das Design tritt zurück. Viel Weißraum, leichte Schrift und ein einziger roter Akzent. Wirkt wie eine Galerie oder ein Architekturmagazin.</p></div>
+<div class="frame"><div class="bar"><i></i><i></i><i></i><span>www.atelier-weiss.de</span></div>
+<div class="a"><nav><b>Atelier Weiss<em>.</em></b><ul><li>Projekte</li><li>Büro</li><li>Leistungen</li><li>Kontakt</li></ul></nav>
+<div class="hero"><div class="txt"><h3>Räume,<br>die bleiben.</h3><p>Architektur für Wohnen, Arbeiten und Gemeinschaft, präzise geplant und ruhig gebaut.</p><a href="#a">Projekte ansehen</a></div><div class="img" role="img" aria-label="Wohnhaus am Hang"></div></div>
+<div class="cap"><span>Haus am Hang, Starnberg</span><span>01 / 06</span></div></div></div>
+<div class="pros"><div><b>Passt zu</b>Büros mit starkem Portfolio und hochwertigen Fotos</div><div><b>Wirkung</b>Hochwertig, ruhig, zeitlos</div><div><b>Achtung</b>Lebt von guten Fotos, ohne sie wirkt die Seite leer</div></div>
+</section>
+
+<section class="v">
+<div class="meta"><div><p class="n">Variante B</p><h2>Beton-Brutalistisch</h2>
+<div class="sw"><span><i style="background:#d9d6d0"></i>#D9D6D0</span><span><i style="background:#2b2b2b"></i>#2B2B2B</span><span><i style="background:#b84500"></i>#B84500</span></div></div>
+<p>Sichtbares Raster, kräftige Linien und fette Versalien. Die Seite ist selbst gebaute Architektur: selbstbewusst, konstruktiv und unverwechselbar.</p></div>
+<div class="frame"><div class="bar"><i></i><i></i><i></i><span>www.atelier-weiss.de</span></div>
+<div class="b"><nav><b>Atelier Weiss</b><ul><li>Projekte</li><li>Büro</li><li>Leistungen</li><li>Anfrage</li></ul></nav>
+<div class="hero"><h3>Wir bauen <span>Struktur.</span></h3><div class="img" role="img" aria-label="Bürogebäude mit Fensterbändern"></div></div>
+<div class="row"><div><strong>18</strong>Jahre</div><div><strong>140+</strong>Projekte</div><div><strong>12</strong>Preise</div></div></div></div>
+<div class="pros"><div><b>Passt zu</b>Jungen Büros, Gewerbebau und Wettbewerben</div><div><b>Wirkung</b>Mutig, modern, bleibt im Kopf</div><div><b>Achtung</b>Polarisiert und kann konservative Privatkunden abschrecken</div></div>
+</section>
+
+<section class="v">
+<div class="meta"><div><p class="n">Variante C</p><h2>Warm-Materialhaft</h2>
+<div class="sw"><span><i style="background:#efe7dc"></i>#EFE7DC</span><span><i style="background:#6b4f3a"></i>#6B4F3A</span><span><i style="background:#5d6e52"></i>#5D6E52</span></div></div>
+<p>Sand-, Holz- und Salbeitöne mit eleganter Serifenschrift und weichen Bogenformen. Vermittelt Nähe, Handwerk und Nachhaltigkeit statt kühler Technik.</p></div>
+<div class="frame"><div class="bar"><i></i><i></i><i></i><span>www.atelier-weiss.de</span></div>
+<div class="c"><nav><b>Atelier Weiss</b><ul><li>Projekte</li><li>Haltung</li><li>Leistungen</li><li>Gespräch vereinbaren</li></ul></nav>
+<div class="hero"><div class="txt"><p class="k">Architektur · Holzbau · Sanierung</p><h3>Häuser, in denen man <em>ankommt.</em></h3><p>Wir planen mit natürlichen Materialien, viel Tageslicht und einem offenen Ohr. Vom ersten Skizzenblatt bis zur Schlüsselübergabe.</p></div>
+<div class="imgs"><div role="img" aria-label="Holzpavillon"></div><div role="img" aria-label="Atelier mit Tageslicht"></div></div></div></div></div>
+<div class="pros"><div><b>Passt zu</b>Privatkunden, Einfamilienhäusern, Holzbau und Sanierung</div><div><b>Wirkung</b>Persönlich, nahbar, nachhaltig</div><div><b>Achtung</b>Für große Gewerbeprojekte eher zu weich</div></div>
+</section>
+
+<section class="v">
+<div class="meta"><div><p class="n">Variante D</p><h2>Dunkel-Editorial</h2>
+<div class="sw"><span><i style="background:#141414"></i>#141414</span><span><i style="background:#f2efe9"></i>#F2EFE9</span><span><i style="background:#c9a46b"></i>#C9A46B</span></div></div>
+<p>Aufgebaut wie ein Magazin: große Serifenüberschriften auf fast schwarzem Grund mit Messing-Akzenten. Jedes Projekt wird wie eine Titelgeschichte erzählt. Edel und exklusiv.</p></div>
+<div class="frame"><div class="bar"><i></i><i></i><i></i><span>www.atelier-weiss.de</span></div>
+<div class="d"><nav><b>Atelier Weiss</b><ul><li>Projekte</li><li>Journal</li><li>Büro</li><li>Kontakt</li></ul></nav>
+<div class="hero"><p class="no">Ausgabe 06 — Stadthaus Lehel</p><h3>Die Stadt <em>weiterbauen.</em></h3>
+<div class="g"><div class="img" role="img" aria-label="Stadthaus mit Klinkerfassade"></div><p><strong>Ein Haus aus Klinker und Licht</strong>Fünf Geschosse, zwölf Wohnungen, eine Fassade, die mit ihrer Nachbarschaft spricht.</p></div></div></div></div>
+<div class="pros"><div><b>Passt zu</b>Premium-Wohnbau, Innenarchitektur und anspruchsvollen Bauherren</div><div><b>Wirkung</b>Luxuriös, erzählerisch, exklusiv</div><div><b>Achtung</b>Braucht gute Texte, nicht nur Bilder</div></div>
+</section>
+<footer>Sag mir einfach „A“, „B“, „C“ oder „D“ oder eine Mischung, z. B. „C mit dem Raster aus B“.</footer>
+</body></html>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cfd6d8"/><stop offset=".55" stop-color="#e9e2d6"/><stop offset="1" stop-color="#f1e6d4"/>
+    </linearGradient>
+    <linearGradient id="hill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7d8a6c"/><stop offset="1" stop-color="#4f5a45"/>
+    </linearGradient>
+    <linearGradient id="hill2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a7ad97"/><stop offset="1" stop-color="#8d957e"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2a3236"/><stop offset=".5" stop-color="#3e4a4f"/><stop offset="1" stop-color="#1c2225"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8b878"/><stop offset="1" stop-color="#b9824a"/>
+    </linearGradient>
+    <linearGradient id="slab" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f1ec"/><stop offset="1" stop-color="#d9d4cb"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <path d="M0 640 C 300 560 520 600 760 560 S 1250 470 1600 520 V1000 H0Z" fill="url(#hill2)"/>
+  <path d="M0 760 C 260 700 520 720 800 690 S 1300 640 1600 680 V1000 H0Z" fill="url(#hill)"/>
+  <!-- Haus -->
+  <g>
+    <rect x="430" y="470" width="760" height="22" fill="url(#slab)"/>
+    <rect x="470" y="492" width="560" height="170" fill="url(#glass)"/>
+    <rect x="470" y="492" width="560" height="170" fill="url(#glow)" opacity=".35"/>
+    <g stroke="#14191b" stroke-width="5" opacity=".8">
+      <line x1="610" y1="492" x2="610" y2="662"/><line x1="750" y1="492" x2="750" y2="662"/><line x1="890" y1="492" x2="890" y2="662"/>
+    </g>
+    <rect x="1030" y="492" width="120" height="170" fill="#cfc8bc"/>
+    <rect x="1030" y="492" width="120" height="170" fill="#000" opacity=".08"/>
+    <rect x="360" y="662" width="900" height="26" fill="url(#slab)"/>
+    <rect x="520" y="688" width="600" height="110" fill="#b8b1a5"/>
+    <rect x="560" y="708" width="240" height="70" fill="url(#glass)"/>
+    <rect x="560" y="708" width="240" height="70" fill="url(#glow)" opacity=".5"/>
+    <rect x="360" y="688" width="900" height="10" fill="#000" opacity=".12"/>
+    <rect x="430" y="492" width="760" height="10" fill="#000" opacity=".1"/>
+  </g>
+  <path d="M0 820 C 340 790 700 800 1000 790 S 1400 770 1600 780 V1000 H0Z" fill="#3f4838"/>
+  <g fill="#2f3629">
+    <ellipse cx="250" cy="700" rx="70" ry="120"/><ellipse cx="1380" cy="650" rx="80" ry="140"/><ellipse cx="1480" cy="690" rx="55" ry="100"/>
+  </g>
+</svg>

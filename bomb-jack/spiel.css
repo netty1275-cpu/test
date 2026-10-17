@@ -1,0 +1,37 @@
+/* ==========================================================================
+   Bomb Jack Remake – Seitenrahmen
+   Das Spiel selbst wird komplett auf die Leinwand gezeichnet.
+   Schriften liegen lokal im Ordner /schriften (SIL Open Font License).
+   ========================================================================== */
+
+@font-face { font-family: "Bangers"; font-weight: 400; font-style: normal; font-display: block; src: url("schriften/bangers-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Baloo 2"; font-weight: 500; font-style: normal; font-display: block; src: url("schriften/baloo-2-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Baloo 2"; font-weight: 700; font-style: normal; font-display: block; src: url("schriften/baloo-2-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Baloo 2"; font-weight: 800; font-style: normal; font-display: block; src: url("schriften/baloo-2-latin-800-normal.woff2") format("woff2"); }
+
+:root {
+  color-scheme: dark;
+  --nacht: #0d0b1e;
+  --tinte: #f4efe6;
+  --gold: #ffc533;
+  --text: "Baloo 2", "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+}
+
+html, body { height: 100%; }
+body {
+  margin: 0; overflow: hidden;
+  background: var(--nacht); color: var(--tinte); font-family: var(--text);
+}
+
+/* Bühne: füllt das Fenster, die Leinwand wird darin mittig skaliert */
+.buehne {
+  position: fixed; inset: 0;
+  display: grid; place-items: center;
+  padding-block: env(safe-area-inset-top, 0px) env(safe-area-inset-bottom, 0px);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+canvas { display: block; outline: none; border-radius: 6px; touch-action: none; }
+canvas:focus-visible { box-shadow: 0 0 0 3px var(--gold); }
+
+.ohne-js { position: fixed; inset: auto 0 40%; text-align: center; font-size: 20px; }

@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Atelier Weiss Architekten | Cinematic</title>
+<meta name="description" content="Atelier Weiss Architekten – eine Reise durch Licht, Material und Raum. Scrollen Sie durch unsere Projekte.">
+<meta name="theme-color" content="#0d1117">
+<style>
+@font-face{font-family:Outfit;font-weight:300;font-display:swap;src:url(schriften/outfit-latin-300-normal.woff2) format("woff2")}
+@font-face{font-family:Outfit;font-weight:400;font-display:swap;src:url(schriften/outfit-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:Outfit;font-weight:500;font-display:swap;src:url(schriften/outfit-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Source Serif 4";font-style:italic;font-weight:400;font-display:swap;src:url(schriften/source-serif-4-latin-400-italic.woff2) format("woff2")}
+
+:root{
+  --bg:#0d1117;--fg:#f1ece3;--muted:#9aa0a6;--accent:#d9a066;
+  --serif:"Source Serif 4",Georgia,serif;--sans:Outfit,system-ui,sans-serif;
+  --gutter:max(20px,env(safe-area-inset-left));
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg);color:var(--fg);font-family:var(--sans);font-weight:300;-webkit-text-size-adjust:100%}
+body{overflow-x:hidden;line-height:1.6}
+img{display:block;max-width:100%}
+a{color:inherit}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+em{font-family:var(--serif);font-style:italic;font-weight:400}
+
+/* Fortschritt + Navigation */
+.progress{position:fixed;inset:0 0 auto 0;height:2px;z-index:50;background:var(--accent);transform-origin:0 50%;transform:scaleX(0)}
+.bar{position:fixed;inset:0 0 auto 0;z-index:40;display:flex;justify-content:space-between;align-items:center;
+  padding:calc(18px + env(safe-area-inset-top)) var(--gutter) 18px;mix-blend-mode:difference;color:#fff;pointer-events:none}
+.bar a{pointer-events:auto;text-decoration:none;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase}
+.bar .logo{font-size:1rem;letter-spacing:.08em;text-transform:none}
+.dots{position:fixed;right:max(14px,env(safe-area-inset-right));top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:12px}
+.dots a{width:8px;height:8px;border-radius:50%;border:1px solid var(--fg);display:block;transition:.3s}
+.dots a.on{background:var(--accent);border-color:var(--accent);transform:scale(1.5)}
+
+/* Szenen */
+.scene{position:relative}
+.pin{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.kicker{font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--accent)}
+
+/* 1 Hero */
+#hero{height:300vh}
+#hero .layer{position:absolute;inset:0;will-change:transform,opacity}
+#hero img{width:100%;height:100%;object-fit:cover}
+#hero .shade{background:linear-gradient(to bottom,rgba(13,17,23,.35),rgba(13,17,23,.15) 40%,var(--bg))}
+.hero-text{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 var(--gutter)}
+.hero-text h1{font-size:clamp(2.6rem,10vw,9rem);font-weight:300;line-height:1;letter-spacing:-.02em}
+.hero-text .kicker{margin-bottom:1.5rem}
+.scroll-hint{position:absolute;bottom:calc(28px + env(safe-area-inset-bottom));left:50%;translate:-50% 0;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--fg);text-align:center}
+.scroll-hint::after{content:"";display:block;width:1px;height:40px;margin:10px auto 0;background:var(--fg);transform-origin:top;animation:drop 2s ease-in-out infinite}
+@keyframes drop{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+
+/* 2 Manifest – Wörter leuchten nacheinander auf */
+#manifest{height:300vh}
+#manifest .pin{display:flex;align-items:center;justify-content:center;padding:0 var(--gutter)}
+.manifest{font-size:clamp(2rem,6.4vw,5.6rem);line-height:1.15;font-weight:300;text-align:center;max-width:22em}
+.manifest .w{opacity:.14;transition:opacity .25s,color .25s}
+.manifest .w.lit{opacity:1}
+.manifest .w.acc.lit{color:var(--accent)}
+
+/* 3 Zoom-Szene */
+#zoom{height:350vh}
+#zoom .frame{position:absolute;inset:0;display:grid;place-items:center}
+#zoom .win{width:36vw;height:46vh;overflow:hidden;will-change:transform,width,height}
+#zoom .win img{width:100%;height:100%;object-fit:cover;will-change:transform}
+.cap{position:absolute;left:var(--gutter);right:var(--gutter);bottom:calc(8vh + env(safe-area-inset-bottom));max-width:34rem;will-change:transform,opacity}
+.cap h2{font-size:clamp(1.8rem,4.5vw,3.4rem);font-weight:300;line-height:1.1;margin:.6rem 0}
+.cap p{color:#d6d1c8;max-width:30rem}
+#zoom .cap{text-shadow:0 2px 24px rgba(0,0,0,.6)}
+#zoom .pin::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(13,17,23,.88),rgba(13,17,23,0) 65%);opacity:var(--shade,0);pointer-events:none}
+
+/* 4 Horizontale Projekte */
+#projekte{height:500vh}
+.track{position:absolute;top:0;left:0;height:100%;display:flex;align-items:center;gap:6vw;padding:0 8vw;will-change:transform}
+.card{flex:none;width:min(62vw,860px);position:relative}
+.card .img{aspect-ratio:4/3;overflow:hidden}
+.card img{width:130%;max-width:none;height:100%;object-fit:cover;will-change:transform}
+.card h3{font-size:clamp(1.3rem,2.4vw,2rem);font-weight:300;margin-top:1rem}
+.card span{color:var(--muted);font-size:.85rem;letter-spacing:.14em;text-transform:uppercase}
+.card .nr{position:absolute;top:-.4em;left:-.1em;font-size:clamp(4rem,12vw,10rem);font-family:var(--serif);font-style:italic;color:rgba(241,236,227,.16);line-height:1;pointer-events:none}
+.intro-card{flex:none;width:min(34vw,420px)}
+.intro-card h2{font-size:clamp(2rem,5vw,4rem);font-weight:300;line-height:1.05;margin-top:.8rem}
+
+/* 5 Zahlen */
+#zahlen{padding:20vh var(--gutter);background:#f1ece3;color:#14181d}
+#zahlen .kicker{color:#a86a2c}
+.zahlen{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:3rem 2rem}
+.zahl b{display:block;font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(3.5rem,9vw,7rem);line-height:1}
+.zahl p{margin-top:.6rem;color:#4b535c}
+.zahlen-head{max-width:1200px;margin:0 auto 6vh}
+.zahlen-head h2{font-size:clamp(2rem,5vw,4rem);font-weight:300;line-height:1.1;margin-top:.8rem;max-width:18ch}
+
+/* 6 Prozess */
+#prozess{height:400vh}
+#prozess .pin{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:4vw;padding:0 var(--gutter) 0 8vw}
+.steps{position:relative;height:50vh}
+.step{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;opacity:0;transform:translateY(40px);transition:opacity .35s,transform .35s}
+.step.on{opacity:1;transform:none}
+.step small{font-family:var(--serif);font-style:italic;font-size:1.2rem;color:var(--accent)}
+.step h3{font-size:clamp(2rem,4.6vw,3.8rem);font-weight:300;line-height:1.05;margin:.4rem 0 1rem}
+.step p{color:#c9c4bb;max-width:30rem}
+.plan{position:relative;aspect-ratio:1;max-height:70vh;width:100%;justify-self:center}
+.plan svg{width:100%;height:100%}
+.plan path,.plan rect,.plan line{fill:none;stroke:var(--fg);stroke-width:1.5;vector-effect:non-scaling-stroke}
+.plan .a{stroke:var(--accent)}
+
+/* 7 Finale */
+#finale{height:260vh}
+#finale .pin{display:grid;place-items:center;text-align:center;padding:0 var(--gutter)}
+#finale img.bg{position:absolute;inset:-5%;width:110%;height:110%;object-fit:cover;opacity:.35;will-change:transform}
+#finale .content{position:relative;will-change:transform,opacity}
+#finale h2{font-size:clamp(2.4rem,8.5vw,8rem);font-weight:300;line-height:1;letter-spacing:-.02em}
+.btn{display:inline-block;margin-top:2.5rem;padding:1.1rem 2.4rem;border:1px solid var(--fg);text-decoration:none;font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;transition:.3s}
+.btn:hover,.btn:focus-visible{background:var(--fg);color:var(--bg)}
+.kontakt{margin-top:2rem;color:var(--muted);font-size:.95rem}
+
+footer{padding:2rem var(--gutter) calc(2rem + env(safe-area-inset-bottom));display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between;color:var(--muted);font-size:.85rem;border-top:1px solid rgba(255,255,255,.08)}
+footer a{text-decoration:none}
+
+/* Mobil */
+@media (max-width:760px){
+  .dots{display:none}
+  #zoom .win{width:70vw}
+  .card{width:78vw}
+  .intro-card{width:70vw}
+  #prozess .pin{grid-template-columns:1fr;grid-template-rows:38vh 1fr;padding:12vh var(--gutter) 0;align-content:start}
+  .plan{max-height:36vh}
+  .steps{height:100%}
+  .step{justify-content:flex-start}
+}
+
+/* Reduzierte Bewegung: normale, statische Seite */
+@media (prefers-reduced-motion:reduce){
+  .scene{height:auto!important}
+  .pin{position:relative;height:auto;min-height:80vh;padding:12vh 0}
+  .manifest .w{opacity:1}
+  .track{position:static;flex-direction:column;padding:0 var(--gutter);height:auto;gap:4rem}
+  .card,.intro-card{width:100%}
+  .card img{width:100%}
+  .step{position:static;opacity:1;transform:none;margin-bottom:2rem}
+  .steps{height:auto}
+  #prozess .pin{grid-template-columns:1fr}
+  #hero .layer,#zoom .win{position:relative}
+  .scroll-hint::after{animation:none}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<header class="bar">
+  <a class="logo" href="#hero">Atelier <em>Weiss</em></a>
+  <a href="#finale">Kontakt</a>
+</header>
+<nav class="dots" aria-label="Abschnitte">
+  <a href="#hero" aria-label="Start"></a><a href="#manifest" aria-label="Haltung"></a><a href="#zoom" aria-label="Licht"></a>
+  <a href="#projekte" aria-label="Projekte"></a><a href="#zahlen" aria-label="Zahlen"></a><a href="#prozess" aria-label="Ablauf"></a><a href="#finale" aria-label="Kontakt"></a>
+</nav>
+
+<main>
+  <section class="scene" id="hero" aria-labelledby="h1">
+    <div class="pin">
+      <div class="layer" data-hero-img><img src="bilder/projekt-haus-am-hang.svg" alt="Modernes Wohnhaus mit Glasfront an einem grünen Hang" width="1600" height="1000"></div>
+      <div class="layer shade"></div>
+      <div class="hero-text" data-hero-text>
+        <p class="kicker">Architekten · München</p>
+        <h1 id="h1">Räume zum <em>Ankommen</em></h1>
+      </div>
+      <div class="scroll-hint">Scrollen</div>
+    </div>
+  </section>
+
+  <section class="scene" id="manifest" aria-label="Haltung">
+    <div class="pin">
+      <p class="manifest" id="manifestText">Ein Zuhause sollte nicht vorgeben, wie Sie leben. Es sollte Ihnen den <span class="acc">Raum</span> geben, es auf Ihre Art zu tun – mit <span class="acc">Licht</span>, Material und Sorgfalt im Detail.</p>
+    </div>
+  </section>
+
+  <section class="scene" id="zoom" aria-labelledby="zoom-h">
+    <div class="pin">
+      <div class="frame"><div class="win" data-win><img src="bilder/projekt-altbauwohnung.svg" alt="Helles Wohnzimmer einer Altbauwohnung mit hohen Sprossenfenstern" loading="lazy" data-win-img></div></div>
+      <div class="cap" data-cap>
+        <p class="kicker">Kapitel 1 · Licht</p>
+        <h2 id="zoom-h">Wir planen vom Fenster aus.</h2>
+        <p>Der Morgen im Schlafzimmer, das Abendlicht am Esstisch: Tageslicht bestimmt, wie sich ein Raum anfühlt – lange bevor das erste Möbel steht.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene" id="projekte" aria-labelledby="proj-h">
+    <div class="pin">
+      <div class="track" data-track>
+        <div class="intro-card">
+          <p class="kicker">Kapitel 2 · Projekte</p>
+          <h2 id="proj-h">Sechs Häuser, <em>sechs</em> Geschichten.</h2>
+        </div>
+        <article class="card"><span class="nr">01</span><div class="img"><img data-par src="bilder/projekt-stadthaus.svg" alt="Stadthaus mit Klinkerfassade" loading="lazy"></div><h3>Stadthaus Haidhausen</h3><span>Neubau · 2024</span></article>
+        <article class="card"><span class="nr">02</span><div class="img"><img data-par src="bilder/projekt-dachgeschoss.svg" alt="Dachgeschoss mit Holzbalken" loading="lazy"></div><h3>Dachgeschoss Schwabing</h3><span>Ausbau · 2023</span></article>
+        <article class="card"><span class="nr">03</span><div class="img"><img data-par src="bilder/projekt-holzpavillon.svg" alt="Holzhaus in einer Wiese" loading="lazy"></div><h3>Holzhaus im Voralpenland</h3><span>Einfamilienhaus · 2024</span></article>
+        <article class="card"><span class="nr">04</span><div class="img"><img data-par src="bilder/projekt-sanierung.svg" alt="Sanierter Altbau" loading="lazy"></div><h3>Villa am Isarhochufer</h3><span>Sanierung · 2022</span></article>
+        <article class="card"><span class="nr">05</span><div class="img"><img data-par src="bilder/projekt-haus-am-hang.svg" alt="Haus am Hang mit Glasfront" loading="lazy"></div><h3>Haus am Hang</h3><span>Einfamilienhaus · 2025</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="zahlen" aria-labelledby="zahl-h">
+    <div class="zahlen-head"><p class="kicker">Kapitel 3 · Verlässlichkeit</p><h2 id="zahl-h">Bauen ist <em>Vertrauenssache.</em></h2></div>
+    <div class="zahlen">
+      <div class="zahl"><b data-count="120">120</b><p>realisierte Wohnungen und Häuser</p></div>
+      <div class="zahl"><b data-count="18">18</b><p>Jahre Erfahrung in München</p></div>
+      <div class="zahl"><b data-count="1">1</b><p>fester Ansprechpartner von Anfang bis Schluss</p></div>
+      <div class="zahl"><b data-count="100" data-suffix="%">100%</b><p>Kostenschätzung in jeder Phase</p></div>
+    </div>
+  </section>
+
+  <section class="scene" id="prozess" aria-labelledby="proz-h">
+    <div class="pin">
+      <div>
+        <p class="kicker">Kapitel 4 · Ablauf</p>
+        <h2 class="visually-hidden" id="proz-h">Vom ersten Gespräch zum Einzug</h2>
+        <div class="steps" data-steps>
+          <div class="step"><small>01</small><h3>Erstgespräch</h3><p>Wir hören zu: Wünsche, Grundstück, Budget. Kostenlos und unverbindlich.</p></div>
+          <div class="step"><small>02</small><h3>Entwurf</h3><p>Aus Ihrem Alltag wird ein Grundriss. Skizzen, Modelle, Materialien – Schritt für Schritt abgestimmt.</p></div>
+          <div class="step"><small>03</small><h3>Genehmigung</h3><p>Wir kümmern uns um Pläne, Behörden und Förderanträge, damit Sie sich nicht darum kümmern müssen.</p></div>
+          <div class="step"><small>04</small><h3>Einzug</h3><p>Bauleitung, Termine, Kosten: alles im Blick bis zur Schlüsselübergabe.</p></div>
+        </div>
+      </div>
+      <div class="plan" aria-hidden="true">
+        <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet">
+          <rect class="draw" x="40" y="60" width="320" height="280"/>
+          <line class="draw" x1="200" y1="60" x2="200" y2="220"/>
+          <line class="draw" x1="40" y1="220" x2="280" y2="220"/>
+          <line class="draw" x1="280" y1="220" x2="280" y2="340"/>
+          <path class="draw a" d="M200 150 a30 30 0 0 1 30 -30"/>
+          <path class="draw a" d="M120 220 a30 30 0 0 0 30 30"/>
+          <line class="draw a" x1="60" y1="60" x2="140" y2="60" style="stroke-width:5"/>
+          <line class="draw a" x1="260" y1="340" x2="340" y2="340" style="stroke-width:5"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene" id="finale" aria-labelledby="fin-h">
+    <div class="pin">
+      <img class="bg" data-fbg src="bilder/atelier.svg" alt="" loading="lazy">
+      <div class="content" data-fcontent>
+        <p class="kicker">Kapitel 5 · Ihr Projekt</p>
+        <h2 id="fin-h" style="margin-top:1rem">Lassen Sie uns <em>bauen</em>.</h2>
+        <a class="btn" href="mailto:info@atelier-weiss.de">Erstgespräch vereinbaren</a>
+        <p class="kontakt">Musterstraße 12, 80331 München · <a href="tel:+498912345670">089 123 456 70</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>© Atelier Weiss Architekten</span>
+  <span><a href="index.html">Zur klassischen Webseite</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+</footer>
+
+<script>
+(function(){
+  var reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var $=function(s,c){return (c||document).querySelector(s)}, $$=function(s,c){return [].slice.call((c||document).querySelectorAll(s))};
+  var clamp=function(v,a,b){return Math.min(b,Math.max(a,v))}, lerp=function(a,b,t){return a+(b-a)*t};
+  var ease=function(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2};
+
+  // Fortschritt Szene: 0..1, solange sie "gepinnt" ist
+  function prog(el){
+    var r=el.getBoundingClientRect(), total=el.offsetHeight-innerHeight;
+    return total>0?clamp(-r.top/total,0,1):0;
+  }
+
+  // Manifest: Text in Wörter teilen
+  var mt=$("#manifestText"), words=[];
+  var frag=document.createDocumentFragment();
+  [].slice.call(mt.childNodes).forEach(function(n){
+    var acc=n.nodeType===1&&n.classList.contains("acc");
+    n.textContent.split(/(\s+)/).forEach(function(p){
+      if(!p) return;
+      if(/^\s+$/.test(p)){frag.appendChild(document.createTextNode(" "));return}
+      var s=document.createElement("span"); s.className="w"+(acc?" acc":""); s.textContent=p;
+      frag.appendChild(s); words.push(s);
+    });
+  });
+  mt.textContent=""; mt.appendChild(frag);
+
+  var sc={
+    hero:$("#hero"),manifest:$("#manifest"),zoom:$("#zoom"),proj:$("#projekte"),proz:$("#prozess"),fin:$("#finale")
+  };
+  var heroImg=$("[data-hero-img]"),heroTxt=$("[data-hero-text]"),
+      win=$("[data-win]"),winImg=$("[data-win-img]"),cap=$("[data-cap]"),
+      track=$("[data-track]"),pars=$$("[data-par]"),
+      steps=$$(".step"),draws=$$(".draw"),
+      fbg=$("[data-fbg]"),fc=$("[data-fcontent]"),
+      bar=$("#progress"),dots=$$(".dots a"),secs=dots.map(function(a){return $(a.getAttribute("href"))});
+
+  // Linienzeichnung vorbereiten
+  draws.forEach(function(d){var l=d.getTotalLength?d.getTotalLength():300;d.style.strokeDasharray=l;d.style.strokeDashoffset=l;d._l=l});
+
+  var counted=false;
+  function count(){
+    if(counted) return; counted=true;
+    $$("[data-count]").forEach(function(el){
+      var to=+el.dataset.count,suf=el.dataset.suffix||"",t0=performance.now(),d=1600;
+      (function tick(now){
+        var t=clamp((now-t0)/d,0,1);
+        el.textContent=Math.round(to*(1-Math.pow(1-t,3)))+suf;
+        if(t<1) requestAnimationFrame(tick);
+      })(t0);
+    });
+  }
+
+  function update(){
+    var y=scrollY, max=document.documentElement.scrollHeight-innerHeight;
+    bar.style.transform="scaleX("+(max>0?y/max:0)+")";
+
+    // Navigationspunkte
+    var cur=0;secs.forEach(function(s,i){if(s.getBoundingClientRect().top<innerHeight*.5)cur=i});
+    dots.forEach(function(d,i){d.classList.toggle("on",i===cur)});
+
+    if(reduce){ return }
+
+    // Hero: Zoom + Textabblendung
+    var p=prog(sc.hero);
+    heroImg.style.transform="scale("+lerp(1,1.6,ease(p))+") translateY("+(p*-6)+"%)";
+    heroImg.style.opacity=1-p*.9;
+    heroTxt.style.transform="translateY("+(p*-30)+"vh) scale("+lerp(1,.9,p)+")";
+    heroTxt.style.opacity=clamp(1-p*2.2,0,1);
+
+    // Manifest
+    p=prog(sc.manifest);
+    var n=Math.round(clamp(p*1.15,0,1)*words.length);
+    words.forEach(function(w,i){w.classList.toggle("lit",i<n)});
+
+    // Zoom: Fenster wächst bis Vollbild
+    p=ease(prog(sc.zoom)*1.4>1?1:prog(sc.zoom)*1.4);
+    win.style.width=lerp(36,100,p)+"vw"; win.style.height=lerp(46,100,p)+"vh";
+    winImg.style.transform="scale("+lerp(1.35,1,p)+")";
+    var cp=prog(sc.zoom);
+    sc.zoom.style.setProperty("--shade",clamp((cp-.4)*4,0,1)*clamp((1-cp)*8,0,1));
+    cap.style.opacity=clamp((cp-.45)*4,0,1)*clamp((1-cp)*8,0,1);
+    cap.style.transform="translateY("+lerp(40,0,clamp((cp-.45)*3,0,1))+"px)";
+
+    // Projekte: horizontaler Lauf
+    p=prog(sc.proj);
+    var dist=track.scrollWidth-innerWidth+innerWidth*.08;
+    track.style.transform="translateX("+(-dist*p)+"px)";
+    pars.forEach(function(img){
+      var r=img.parentNode.getBoundingClientRect();
+      var c=(r.left+r.width/2-innerWidth/2)/innerWidth;
+      img.style.transform="translateX("+(-12+c*-10)+"%)";
+    });
+
+    // Zahlen
+    if($("#zahlen").getBoundingClientRect().top<innerHeight*.6) count();
+
+    // Prozess: Schritte + Zeichnung
+    p=prog(sc.proz);
+    var idx=Math.min(steps.length-1,Math.floor(p*steps.length));
+    steps.forEach(function(s,i){s.classList.toggle("on",i===idx)});
+    var dp=clamp(p*1.15,0,1)*draws.length;
+    draws.forEach(function(d,i){d.style.strokeDashoffset=d._l*(1-clamp(dp-i,0,1))});
+
+    // Finale
+    p=prog(sc.fin);
+    fbg.style.transform="scale("+lerp(1.15,1,p)+") translateY("+lerp(4,-4,p)+"%)";
+    var inP=clamp(p*3,0,1);
+    fc.style.opacity=inP; fc.style.transform="translateY("+lerp(60,0,ease(inP))+"px) scale("+lerp(.94,1,ease(inP))+")";
+  }
+
+  var tick=false;
+  function req(){if(!tick){tick=true;requestAnimationFrame(function(){tick=false;update()})}}
+  addEventListener("scroll",req,{passive:true});
+  addEventListener("resize",req);
+  update();
+})();
+</script>
+</body>
+</html>

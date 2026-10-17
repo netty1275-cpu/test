@@ -47,6 +47,7 @@
   </script>
 </head>
 <body>
+  <div class="scroll-fortschritt" aria-hidden="true"></div>
   <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
 
   <header class="site-header">
@@ -89,11 +90,14 @@
   </div>
 
   <main id="inhalt">
-    <section class="hero" aria-labelledby="hero-titel">
-      <img class="hero__bild" src="bilder/projekt-haus-am-hang.svg" alt="Modernes Wohnhaus mit Glasfront an einem grünen Hang" width="1600" height="1000">
-      <div class="hero__inhalt">
-        <div class="container">
-          <h1 id="hero-titel">Räume zum <span class="kursiv">Ankommen</span></h1>
+    <section class="hero hero--kino" aria-labelledby="hero-titel">
+      <div class="hero__buehne">
+        <img class="hero__bild" src="bilder/projekt-haus-am-hang.svg" alt="Modernes Wohnhaus mit Glasfront an einem grünen Hang" width="1600" height="1000">
+        <div class="hero__inhalt">
+          <div class="container">
+            <h1 id="hero-titel">Räume zum <span class="kursiv">Ankommen</span></h1>
+            <p class="hero__hinweis" aria-hidden="true">Scrollen</p>
+          </div>
         </div>
       </div>
     </section>
@@ -104,13 +108,13 @@
         <p>Wer eine Wohnung umbaut oder ein Haus baut, entscheidet nicht nur über Quadratmeter. Sondern darüber, wie man leben möchte. Über Licht am Morgen, kurze Wege im Alltag und Räume, in denen man gerne Gäste hat. Über Materialien, die man gerne berührt, und Details, die man jeden Tag spürt.</p>
       </div>
       <div class="container collage">
-        <figure class="collage__a reveal"><img src="bilder/projekt-altbauwohnung.svg" alt="Helles Wohnzimmer einer umgebauten Altbauwohnung mit hohen Sprossenfenstern" width="1200" height="900" loading="lazy"></figure>
+        <figure class="collage__a reveal" data-parallax><img src="bilder/projekt-altbauwohnung.svg" alt="Helles Wohnzimmer einer umgebauten Altbauwohnung mit hohen Sprossenfenstern" width="1200" height="900" loading="lazy"></figure>
         <div class="collage__zitat reveal">
           <p>Atelier Weiss plant Wohnungen und Häuser für private Bauherren in München und Umgebung. Mit einem festen Ansprechpartner, ehrlichen Kosten und viel Sorgfalt im Detail. So entsteht nicht irgendein Zuhause.</p>
           <p class="untertitel">Sondern eines, das unverwechselbar Ihres ist.</p>
         </div>
-        <figure class="collage__b reveal"><img src="bilder/projekt-dachgeschoss.svg" alt="Ausgebautes Dachgeschoss mit Holzbalken und Dachfenstern" width="1200" height="900" loading="lazy"></figure>
-        <figure class="collage__c reveal"><img src="bilder/projekt-holzpavillon.svg" alt="Holzhaus mit Satteldach und Holzlamellen in einer Wiese" width="1200" height="900" loading="lazy"></figure>
+        <figure class="collage__b reveal" data-parallax><img src="bilder/projekt-dachgeschoss.svg" alt="Ausgebautes Dachgeschoss mit Holzbalken und Dachfenstern" width="1200" height="900" loading="lazy"></figure>
+        <figure class="collage__c reveal" data-parallax><img src="bilder/projekt-holzpavillon.svg" alt="Holzhaus mit Satteldach und Holzlamellen in einer Wiese" width="1200" height="900" loading="lazy"></figure>
       </div>
     </section>
 
@@ -161,7 +165,7 @@
       </div>
       <div class="container" style="margin-top:clamp(56px,7vw,96px)">
         <div class="reihe reveal">
-          <figure><img src="bilder/projekt-haus-am-hang.svg" alt="Wohnhaus mit großer Glasfront an einem grünen Hang" width="1600" height="1000" loading="lazy"></figure>
+          <figure data-parallax><img src="bilder/projekt-haus-am-hang.svg" alt="Wohnhaus mit großer Glasfront an einem grünen Hang" width="1600" height="1000" loading="lazy"></figure>
           <div class="reihe__text">
             <h3>Haus am Hang</h3>
             <p class="fett">Starnberg · Neubau · 2024</p>
@@ -170,7 +174,7 @@
           </div>
         </div>
         <div class="reihe reihe--umgekehrt reveal">
-          <figure><img src="bilder/projekt-dachgeschoss.svg" alt="Ausgebautes Dachgeschoss mit sichtbarem Dachstuhl und Dachfenstern" width="1200" height="900" loading="lazy"></figure>
+          <figure data-parallax><img src="bilder/projekt-dachgeschoss.svg" alt="Ausgebautes Dachgeschoss mit sichtbarem Dachstuhl und Dachfenstern" width="1200" height="900" loading="lazy"></figure>
           <div class="reihe__text">
             <h3>Dachgeschoss Haidhausen</h3>
             <p class="fett">München · Dachausbau · 2023</p>

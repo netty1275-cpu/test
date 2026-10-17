@@ -39,6 +39,34 @@ if ('IntersectionObserver' in window) {
   reveals.forEach((el) => el.classList.add('is-visible'));
 }
 
+// Cinematic Scroll: Hero-Zoom, Parallax, Fortschrittslinie
+const kinoHero = document.querySelector('.hero--kino');
+const fortschritt = document.querySelector('.scroll-fortschritt');
+const parallaxe = document.querySelectorAll('[data-parallax]');
+if ((kinoHero || fortschritt || parallaxe.length) && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  let wartet = false;
+  const klemmen = (v) => Math.min(1, Math.max(0, v));
+  const aktualisieren = () => {
+    wartet = false;
+    const vh = window.innerHeight;
+    if (kinoHero) kinoHero.style.setProperty('--p', klemmen(window.scrollY / (kinoHero.offsetHeight - vh)).toFixed(4));
+    if (fortschritt) {
+      const gesamt = document.documentElement.scrollHeight - vh;
+      fortschritt.style.setProperty('--fortschritt', gesamt > 0 ? klemmen(window.scrollY / gesamt).toFixed(4) : 0);
+    }
+    parallaxe.forEach((el) => {
+      const r = el.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > vh) return;
+      const mitte = (r.top + r.height / 2 - vh / 2) / vh;
+      el.style.setProperty('--versatz', (-mitte * r.height * 0.1).toFixed(1) + 'px');
+    });
+  };
+  const anfordern = () => { if (!wartet) { wartet = true; requestAnimationFrame(aktualisieren); } };
+  window.addEventListener('scroll', anfordern, { passive: true });
+  window.addEventListener('resize', anfordern);
+  aktualisieren();
+}
+
 // Projektfilter
 const filterButtons = document.querySelectorAll('.filter button');
 if (filterButtons.length) {

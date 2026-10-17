@@ -323,3 +323,27 @@ strong { font-weight: 500; }
 /* ---------- Einblenden ---------- */
 .js .reveal { transform: translateY(18px); transition: transform .9s cubic-bezier(.2, .7, .2, 1); }
 .js .reveal.is-visible { transform: none; }
+
+/* ---------- Cinematic Scroll (Startseite) ---------- */
+.scroll-fortschritt { position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 60; background: #fff; mix-blend-mode: difference; transform: scaleX(var(--fortschritt, 0)); transform-origin: left; pointer-events: none; }
+.hero--kino { display: block; height: 190vh; min-height: 0; overflow: visible; --p: 0; }
+.hero--kino::after { display: none; }
+.hero__buehne { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; display: flex; align-items: flex-end; background: var(--grau-blau); }
+.hero__buehne::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(23,47,74,.55) 0%, rgba(23,47,74,.12) 40%, rgba(23,47,74,.6) 100%), rgba(10,20,32,calc(var(--p) * .55)); }
+.hero--kino .hero__bild { transform: scale(calc(1 + var(--p) * .28)) translateY(calc(var(--p) * -3%)); will-change: transform; }
+.hero--kino .hero__inhalt { padding-top: 0; transform: translateY(calc(var(--p) * -14vh)); opacity: calc(1 - var(--p) * 1.5); will-change: transform, opacity; }
+.hero--kino h1 { letter-spacing: calc(-.02em + var(--p) * .06em); }
+.hero__hinweis { margin: 28px 0 0; font-size: 13px; letter-spacing: .24em; text-transform: uppercase; color: #eef2f6; display: flex; align-items: center; gap: 14px; }
+.hero__hinweis::after { content: ""; width: 1px; height: 44px; background: currentColor; transform-origin: top; animation: hinweis 2.2s cubic-bezier(.6, 0, .3, 1) infinite; }
+@keyframes hinweis { 0% { transform: scaleY(0); } 55% { transform: scaleY(1); transform-origin: top; } 56% { transform-origin: bottom; } 100% { transform: scaleY(0); transform-origin: bottom; } }
+[data-parallax] img { transform: translateY(var(--versatz, 0px)) scale(1.18); will-change: transform; }
+.reihe figure[data-parallax]:hover img { transform: translateY(var(--versatz, 0px)) scale(1.22); }
+.js .reveal { opacity: 0; }
+.js .reveal.is-visible { opacity: 1; }
+.js .reveal { transition: transform 1.1s cubic-bezier(.2, .7, .2, 1), opacity 1.1s ease; }
+@media (prefers-reduced-motion: reduce) {
+  .hero--kino { height: min(92vh, 900px); --p: 0 !important; }
+  .hero__buehne { position: relative; height: 100%; }
+  [data-parallax] img { transform: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}

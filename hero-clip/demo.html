@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hero-Clip Demo</title>
+<style>
+  :root {
+    --text: #f4f1ec;
+    --akzent: #e5483b;
+    --grund: #07090f;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--grund); color: var(--text); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+
+  /* ---- Hero mit Hintergrundvideo ---- */
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: grid;
+    align-items: center;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .hero__video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+  /* Abdunklung links, damit die Schrift immer lesbar bleibt */
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      linear-gradient(90deg, rgba(7, 9, 15, .82) 0%, rgba(7, 9, 15, .45) 45%, rgba(7, 9, 15, 0) 75%),
+      linear-gradient(0deg, rgba(7, 9, 15, .9) 0%, rgba(7, 9, 15, 0) 30%);
+  }
+  .hero__inhalt { padding: 0 clamp(16px, 7vw, 120px); max-width: 860px; }
+  .hero__marke {
+    display: inline-flex; align-items: center; gap: .6em;
+    font-size: .8rem; letter-spacing: .2em; text-transform: uppercase; opacity: .85;
+  }
+  .hero__marke::before {
+    content: ""; width: .6em; height: .6em; border-radius: 50%;
+    background: var(--akzent); box-shadow: 0 0 12px var(--akzent);
+  }
+  .hero h1 {
+    font-size: clamp(2.2rem, 6vw, 4.8rem);
+    line-height: 1.04; letter-spacing: -.02em; margin: .35em 0 .4em;
+  }
+  .hero p { font-size: clamp(1rem, 1.6vw, 1.25rem); line-height: 1.55; opacity: .85; max-width: 38em; }
+  .hero__knopf {
+    display: inline-block; margin-top: 2rem; padding: .9em 1.6em;
+    background: var(--akzent); color: #fff; text-decoration: none; font-weight: 600; border-radius: 999px;
+  }
+
+  /* Wer reduzierte Bewegung wünscht, sieht nur das Standbild */
+  @media (prefers-reduced-motion: reduce) {
+    .hero__video { display: none; }
+    .hero { background: url("hero-poster.jpg") center / cover no-repeat; }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="hero-poster.jpg" aria-hidden="true">
+    <source src="hero-funk-fernsehen-720p.mp4" type="video/mp4" media="(max-width: 900px)">
+    <source src="hero-funk-fernsehen-1080p.webm" type="video/webm">
+    <source src="hero-funk-fernsehen-1080p.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero__inhalt">
+    <span class="hero__marke">Produktion für Funk &amp; Fernsehen</span>
+    <h1>Wir bringen Geschichten auf Sendung.</h1>
+    <p>Von der Idee bis zur Ausstrahlung: Fernsehbeiträge, Hörfunk, Podcasts und Imagefilme – konzipiert, gedreht und gemischt aus einer Hand.</p>
+    <a class="hero__knopf" href="#kontakt">Projekt anfragen</a>
+  </div>
+</section>
+
+</body>
+</html>

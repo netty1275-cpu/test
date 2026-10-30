@@ -8,7 +8,7 @@ Status: ✅ erledigt · 🔄 läuft · ⬜ offen
 |---|---|---|---|
 | 0 | Einrichten | ✅ | 2026-10-30 |
 | 1 | Fundament | ✅ | 2026-10-30 |
-| 2 | Recherche | ⬜ | |
+| 2 | Recherche | 🔄 | 2026-10-30 |
 | 3 | Texte | ⬜ | |
 | 4 | Design-Richtung | ⬜ | |
 | 5 | Bauen | ⬜ | |
@@ -61,6 +61,11 @@ Jede Entscheidung der Person mit Datum, damit sie nicht erneut diskutiert wird.
 - Wer betreut welches Rechtsgebiet? Gibt es Fachanwaltstitel?
 - Online-Fragebogen für Verkehrsunfälle beibehalten?
 - Ohne Tracking (bisher Matomo)?
+- 3–5 Lieblingswebseiten (Design-Referenzen, Phase 2A)
+- ChatGPT/Perplexity: drei Fragen aus recherche/keywords-geo.md Abschnitt 3 stellen und Antworten liefern
+- Strategie: Seite pro Rechtsgebiet mit Ort; Verkehrsrecht auf Unfall- und Bußgeldseite aufteilen?
+- „Keine Schuld – keine Kosten“ beim Verkehrsunfall: fachlich freigegeben?
+- Was kostet die Mediation, und ist das Informationsgespräch kostenlos?
 
 ## Update-Ablauf nach dem Livegang
 

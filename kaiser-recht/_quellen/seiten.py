@@ -137,6 +137,10 @@ def page(p):
 <meta property="og:locale" content="de_DE">
 <meta property="og:title" content="{html.escape(p["title"])}">
 <meta property="og:description" content="{html.escape(p["desc"])}">
+<meta property="og:image" content="{BASE}assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:url" content="{BASE + p["file"]}">
 {'<meta name="robots" content="noindex">' if p.get("noindex") else ''}
 <link rel="preload" href="assets/fonts/literata-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>

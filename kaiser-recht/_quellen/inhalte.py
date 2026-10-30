@@ -288,8 +288,32 @@ PAGES = [
         title="Datenschutzerklärung · Kaiser & Kaiser Rechtsanwälte",
         desc="Datenschutzerklärung der Rechtsanwaltskanzlei Kaiser & Kaiser.",
         h1="Datenschutzerklärung",
-        intro=["Die Datenschutzerklärung für die neue Seite wird vor der Veröffentlichung erstellt und von der Kanzlei geprüft."],
+        intro=["Entwurf, Stand 30. Oktober 2026. Wird vor der Veröffentlichung von der Kanzlei geprüft.",
+               "Diese Seite setzt keine Cookies, nutzt keine Statistik- oder Werbedienste und lädt keine Inhalte von fremden Servern."],
         hero_buttons="",
-        sections=[],
+        sections=[
+            dict(h2="Verantwortliche", id="verantwortliche", html=p(
+                "Andreas Kaiser und Claudia Kaiser, Rechtsanwälte<br>Mariendorfer Damm 73, 12109 Berlin<br>Telefon 030 661 22 54<br>E-Mail <a href=\"mailto:kanzlei@kaiser-recht.de\">kanzlei@kaiser-recht.de</a>")),
+            dict(h2="Aufruf der Website", id="server", html=p(
+                "Wenn Sie diese Website aufrufen, verarbeitet der Server unseres Hosting-Anbieters automatisch Daten, die Ihr Browser übermittelt: IP-Adresse, Datum und Uhrzeit, aufgerufene Seite, Seite, von der Sie kommen, sowie Browser und Betriebssystem. Das ist nötig, um die Seite auszuliefern und die Sicherheit des Servers zu gewährleisten.",
+                "Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse ist der sichere und störungsfreie Betrieb der Website.",
+                "Hosting-Anbieter ist die IONOS SE, Elgendorfer Straße 57, 56410 Montabaur. Mit IONOS besteht ein Vertrag zur Auftragsverarbeitung. Die Protokolldaten werden vom Anbieter nach kurzer Zeit gelöscht.")),
+            dict(h2="Keine Cookies, keine Analyse", id="cookies", html=p(
+                "Wir setzen keine Cookies und speichern nichts auf Ihrem Gerät. Wir nutzen keine Werkzeuge zur Reichweitenmessung, keine Werbedienste und keine Social-Media-Plugins.",
+                "Die Schriften der Website liegen auf unserem eigenen Server. Beim Aufruf werden keine Daten an Schriftanbieter wie Google übertragen.")),
+            dict(h2="Rückruf-Formular", id="formular", html=p(
+                "Wenn Sie über das Formular um einen Rückruf bitten, verarbeiten wir die Angaben, die Sie eintragen: Name und Telefonnummer, freiwillig auch Thema, gewünschte Zeit, Nachricht und wie Sie von uns erfahren haben. Die Angaben werden über unseren Server per E-Mail an die Kanzlei geschickt und nur genutzt, um Sie zurückzurufen und Ihr Anliegen zu bearbeiten.",
+                "Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, weil die Anfrage der Anbahnung eines Mandats dient, im Übrigen Art. 6 Abs. 1 lit. f DSGVO. Wir löschen die Angaben, wenn sie nicht mehr gebraucht werden und keine gesetzlichen Aufbewahrungspflichten bestehen.",
+                "Als Rechtsanwälte unterliegen wir der beruflichen Verschwiegenheitspflicht. Bitte schicken Sie über das Formular trotzdem noch keine vertraulichen Einzelheiten.")),
+            dict(h2="Kontakt per E-Mail und Telefon", id="kontakt", html=p(
+                "Wenn Sie uns per E-Mail oder Telefon erreichen, verarbeiten wir Ihre Angaben, um Ihr Anliegen zu bearbeiten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b oder f DSGVO.")),
+            dict(h2="Link zu Google Maps", id="karte", html=p(
+                "Auf der Kontaktseite verlinken wir eine Route in Google Maps. Die Karte ist nicht eingebettet. Erst wenn Sie den Link anklicken, öffnet sich die Seite von Google, und es gelten die Datenschutzbestimmungen von Google.")),
+            dict(h2="Ihre Rechte", id="rechte", html=p(
+                "Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch gegen eine Verarbeitung auf Grundlage berechtigter Interessen (Art. 21 DSGVO). Schreiben Sie uns dafür an die oben genannte Adresse.",
+                "Sie können sich außerdem bei einer Datenschutz-Aufsichtsbehörde beschweren. Zuständig für uns ist die Berliner Beauftragte für Datenschutz und Informationsfreiheit, Alt-Moabit 59–61, 10555 Berlin.")),
+            dict(h2="Verschlüsselung", id="ssl", html=p(
+                "Die Website wird verschlüsselt über HTTPS übertragen. Das erkennen Sie am Schloss-Symbol in der Adresszeile Ihres Browsers.")),
+        ],
     ),
 ]

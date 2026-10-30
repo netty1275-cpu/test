@@ -12,7 +12,7 @@ Status: ✅ erledigt · 🔄 läuft · ⬜ offen
 | 3 | Texte | ✅ | 2026-10-30 |
 | 4 | Design-Richtung | ✅ | 2026-10-30 |
 | 5 | Bauen | ✅ | 2026-10-30 |
-| 6 | Prüfen und Feinschliff | ⬜ | |
+| 6 | Prüfen und Feinschliff | 🔄 | 2026-10-30 |
 | 7 | Livegang | ⬜ | |
 | 8 | Danach | ⬜ | |
 
@@ -58,6 +58,7 @@ Jede Entscheidung der Person mit Datum, damit sie nicht erneut diskutiert wird.
 - 2026-10-30: Texte Entwurf 1 vorläufig abgenommen. Eigene Texte der Kanzlei kommen später und ersetzen ihn.
 - 2026-10-30: Design-Richtung gewählt: U6-Linienplan „Zwei Wege“ (Recht bekommen in Petrol, Lösung finden in Terrakotta), nach drei Neuwürfelungen. Richtungsvertrag in .impeccable/surfaces/index-html.md.
 - 2026-10-30: Alle Seiten gebaut. Unterseiten werden mit `python _quellen/seiten.py` aus `_quellen/inhalte.py` erzeugt (Kopf, Kontakt, Fuß aus index.html).
+- 2026-10-30: Unabhängige Abnahme: 2 Runden. Runde 2: 7 von 8 Befunden gelöst, Rest (Kosten-Satz nicht hervorheben) danach behoben, ohne dritte Prüfrunde. Regler-Panel entfällt (Cloud-Umgebung, lokaler Server nicht erreichbar).
 - 2026-10-30: Technik: statisches HTML, CSS, etwas JavaScript, ohne Baukasten und ohne WordPress.
 
 ## Offene Fragen an die Person
@@ -79,7 +80,6 @@ Jede Entscheidung der Person mit Datum, damit sie nicht erneut diskutiert wird.
 
 Alle mit [prüfen] markierten Stellen aus `texte.md` (43). Bis zur Bestätigung stehen sie als Entwurf auf der Seite.
 
-- : steht hinter Rechtsaussagen. Die Anwälte geben sie fachlich frei, bevor die Seite online geht.
 - 1. Startseite: Persönlich:** Sie sprechen direkt mit Ihrer Anwältin oder Ihrem Anwalt, nicht mit wechselnden Ansprechpartnern (stimmt das so?)
 - 1. Startseite: Bevor Sie uns beauftragen, beraten wir Sie kostenfrei über die Anwaltsgebühren, über Ihre Rechtsschutzversiche (gilt das weiterhin so wie auf der alten Seite?)
 - 1. Startseite: Nach einem Verkehrsunfall, an dem Sie keine Schuld haben, muss in der Regel die Versicherung des Unfallgegners

@@ -34,7 +34,7 @@ FILES = PAGES + [
     "assets/fonts/literata-latin-opsz-normal.woff2", "assets/fonts/public-sans-latin-wght-normal.woff2",
     "assets/img/favicon.svg", "assets/img/favicon-32.png", "assets/img/favicon-512.png",
     "assets/img/apple-touch-icon.png", "assets/img/og-image.png",
-    "assets/img/mediation-poster.jpg", "assets/video/mediation.mp4",
+    "assets/img/mediation-poster.jpg", "assets/img/mediation-poster-960.jpg", "assets/video/mediation.mp4",
 ]
 if VORSCHAU:
     FILES = [f for f in FILES if f not in ("sitemap.xml", "llms.txt", "anfrage.php")]

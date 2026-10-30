@@ -114,6 +114,7 @@ def page(p):
                 for q, a in faq
             ],
         })
+    ld += p.get("ld_extra", [])
     ld_html = "".join('<script type="application/ld+json">\n' + json.dumps(x, ensure_ascii=False, indent=1) + "\n</script>\n" for x in ld)
 
     header = HEADER

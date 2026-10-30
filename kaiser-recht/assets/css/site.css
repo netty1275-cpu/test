@@ -449,3 +449,14 @@ a:hover .go svg { translate: 4px 0; }
 .transcript summary { cursor: pointer; padding: 14px 0; font-weight: 600; color: var(--petrol); }
 .transcript summary:hover { color: var(--terra-text); }
 .transcript > div { padding-bottom: 8px; }
+.video-teaser { display: grid; grid-template-columns: 180px 1fr; gap: 18px; align-items: center; margin-top: 2rem; padding-top: 1.6rem; border-top: 1px solid var(--line); text-decoration: none; color: var(--ink); max-width: 460px; }
+.video-teaser-img { position: relative; display: block; border-radius: 3px; overflow: hidden; box-shadow: 0 12px 24px -16px rgba(34, 49, 46, .5); }
+.video-teaser-img img { width: 100%; height: auto; transition: scale .3s ease; }
+.video-teaser .play { position: absolute; left: 8px; bottom: 8px; width: 40px; height: 40px; border-radius: 50%; background: var(--terra); color: #fff; display: grid; place-items: center; transition: background-color .2s ease; }
+.video-teaser .play svg { width: 22px; height: 22px; margin-left: 3px; }
+.video-teaser-txt b { display: block; font: 600 1.15rem/1.3 var(--serif); }
+.video-teaser-txt span { font-size: .92rem; color: var(--muted); }
+.video-teaser:hover { color: var(--terra-text); }
+.video-teaser:hover .play { background: var(--terra-text); }
+.video-teaser:hover img { scale: 1.04; }
+@media (max-width: 420px) { .video-teaser { grid-template-columns: 130px 1fr; } }

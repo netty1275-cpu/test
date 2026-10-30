@@ -180,6 +180,15 @@ PAGES = [
     # ------------------------------------------------------------------ Mediation
     dict(
         file="mediation.html", crumb="Mediation", nav="mediation.html", line="t",
+        ld_extra=[{
+            "@context": "https://schema.org", "@type": "VideoObject",
+            "name": "Mediation in 60 Sekunden",
+            "description": "Kurzes Erklärvideo ohne Ton: was Mediation ist, was sie bringt und wie sie in fünf Schritten abläuft. Praxis für Mediation von Claudia Kaiser in Berlin-Mariendorf.",
+            "thumbnailUrl": "https://www.kaiser-recht.de/assets/img/mediation-poster.jpg",
+            "contentUrl": "https://www.kaiser-recht.de/assets/video/mediation.mp4",
+            "uploadDate": "2026-10-30", "duration": "PT1M", "inLanguage": "de",
+            "publisher": {"@id": "https://www.kaiser-recht.de/#kanzlei"},
+        }],
         title="Mediation Berlin-Tempelhof · Trennung, Familie, Erbe · Kaiser",
         desc="Mediation bei Trennung, Erbstreit, Nachbarn und Konflikten im Betrieb. Claudia Kaiser, Rechtsanwältin und Master of Mediation, Berlin-Mariendorf.",
         h1="Mediation in Berlin-Mariendorf",

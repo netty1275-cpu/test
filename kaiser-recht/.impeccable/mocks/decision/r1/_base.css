@@ -1,0 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&family=Public+Sans:wght@400;500;600&display=swap');
+:root{--petrol:#1F4E4A;--petrol-dk:#163a37;--ink:#22312E;--terra:#A4482A;--leinen:#F4EFE6;--leinen-dk:#E7DFD1;--muted:#4c5753}
+*{box-sizing:border-box}html,body{margin:0}body{width:1366px;height:860px;overflow:hidden;font:17px/1.5 'Public Sans',sans-serif;color:var(--ink)}
+.serif{font-family:'Literata',Georgia,serif}

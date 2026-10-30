@@ -1,0 +1,42 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css"><style>
+body{background:#EFE8DB;position:relative}
+svg.map{position:absolute;inset:0}
+header{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:24px 48px;z-index:3}
+.mark{font-family:Literata;font-size:24px;color:var(--petrol)}.mark small{display:block;font:600 12px 'Public Sans';letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+nav{display:flex;gap:24px;align-items:center;font-size:15px;background:#EFE8DB;padding:8px 8px 8px 18px;border:1px solid #d6ccb9}
+nav b{background:var(--petrol);color:#fff;padding:10px 14px}
+.legend{position:absolute;left:48px;top:118px;width:560px;background:#FBF8F2;border:1.5px solid var(--ink);z-index:2}
+.legend .head{border-bottom:1.5px solid var(--ink);padding:26px 30px 24px}
+.k{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--terra);margin-bottom:12px}
+h1{font-family:Literata;font-weight:500;font-size:46px;line-height:1.06;margin:0 0 14px;color:var(--ink)}
+.head p{margin:0 0 20px;color:var(--muted);font-size:17px}
+.btn{display:inline-block;background:var(--petrol);color:#fff;font-weight:600;padding:13px 18px;margin-right:8px}.btn.alt{background:none;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.items{display:grid;grid-template-columns:1fr 1fr;padding:12px 30px 18px;column-gap:24px}
+.items div{display:flex;gap:10px;align-items:center;padding:7px 0;border-bottom:1px solid #e4dccd;font-size:15px;font-weight:500}
+.items i{width:22px;height:22px;flex:none;border-radius:50%;border:2px solid var(--petrol);display:flex;align-items:center;justify-content:center;font:700 11px 'Public Sans';font-style:normal;color:var(--petrol)}
+.items .m i{background:var(--terra);border-color:var(--terra);color:#fff}.items .m{color:var(--terra)}
+.pin{position:absolute;left:964px;top:388px;z-index:2}
+.pin .dot{width:30px;height:30px;border-radius:50%;background:var(--terra);border:4px solid #FBF8F2;box-shadow:0 0 0 2px var(--terra)}
+.pin .lab{position:absolute;left:44px;top:-20px;background:var(--terra);color:#fff;padding:10px 14px;white-space:nowrap;font-size:14px;line-height:1.35}
+.pin .lab b{font-family:Literata;font-size:18px;font-weight:600;display:block}
+.scale{position:absolute;right:48px;bottom:28px;font-size:12px;color:var(--muted);z-index:2}
+</style></head><body>
+<svg class="map" viewBox="0 0 1366 860" preserveAspectRatio="none">
+ <rect width="1366" height="860" fill="#EFE8DB"/>
+ <g fill="#E3DACA"><rect x="640" y="120" width="290" height="230"/><rect x="1030" y="120" width="300" height="230"/><rect x="640" y="440" width="290" height="300"/><rect x="1030" y="440" width="300" height="160"/><rect x="1030" y="660" width="300" height="200"/></g>
+ <path d="M1180 620 Q1250 600 1330 640 L1366 860 L1120 860 Z" fill="#cfd9cf"/>
+ <g stroke="#FBF8F2" stroke-width="22" fill="none"><path d="M980 0 L980 860"/><path d="M600 395 L1366 395"/><path d="M600 630 L1366 630"/><path d="M1030 395 L1366 140"/></g>
+ <g stroke="#d4c9b4" stroke-width="1.5" fill="none"><path d="M969 0 L969 860 M991 0 L991 860"/></g>
+ <text x="1003" y="250" font-family="Public Sans" font-size="14" font-weight="600" letter-spacing="3" fill="#4c5753" transform="rotate(90 1003 250)">MARIENDORFER DAMM</text>
+ <text x="660" y="388" font-family="Public Sans" font-size="13" font-weight="600" letter-spacing="2.5" fill="#4c5753">WESTPHALWEG</text>
+ <text x="1140" y="300" font-family="Public Sans" font-size="13" font-weight="600" letter-spacing="2.5" fill="#4c5753" transform="rotate(-37 1140 300)">KAISERSTRASSE</text>
+ <g transform="translate(1000 470)"><rect width="26" height="26" fill="#1F4E4A"/><text x="13" y="19" text-anchor="middle" font-family="Public Sans" font-weight="700" font-size="17" fill="#fff">U</text><text x="34" y="18" font-family="Public Sans" font-size="13" font-weight="600" fill="#1F4E4A">U6 Westphalweg</text></g>
+ <g transform="translate(905 345)"><circle r="12" fill="#FBF8F2" stroke="#1F4E4A" stroke-width="2"/><text y="4" text-anchor="middle" font-family="Public Sans" font-weight="700" font-size="10" fill="#1F4E4A">H</text><text x="18" y="-6" font-family="Public Sans" font-size="12" fill="#4c5753">Bus 282</text></g>
+ <text x="1200" y="760" font-family="Literata" font-style="italic" font-size="15" fill="#5d7360">Volkspark</text>
+</svg>
+<header><div class="mark">Kaiser &amp; Kaiser<small>Rechtsanwälte · Mediation</small></div><nav><span>Rechtsgebiete</span><span>Mediation</span><span>Kanzlei</span><span>Kontakt</span><b>030 661 22 54</b></nav></header>
+<div class="legend"><div class="head"><div class="k">Ihre Anwälte in Mariendorf · seit 1984</div><h1>Recht bekommen. Oder eine Lösung finden.</h1><p>Andreas und Claudia Kaiser, Rechtsanwälte am Mariendorfer Damm 73. Mit eigener Praxis für Mediation.</p><a class="btn">030 661 22 54 anrufen</a><a class="btn alt">Rückruf erbitten</a></div>
+<div class="items"><div><i>1</i>Verkehrsunfall</div><div><i>2</i>Bußgeld und Strafrecht</div><div><i>3</i>Familienrecht</div><div><i>4</i>Arbeitsrecht</div><div><i>5</i>Mietrecht</div><div><i>6</i>Baurecht</div><div class="m"><i>M</i>Mediation</div><div><i>i</i>Kanzlei und Anfahrt</div></div></div>
+<div class="pin"><div class="dot"></div><div class="lab"><b>Kaiser &amp; Kaiser</b>Mariendorfer Damm 73, Ärztehaus<br>Mo bis Do 9 bis 18 · Fr 9 bis 13 Uhr</div></div>
+<div class="scale">Kartenausschnitt schematisch</div>
+</body></html>

@@ -110,6 +110,33 @@
         ],
         "createdAt": "2026-10-30T18:46:47.667Z",
         "reason": "Auftraggeberin hat am 2026-10-30 Farbwelt B mit Leinen #F4EFE6 gewählt (WEBSITE-STATUS.md)"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "source serif 4",
+        "files": [
+          "referenzen/vorschau.html"
+        ],
+        "createdAt": "2026-10-30T19:08:15.135Z",
+        "reason": "Vergleichsseite aus Phase 2, zeigt absichtlich die nicht gewählten Farbwelten A und C mit ihren Schriften; wird nicht ausgeliefert"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "source sans 3",
+        "files": [
+          "referenzen/vorschau.html"
+        ],
+        "createdAt": "2026-10-30T19:08:15.147Z",
+        "reason": "Vergleichsseite aus Phase 2, zeigt absichtlich die nicht gewählten Farbwelten A und C mit ihren Schriften; wird nicht ausgeliefert"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "atkinson hyperlegible",
+        "files": [
+          "referenzen/vorschau.html"
+        ],
+        "createdAt": "2026-10-30T19:08:15.158Z",
+        "reason": "Vergleichsseite aus Phase 2, zeigt absichtlich die nicht gewählten Farbwelten A und C mit ihren Schriften; wird nicht ausgeliefert"
       }
     ]
   }

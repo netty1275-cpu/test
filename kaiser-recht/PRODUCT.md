@@ -70,7 +70,8 @@ Offen:
 ## Brand Commitments
 
 - Name: „Andreas Kaiser · Claudia Kaiser, Rechtsanwaltskanzlei und Praxis für Mediation“. Auf der Kanzlei-Seite auch „Rechtsanwaltskanzlei Kaiser & Kaiser“.
-- Bisherige Markenfarbe ist Marineblau (#0A328C). Es gibt kein eigenständiges Logo, nur eine alte Kopfgrafik. **Annahme:** Ein neuer, ruhiger Schriftzug ersetzt sie.
+- Bisherige Markenfarbe ist Marineblau (#0A328C). Sie ist **nicht bindend**: Farbe und visuelle Richtung dürfen sich komplett ändern (Freigabe der Auftraggeberin, 2026-10-30).
+- Es gibt kein eigenständiges Logo, nur eine alte Kopfgrafik. Ein neuer Schriftzug ersetzt sie.
 - Ansprache: Sie.
 - Ton: sachlich, verständlich, persönlich. Die alte Seite spricht ausdrücklich von „vertrauensvoller Zusammenarbeit“ und „persönlicher, an den Belangen des Mandanten orientierter Betreuung“.
 
@@ -80,6 +81,7 @@ Offen:
 - Claudia Kaiser: Master of Mediation (Hochschulabschluss), Ausbildung zur Schulmediatorin und zum Personal Coach.
 - Mitgliedschaft in der Rechtsanwaltskammer Berlin. Gründungsmitglied des Mediationszentrums Harz in Halberstadt (laut Text wohl Claudia Kaiser, zu bestätigen).
 - Ein gemeinsames Foto der beiden Anwälte, klein (229 × 253 Pixel) und älter: `archiv/alte-seite/startkaiser.jpg`.
+- Neue Fotos besorgt die Auftraggeberin später. Bis dahin plant die Seite feste Bildplätze mit neutralen Platzhaltern.
 
 Nicht vorhanden und deshalb nicht zu erfinden: Bewertungen, Mandantenzitate, Fallzahlen, Erfolgsquoten, Auszeichnungen, Antwortzeiten, Preise, Fachanwaltstitel.
 

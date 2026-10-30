@@ -7,7 +7,7 @@ Status: ✅ erledigt · 🔄 läuft · ⬜ offen
 | Phase | Name | Status | Datum |
 |---|---|---|---|
 | 0 | Einrichten | ✅ | 2026-10-30 |
-| 1 | Fundament | 🔄 | 2026-10-30 |
+| 1 | Fundament | ✅ | 2026-10-30 |
 | 2 | Recherche | ⬜ | |
 | 3 | Texte | ⬜ | |
 | 4 | Design-Richtung | ⬜ | |
@@ -49,14 +49,15 @@ Jede Entscheidung der Person mit Datum, damit sie nicht erneut diskutiert wird.
 - 2026-10-30: Hauptziel neue Mandanten. Hosting bleibt, wo es ist. Recherche ohne DataForSEO.
 - 2026-10-30: Alle acht Rechtsgebiete bleiben. Mediation wird ein eigener, gleichwertiger Bereich (ausdrücklicher Wunsch).
 - 2026-10-30: Gestaltung eher ruhig und hochwertig, kein Cinematic Scroll. Endgültige Wahl in Phase 4.
+- 2026-10-30: Phase 1 abgenommen. Marineblau ist nicht bindend, eine ganz neue Richtung ist erlaubt. Neuer Schriftzug statt alter Kopfgrafik.
+- 2026-10-30: Neue Fotos kommen später. Bis dahin Platzhalter an festen Bildplätzen.
 - 2026-10-30: Technik: statisches HTML, CSS, etwas JavaScript, ohne Baukasten und ohne WordPress.
 
 ## Offene Fragen an die Person
 
 - IONOS-Zugang (Kundenlogin oder SFTP) wird in Phase 7 gebraucht; die Person weiß noch nicht, wer ihn hat.
-- Logo, Briefpapier oder andere Markendateien der Kanzlei vorhanden? Sonst neuer Schriftzug (Annahme).
 - Woher kommen die meisten Mandanten (Annahme: Google)?
-- Gibt es neue oder bessere Fotos der Anwälte?
+- Neue Fotos der Anwälte (kommen, noch kein Termin)
 - Wer betreut welches Rechtsgebiet? Gibt es Fachanwaltstitel?
 - Online-Fragebogen für Verkehrsunfälle beibehalten?
 - Ohne Tracking (bisher Matomo)?

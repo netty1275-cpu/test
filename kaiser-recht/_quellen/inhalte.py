@@ -33,7 +33,7 @@ PAGES = [
         intro=["Nach einem Unfall beginnt der Ärger oft erst: Werkstatt, Gutachter, die Versicherung des Unfallgegners und manchmal die Polizei. Wir übernehmen die Korrespondenz und setzen Ihre Ansprüche durch.",
                "Holen Sie sich Rat, bevor Sie gegenüber der Versicherung, dem Unfallgegner oder der Polizei etwas erklären."],
         sections=[
-            dict(h2="Schadensregulierung nach dem Verkehrsunfall", html=ul([
+            dict(h2="Schadens&shy;regulierung nach dem Verkehrsunfall", html=ul([
                 "Wir melden Ihre Ansprüche bei der Versicherung des Unfallgegners an.",
                 "Wir fordern Reparaturkosten oder den Wiederbeschaffungswert, die Kosten für den Gutachter und einen Mietwagen oder Nutzungsausfall.",
                 "Bei Verletzungen fordern wir Schmerzensgeld und den Ersatz weiterer Schäden, etwa Verdienstausfall.",
@@ -71,12 +71,12 @@ PAGES = [
         sections=[
             dict(h2="Bußgeldbescheid prüfen lassen", id="bussgeld", html=p(
                 "Manche Bußgeldbescheide halten einer Prüfung nicht stand: Die Messung war fehlerhaft, das Foto zeigt nicht eindeutig den Fahrer, oder eine Frist ist abgelaufen. Wir beantragen Akteneinsicht und prüfen den Bescheid, bevor Sie zahlen oder Einspruch einlegen.")),
-            dict(h2="Einspruch: zwei Wochen Zeit", id="frist", html='<p class="figure"><b>2</b> Wochen</p>' + p(
+            dict(h2="Einspruch: zwei Wochen Zeit", id="frist", html=p(
                 "Gegen einen Bußgeldbescheid können Sie innerhalb von zwei Wochen nach Zustellung Einspruch einlegen. Ist die Frist vorbei, wird der Bescheid rechtskräftig.",
                 "Rufen Sie uns deshalb an, sobald der Bescheid im Briefkasten liegt.")),
             dict(h2="Fahrverbot und Führerschein", id="fahrverbot", html=p(
                 "Wer beruflich auf das Auto angewiesen ist, für den ist ein Fahrverbot oft schlimmer als das Bußgeld. Wir prüfen, ob sich das Fahrverbot vermeiden oder der Zeitpunkt günstig legen lässt.")),
-            dict(h2="Strafverteidigung und Verkehrsstrafsachen", id="strafrecht", html=p(
+            dict(h2="Strafverteidigung und Verkehrs&shy;strafsachen", id="strafrecht", html=p(
                 "Wir verteidigen Sie im Ermittlungsverfahren und vor Gericht. Ein Schwerpunkt sind Verkehrsstraftaten wie Unfallflucht, Trunkenheit im Verkehr oder Gefährdung des Straßenverkehrs.")),
         ],
         faq_h2="Häufige Fragen zu Bußgeld und Strafverfahren",
@@ -123,7 +123,7 @@ PAGES = [
         intro=["Nach einer Kündigung zählt jeder Tag. Wir prüfen die Kündigung, sagen Ihnen, ob sich eine Klage lohnt, und verhandeln über eine Abfindung.",
                "Wir vertreten Arbeitnehmer und Arbeitgeber und kennen deshalb beide Seiten."],
         sections=[
-            dict(h2="Drei Wochen Zeit für die Kündigungsschutzklage", id="frist", html='<p class="figure"><b>3</b> Wochen</p>' + p(
+            dict(h2="Drei Wochen Zeit für die Klage", id="frist", html=p(
                 "Wer sich gegen eine Kündigung wehren will, muss innerhalb von drei Wochen nach Zugang der Kündigung Klage beim Arbeitsgericht erheben. Verpassen Sie die Frist, gilt die Kündigung in aller Regel als wirksam.",
                 "Melden Sie sich außerdem spätestens drei Tage nach Zugang der Kündigung bei der Agentur für Arbeit arbeitssuchend.")),
             dict(h2="Wobei wir Arbeitnehmer und Arbeitgeber beraten", id="themen", html=ul([
@@ -277,7 +277,7 @@ PAGES = [
                 "Die gesetzlichen Berufsbezeichnungen „Rechtsanwalt“ und „Rechtsanwältin“ wurden in der Bundesrepublik Deutschland im Bundesland Berlin verliehen.",
                 "Zuständige Aufsichtsbehörde: Rechtsanwaltskammer Berlin, Littenstraße 9, 10179 Berlin, Telefon 030 306931 0, <a href=\"https://www.rak-berlin.de\" rel=\"noopener\">www.rak-berlin.de</a>",
                 "Berufsrechtliche Regelungen: Bundesrechtsanwaltsordnung (BRAO), Berufsordnung für Rechtsanwälte (BORA), Berufsregeln der Rechtsanwälte der Europäischen Union (CCBE), Fachanwaltsordnung (FAO), Rechtsanwaltsvergütungsgesetz (RVG). Die Regelungen können bei der Bundesrechtsanwaltskammer unter <a href=\"https://www.brak.de\" rel=\"noopener\">www.brak.de</a> eingesehen werden.")),
-            dict(h2="Berufshaftpflichtversicherung", id="versicherung", html=p(
+            dict(h2="Berufshaftpflicht&shy;versicherung", id="versicherung", html=p(
                 "Allianz Versicherungs-AG, 10900 Berlin",
                 "Geltungsbereich: berufliche Tätigkeit in Deutschland, in den Mitgliedsländern der EU, in der Türkei und in den Staaten auf dem Gebiet der ehemaligen Sowjetunion, einschließlich Litauen, Estland und Lettland.")),
         ],

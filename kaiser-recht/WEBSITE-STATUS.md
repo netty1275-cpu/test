@@ -75,6 +75,54 @@ Jede Entscheidung der Person mit Datum, damit sie nicht erneut diskutiert wird.
 - „Keine Schuld – keine Kosten“ beim Verkehrsunfall: fachlich freigegeben?
 - Was kostet die Mediation, und ist das Informationsgespräch kostenlos?
 
+## Vor dem Livegang von der Kanzlei zu bestätigen
+
+Alle mit [prüfen] markierten Stellen aus `texte.md` (43). Bis zur Bestätigung stehen sie als Entwurf auf der Seite.
+
+- : steht hinter Rechtsaussagen. Die Anwälte geben sie fachlich frei, bevor die Seite online geht.
+- 1. Startseite: Persönlich:** Sie sprechen direkt mit Ihrer Anwältin oder Ihrem Anwalt, nicht mit wechselnden Ansprechpartnern (stimmt das so?)
+- 1. Startseite: Bevor Sie uns beauftragen, beraten wir Sie kostenfrei über die Anwaltsgebühren, über Ihre Rechtsschutzversiche (gilt das weiterhin so wie auf der alten Seite?)
+- 1. Startseite: Nach einem Verkehrsunfall, an dem Sie keine Schuld haben, muss in der Regel die Versicherung des Unfallgegners
+- 2. Verkehrsunfall: (Überschrift/Liste) (Liste vollständig und richtig?)
+- 2. Verkehrsunfall: Wenn Sie den Unfall nicht verursacht haben, muss in der Regel die Haftpflichtversicherung des Unfallgegners au
+- 2. Verkehrsunfall: (Überschrift/Liste)
+- 2. Verkehrsunfall: Nein. Als Geschädigter dürfen Sie in der Regel einen unabhängigen Gutachter selbst beauftragen. Bei Bagatellsc
+- 2. Verkehrsunfall: Wenn Sie beim Unfall verletzt wurden, haben Sie in der Regel Anspruch auf Schmerzensgeld. Wie hoch es ausfällt
+- 2. Verkehrsunfall: Ansprüche auf Schadensersatz und Schmerzensgeld verjähren in der Regel nach drei Jahren, gerechnet ab dem Ende
+- 2. Verkehrsunfall: Dann wird der Schaden nach Quoten verteilt. Wir prüfen den Hergang und vertreten Sie, wenn Ihnen auch ein Bußg
+- 3. Bußgeld und Strafrecht: Viele Bußgeldbescheide halten einer Prüfung nicht stand: Die Messung war fehlerhaft, das Foto zeigt nicht eind („viele“ belegbar? Sonst „Manche“.)
+- 3. Bußgeld und Strafrecht: Gegen einen Bußgeldbescheid können Sie innerhalb von zwei Wochen nach Zustellung Einspruch einlegen. Ist die F
+- 3. Bußgeld und Strafrecht: Wer beruflich auf das Auto angewiesen ist, für den ist ein Fahrverbot oft schlimmer als das Bußgeld. Wir prüfe
+- 3. Bußgeld und Strafrecht: Angaben zu Ihrer Person müssen Sie machen. Zur Sache selbst müssen Sie sich nicht äußern. Sprechen Sie vorher 
+- 3. Bußgeld und Strafrecht: Das hängt von den Folgen ab. Bei Punkten in Flensburg oder einem drohenden Fahrverbot lohnt sich die Prüfung f
+- 3. Bußgeld und Strafrecht: Einer Vorladung als Beschuldigter bei der Polizei müssen Sie nicht folgen. Rufen Sie uns an, wir beantragen Ak
+- 4. Familienrecht: (Überschrift/Liste) (Liste vollständig? Auch Versorgungsausgleich, Ehevertrag?)
+- 4. Familienrecht: 1. **Trennungsjahr:** In der Regel müssen Sie ein Jahr getrennt leben, bevor die Ehe geschieden werden kann.
+- 4. Familienrecht: 2. **Scheidungsantrag:** Ein Anwalt reicht den Antrag beim Familiengericht ein.
+- 4. Familienrecht: Die Kosten richten sich nach dem Einkommen beider Ehepartner und danach, was geregelt werden muss. Wir beraten
+- 4. Familienrecht: Den Scheidungsantrag muss ein Anwalt stellen. Der andere Ehepartner braucht keinen eigenen Anwalt, wenn er nur
+- 5. Arbeitsrecht: Wer sich gegen eine Kündigung wehren will, muss innerhalb von drei Wochen nach Zugang der Kündigung Klage beim
+- 5. Arbeitsrecht: Melden Sie sich außerdem spätestens drei Tage nach Zugang der Kündigung bei der Agentur für Arbeit arbeitssuch
+- 5. Arbeitsrecht: (Überschrift/Liste) (Liste vollständig?)
+- 5. Arbeitsrecht: Einen gesetzlichen Anspruch gibt es nur in wenigen Fällen. Abfindungen entstehen meist durch Verhandlung oder 
+- 5. Arbeitsrecht: Unterschreiben Sie nichts sofort. Ein Aufhebungsvertrag kann zu einer Sperrzeit beim Arbeitslosengeld führen. 
+- 5. Arbeitsrecht: In der ersten Instanz trägt jede Seite ihre Anwaltskosten selbst, auch wenn sie gewinnt. Eine Rechtsschutzvers
+- 6. Mietrecht: (Überschrift/Liste) (Liste vollständig? Auch Gewerbemiete?)
+- 6. Mietrecht: Nicht unbedingt. Die Kündigung muss den Bedarf konkret begründen, und in bestimmten Härtefällen können Sie wid
+- 6. Mietrecht: Eine Erhöhung bis zur ortsüblichen Vergleichsmiete ist frühestens 15 Monate nach Einzug oder nach der letzten 
+- 6. Mietrecht: Einwände gegen die Abrechnung müssen Sie innerhalb von zwölf Monaten nach Zugang erheben.
+- 7. Baurecht: (Überschrift/Liste) (Liste vollständig? Nur privates Baurecht?)
+- 7. Baurecht: Bei Bauwerken verjähren die Mängelansprüche in der Regel fünf Jahre nach der Abnahme.
+- 7. Baurecht: Mit der Abnahme beginnt die Verjährung, und die Beweislast für Mängel geht in der Regel auf den Bauherrn über.
+- 8. Mediation: (Überschrift/Liste) (Arbeitet Claudia Kaiser so in fünf Schritten? Sonst anpassen.)
+- 8. Mediation: Als Rechtsanwältin weiß ich, welche rechtlichen Folgen eine Vereinbarung hat. In der Mediation bin ich aber ni (Sieht Claudia Kaiser das so?)
+- 8. Mediation: Gründungsmitglied des Mediationszentrums Harz in Halberstadt (Claudia Kaiser?)
+- 8. Mediation: Die Vereinbarung ist ein Vertrag zwischen Ihnen. Für manche Regelungen, etwa zu Grundstücken oder für die Voll
+- 9. Kanzlei: Claudia Kaiser hat Rechtswissenschaften an der Universität Saarbrücken und der Freien Universität Berlin studi (Gründungsmitglied Mediationszentrum Harz hier ergänzen?)
+- 11. Formular: Rückruf erbitten: Hinweis unter dem Formular:** Bitte schicken Sie über dieses Formular noch keine vertraulichen Einzelheiten. D
+- 13. Faktensätze: Vor der Beauftragung berät die Kanzlei kostenfrei über die Anwaltsgebühren, die Rechtsschutzversicherung sowie
+- 14. Offene Fragen an die Kanzlei: 1. **Fachliche Freigabe:** Alle mit  markierten Rechtsaussagen lesen und freigeben oder korrigieren.
+
 ## Update-Ablauf nach dem Livegang
 
 1. Änderung in der Seite und in `texte.md`

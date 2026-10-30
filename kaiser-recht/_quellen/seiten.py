@@ -39,7 +39,7 @@ BUTTONS = (
 
 
 def slug(text):
-    t = text.lower()
+    t = text.replace("&shy;", "").lower()
     for a, b in (("ä", "ae"), ("ö", "oe"), ("ü", "ue"), ("ß", "ss")):
         t = t.replace(a, b)
     return re.sub(r"[^a-z0-9]+", "-", t).strip("-")
@@ -73,9 +73,9 @@ def page(p):
 
     # Linienverlauf der Seite als Inhaltsverzeichnis
     route = ""
-    if toc:
+    if len(toc) > 1:
         route = '<nav class="route route--' + line + '" aria-label="Auf dieser Seite"><p class="route-h">Auf dieser Seite</p><ol>'
-        route += "".join('<li><a href="#' + i + '">' + html.escape(t) + "</a></li>" for t, i in toc)
+        route += "".join('<li><a href="#' + i + '">' + t + "</a></li>" for t, i in toc)
         route += "</ol></nav>"
 
     body = ""

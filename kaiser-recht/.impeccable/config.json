@@ -11,6 +11,105 @@
         ],
         "createdAt": "2026-10-30T18:38:43.212Z",
         "reason": "Auftraggeberin hat am 2026-10-30 Farbwelt B mit Leinen #F4EFE6 als Grund gewählt (WEBSITE-STATUS.md, Entscheidungen)"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "verkehrsunfall.html"
+        ],
+        "createdAt": "2026-10-30T18:46:47.556Z",
+        "reason": "Auftraggeberin hat am 2026-10-30 Farbwelt B mit Leinen #F4EFE6 gewählt (WEBSITE-STATUS.md)"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "bussgeld-strafrecht.html"
+        ],
+        "createdAt": "2026-10-30T18:46:47.568Z",
+        "reason": "Auftraggeberin hat am 2026-10-30 Farbwelt B mit Leinen #F4EFE6 gewählt (WEBSITE-STATUS.md)"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "familienrecht.html"
+        ],
+        "createdAt": "2026-10-30T18:46:47.580Z",
+        "reason": "Auftraggeberin hat am 2026-10-30 Farbwelt B mit Leinen #F4EFE6 gewählt (WEBSITE-STATUS.md)"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "arbeitsrecht.html"
+        ],
+        "createdAt": "2026-10-30T18:46:47.594Z",
+        "reason": "Auftraggeberin hat am 2026-10-30 Farbwelt B mit Leinen #F4EFE6 gewählt (WEBSITE-STATUS.md)"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "mietrecht.html"
+        ],
+        "createdAt": "2026-10-30T18:46:47.604Z",
+        "reason": "Auftraggeberin hat am 2026-10-30 Farbwelt B mit Leinen #F4EFE6 gewählt (WEBSITE-STATUS.md)"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "baurecht.html"
+        ],
+        "createdAt": "2026-10-30T18:46:47.614Z",
+        "reason": "Auftraggeberin hat am 2026-10-30 Farbwelt B mit Leinen #F4EFE6 gewählt (WEBSITE-STATUS.md)"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "mediation.html"
+        ],
+        "createdAt": "2026-10-30T18:46:47.624Z",
+        "reason": "Auftraggeberin hat am 2026-10-30 Farbwelt B mit Leinen #F4EFE6 gewählt (WEBSITE-STATUS.md)"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "kanzlei.html"
+        ],
+        "createdAt": "2026-10-30T18:46:47.634Z",
+        "reason": "Auftraggeberin hat am 2026-10-30 Farbwelt B mit Leinen #F4EFE6 gewählt (WEBSITE-STATUS.md)"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "kontakt.html"
+        ],
+        "createdAt": "2026-10-30T18:46:47.644Z",
+        "reason": "Auftraggeberin hat am 2026-10-30 Farbwelt B mit Leinen #F4EFE6 gewählt (WEBSITE-STATUS.md)"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "impressum.html"
+        ],
+        "createdAt": "2026-10-30T18:46:47.656Z",
+        "reason": "Auftraggeberin hat am 2026-10-30 Farbwelt B mit Leinen #F4EFE6 gewählt (WEBSITE-STATUS.md)"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "datenschutz.html"
+        ],
+        "createdAt": "2026-10-30T18:46:47.667Z",
+        "reason": "Auftraggeberin hat am 2026-10-30 Farbwelt B mit Leinen #F4EFE6 gewählt (WEBSITE-STATUS.md)"
       }
     ]
   }

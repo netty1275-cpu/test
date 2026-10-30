@@ -11,7 +11,7 @@ Status: ✅ erledigt · 🔄 läuft · ⬜ offen
 | 2 | Recherche | ✅ | 2026-10-30 |
 | 3 | Texte | ✅ | 2026-10-30 |
 | 4 | Design-Richtung | ✅ | 2026-10-30 |
-| 5 | Bauen | 🔄 | 2026-10-30 |
+| 5 | Bauen | ✅ | 2026-10-30 |
 | 6 | Prüfen und Feinschliff | ⬜ | |
 | 7 | Livegang | ⬜ | |
 | 8 | Danach | ⬜ | |
@@ -57,6 +57,7 @@ Jede Entscheidung der Person mit Datum, damit sie nicht erneut diskutiert wird.
 - 2026-10-30: Gewählt: Vorbild Seriosität (Gleiss Lutz) und Farbwelt B warm und menschlich (Petrol, Leinen, Terrakotta; Literata + Public Sans). Phase 2 abgenommen.
 - 2026-10-30: Texte Entwurf 1 vorläufig abgenommen. Eigene Texte der Kanzlei kommen später und ersetzen ihn.
 - 2026-10-30: Design-Richtung gewählt: U6-Linienplan „Zwei Wege“ (Recht bekommen in Petrol, Lösung finden in Terrakotta), nach drei Neuwürfelungen. Richtungsvertrag in .impeccable/surfaces/index-html.md.
+- 2026-10-30: Alle Seiten gebaut. Unterseiten werden mit `python _quellen/seiten.py` aus `_quellen/inhalte.py` erzeugt (Kopf, Kontakt, Fuß aus index.html).
 - 2026-10-30: Technik: statisches HTML, CSS, etwas JavaScript, ohne Baukasten und ohne WordPress.
 
 ## Offene Fragen an die Person
@@ -68,6 +69,8 @@ Jede Entscheidung der Person mit Datum, damit sie nicht erneut diskutiert wird.
 - Wer betreut welches Rechtsgebiet? Gibt es Fachanwaltstitel?
 - Online-Fragebogen für Verkehrsunfälle beibehalten?
 - Ohne Tracking (bisher Matomo)?
+- Impressum: alte Seite nennt „UStId.-Nr.“, die Nummer ist aber eine Steuernummer (Finanzamt Neukölln-Süd). In Phase 7 klären.
+- Datenschutzerklärung neu erstellen (Phase 7).
 - ChatGPT/Perplexity: drei Fragen aus recherche/keywords-geo.md Abschnitt 3 stellen und Antworten liefern
 - „Keine Schuld – keine Kosten“ beim Verkehrsunfall: fachlich freigegeben?
 - Was kostet die Mediation, und ist das Informationsgespräch kostenlos?

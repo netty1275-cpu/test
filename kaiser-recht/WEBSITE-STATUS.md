@@ -51,6 +51,7 @@ Jede Entscheidung der Person mit Datum, damit sie nicht erneut diskutiert wird.
 - 2026-10-30: Gestaltung eher ruhig und hochwertig, kein Cinematic Scroll. Endgültige Wahl in Phase 4.
 - 2026-10-30: Phase 1 abgenommen. Marineblau ist nicht bindend, eine ganz neue Richtung ist erlaubt. Neuer Schriftzug statt alter Kopfgrafik.
 - 2026-10-30: Neue Fotos kommen später. Bis dahin Platzhalter an festen Bildplätzen.
+- 2026-10-30: Seitenaufbau an mich delegiert: Start, Verkehrsunfall, Bußgeld & Strafrecht, Familienrecht, Arbeitsrecht, Mietrecht, Baurecht, Mediation (eigener großer Bereich), Kanzlei, Kontakt & Anfahrt. Verkehrsrecht wird auf Unfall- und Bußgeldseite aufgeteilt.
 - 2026-10-30: Technik: statisches HTML, CSS, etwas JavaScript, ohne Baukasten und ohne WordPress.
 
 ## Offene Fragen an die Person
@@ -61,9 +62,8 @@ Jede Entscheidung der Person mit Datum, damit sie nicht erneut diskutiert wird.
 - Wer betreut welches Rechtsgebiet? Gibt es Fachanwaltstitel?
 - Online-Fragebogen für Verkehrsunfälle beibehalten?
 - Ohne Tracking (bisher Matomo)?
-- 3–5 Lieblingswebseiten (Design-Referenzen, Phase 2A)
+- Farbwelt A, B oder C wählen (referenzen/vorschau.html), Empfehlung B
 - ChatGPT/Perplexity: drei Fragen aus recherche/keywords-geo.md Abschnitt 3 stellen und Antworten liefern
-- Strategie: Seite pro Rechtsgebiet mit Ort; Verkehrsrecht auf Unfall- und Bußgeldseite aufteilen?
 - „Keine Schuld – keine Kosten“ beim Verkehrsunfall: fachlich freigegeben?
 - Was kostet die Mediation, und ist das Informationsgespräch kostenlos?
 

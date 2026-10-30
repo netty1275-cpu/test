@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kaiser · Vorbilder und Farbwelten</title>
+<!-- Nur für diese Vorschau. Die fertige Seite hostet ihre Schriften selbst. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Source+Sans+3:wght@400;600&family=Literata:opsz,wght@7..72,400;7..72,600&family=Public+Sans:wght@400;600&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#1f1f1f; --muted:#5b5b5b; --line:#e3e1dc; --bg:#fbfaf8; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:17px/1.55 system-ui, sans-serif; }
+  .wrap { max-width:1180px; margin:0 auto; padding:40px 16px 80px; }
+  h1 { font-size:28px; margin:0 0 6px; }
+  h2 { font-size:22px; margin:56px 0 8px; }
+  p.lead { color:var(--muted); margin:0 0 24px; max-width:70ch; }
+  .refs { display:grid; grid-template-columns:repeat(auto-fit,minmax(330px,1fr)); gap:24px; }
+  .ref { background:#fff; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+  .ref img { width:100%; display:block; border-bottom:1px solid var(--line); aspect-ratio:1366/860; object-fit:cover; object-position:top; }
+  .ref .t { padding:16px 18px 18px; }
+  .ref h3 { margin:0 0 6px; font-size:18px; }
+  .ref ul { margin:6px 0 0; padding-left:18px; font-size:15px; }
+  .ok { color:#1d6b3a; } .no { color:#9b2c2c; }
+  .tag { display:inline-block; font-size:12px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; background:#efece6; padding:2px 8px; border-radius:3px; margin-bottom:6px; }
+  .worlds { display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:24px; }
+  .world { border-radius:6px; overflow:hidden; border:1px solid var(--line); }
+  .world .stage { padding:28px 26px 30px; background:var(--w-bg); color:var(--w-ink); font-family:var(--w-body); }
+  .mark { font-family:var(--w-head); font-size:26px; letter-spacing:.01em; color:var(--w-ink); border-bottom:1px solid var(--w-line); padding-bottom:14px; display:flex; justify-content:space-between; align-items:baseline; gap:8px; flex-wrap:wrap; }
+  .mark small { font-family:var(--w-body); font-size:13px; color:var(--w-muted); letter-spacing:0; }
+  .mark .amp { color:var(--w-acc); }
+  .stage h4 { font-family:var(--w-head); font-weight:600; font-size:30px; line-height:1.15; margin:26px 0 10px; color:var(--w-ink); }
+  .stage p { margin:0 0 18px; color:var(--w-muted); font-size:16px; }
+  .btns { display:flex; gap:10px; flex-wrap:wrap; }
+  .btn { font:600 15px/1 var(--w-body); padding:13px 18px; border-radius:var(--w-radius); background:var(--w-btn); color:#fff; text-decoration:none; }
+  .btn.alt { background:transparent; color:var(--w-ink); box-shadow:inset 0 0 0 1.5px var(--w-ink); }
+  .areas { margin:22px 0 0; padding:0; list-style:none; border-top:1px solid var(--w-line); }
+  .areas li { display:flex; justify-content:space-between; padding:11px 0; border-bottom:1px solid var(--w-line); font-size:16px; color:var(--w-ink); }
+  .areas li span { color:var(--w-acc); }
+  .swatches { display:flex; }
+  .swatches div { flex:1; padding:10px 10px 8px; font:12px/1.3 ui-monospace, monospace; color:#fff; min-height:64px; }
+  .meta { background:#fff; padding:14px 18px 18px; font-size:14px; }
+  .meta b { display:block; font-size:16px; margin-bottom:4px; }
+  .w-a { --w-bg:#F7F5F0; --w-ink:#1B2A4A; --w-muted:#4a5468; --w-acc:#8A6A3B; --w-btn:#1B2A4A; --w-line:#dcd8cf; --w-radius:2px; --w-head:'Source Serif 4', Georgia, serif; --w-body:'Source Sans 3', system-ui, sans-serif; }
+  .w-b { --w-bg:#F4EFE6; --w-ink:#22312E; --w-muted:#4c5753; --w-acc:#A4482A; --w-btn:#1F4E4A; --w-line:#ddd4c4; --w-radius:999px; --w-head:'Literata', Georgia, serif; --w-body:'Public Sans', system-ui, sans-serif; }
+  .w-c { --w-bg:#FFFFFF; --w-ink:#1A1A1A; --w-muted:#474747; --w-acc:#0B5CAD; --w-btn:#0B5CAD; --w-line:#d8d8d8; --w-radius:4px; --w-head:'Atkinson Hyperlegible', system-ui, sans-serif; --w-body:'Atkinson Hyperlegible', system-ui, sans-serif; }
+  .w-c .mark { font-weight:700; }
+  .note { margin-top:40px; padding:18px 20px; background:#fff; border-left:3px solid #1B2A4A; max-width:80ch; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Rechtsanwälte Kaiser: Vorbilder und Farbwelten</h1>
+  <p class="lead">Phase 2. Oben vier Vorbilder, jeweils mit dem, was wir übernehmen, und dem, was wir weglassen. Darunter drei mögliche Welten für die neue Seite. Alle Farbpaare erfüllen die Kontrastregeln für gute Lesbarkeit (WCAG AA). Gezeigt werden nur Stimmungen. Die echten Entwürfe kommen in Phase 4, mit euren Texten.</p>
+
+  <h2>Vorbilder</h2>
+  <div class="refs">
+    <div class="ref"><img src="www-gleisslutz-com-de.png" alt="Startseite Gleiss Lutz"><div class="t">
+      <span class="tag">Seriosität</span><h3>Gleiss Lutz</h3>
+      <ul><li class="ok">Ruhiger Serifen-Schriftzug, viel Weiß, Navigation in feinen Versalien</li><li class="ok">Ein Dunkelblau als einzige starke Farbe</li><li class="no">Stockfotos, Kachel-Raster mit News, Großkanzlei-Ton</li></ul></div></div>
+    <div class="ref"><img src="www-kinfolk-com.png" alt="Startseite Kinfolk"><div class="t">
+      <span class="tag">Wärme</span><h3>Kinfolk (Magazin)</h3>
+      <ul><li class="ok">Großzügiger Weißraum, ruhige Serifenschrift, Seiten wie aus Papier</li><li class="ok">Wirkt menschlich, ohne verspielt zu sein. Passt zur Mediation.</li><li class="no">Mode-Fotografie, Hamburger-Menü am Desktop</li></ul></div></div>
+    <div class="ref"><img src="www-gov-uk-2.png" alt="Themenliste GOV.UK"><div class="t">
+      <span class="tag">Klarheit</span><h3>GOV.UK</h3>
+      <ul><li class="ok">Themen als Liste mit Titel, einem Satz und Pfeil. Ideal für acht Rechtsgebiete.</li><li class="ok">Große Schrift, starke Kontraste, unterstrichene Links. Gut für ältere Besucher und Menschen unter Stress.</li><li class="no">Behördenblau als Vollfläche, kein Gesicht</li></ul></div></div>
+    <div class="ref"><img src="../recherche/screenshots/www-anwalt-verkehrsrecht-tempelhof-de-.png" alt="Startseite Gehrmann Rechtsanwälte"><div class="t">
+      <span class="tag">Anfrage</span><h3>Gehrmann (Wettbewerber)</h3>
+      <ul><li class="ok">Nur der Aufbau: Kontaktkarte mit Foto, großer Telefonnummer und Rückruf direkt im ersten Bildschirm</li><li class="ok">Kostenangst früh nehmen</li><li class="no">Optik: graue Kopfleiste, Stockfoto, Häkchen-Liste</li></ul></div></div>
+  </div>
+  <p class="lead" style="margin-top:16px">Bewusst nicht gewählt: Noerr und Mishcon de Reya (laut, Konzern-Look, Cinematic-Effekte).</p>
+
+  <h2>Drei Farb- und Schriftwelten</h2>
+  <div class="worlds">
+
+    <div class="world w-a"><div class="stage">
+      <div class="mark"><span>Kaiser <span class="amp">&amp;</span> Kaiser</span><small>Rechtsanwälte · Mediation</small></div>
+      <h4>Rechtsanwälte in Berlin-Mariendorf. Seit 1984.</h4>
+      <p>Verkehrsunfall, Kündigung, Trennung: Wir vertreten Sie vor Gericht oder finden mit Ihnen eine Einigung.</p>
+      <div class="btns"><a class="btn">030 661 22 54</a><a class="btn alt">Rückruf erbitten</a></div>
+      <ul class="areas"><li>Verkehrsunfall <span>→</span></li><li>Familienrecht <span>→</span></li><li>Mediation <span>→</span></li></ul>
+    </div>
+    <div class="swatches"><div style="background:#1B2A4A">#1B2A4A<br>Tinte</div><div style="background:#8A6A3B">#8A6A3B<br>Messing</div><div style="background:#F7F5F0;color:#1B2A4A">#F7F5F0<br>Papier</div></div>
+    <div class="meta"><b>A · Klassisch modern</b>Source Serif + Source Sans. Das bekannte Blau, aber tiefer und ruhiger, mit Messing als Akzent. Am nächsten an der alten Seite, seriös und sicher. Kontrast Text 13,1 · Akzent 4,6 · Button 14,2.</div></div>
+
+    <div class="world w-b"><div class="stage">
+      <div class="mark"><span>Kaiser <span class="amp">&amp;</span> Kaiser</span><small>Rechtsanwälte · Mediation</small></div>
+      <h4>Recht bekommen. Oder eine Lösung finden.</h4>
+      <p>Zwei Anwälte in Berlin-Mariendorf, seit 1984. Mit eigener Praxis für Mediation.</p>
+      <div class="btns"><a class="btn">030 661 22 54</a><a class="btn alt">Rückruf erbitten</a></div>
+      <ul class="areas"><li>Verkehrsunfall <span>→</span></li><li>Familienrecht <span>→</span></li><li>Mediation <span>→</span></li></ul>
+    </div>
+    <div class="swatches"><div style="background:#1F4E4A">#1F4E4A<br>Petrol</div><div style="background:#A4482A">#A4482A<br>Terrakotta</div><div style="background:#F4EFE6;color:#22312E">#F4EFE6<br>Leinen</div></div>
+    <div class="meta"><b>B · Warm und menschlich</b>Literata + Public Sans. Petrol und Leinen statt Behördenblau, Terrakotta als Akzent. Trägt die Mediation am besten und hebt sich am deutlichsten von allen Kanzleien in der Umgebung ab. Kontrast Text 11,9 · Akzent 5,2 · Button 9,3.</div></div>
+
+    <div class="world w-c"><div class="stage">
+      <div class="mark"><span>Kaiser <span class="amp">&amp;</span> Kaiser</span><small>Rechtsanwälte · Mediation</small></div>
+      <h4>Anwälte in Berlin-Mariendorf</h4>
+      <p>Wir helfen bei Verkehrsunfall, Bußgeld, Familie, Arbeit, Miete und Bau. Und mit Mediation, wenn Sie sich einigen wollen.</p>
+      <div class="btns"><a class="btn">030 661 22 54</a><a class="btn alt">Rückruf erbitten</a></div>
+      <ul class="areas"><li>Verkehrsunfall <span>→</span></li><li>Familienrecht <span>→</span></li><li>Mediation <span>→</span></li></ul>
+    </div>
+    <div class="swatches"><div style="background:#1A1A1A">#1A1A1A<br>Graphit</div><div style="background:#0B5CAD">#0B5CAD<br>Klarblau</div><div style="background:#FFFFFF;color:#1A1A1A">#FFFFFF<br>Weiß</div></div>
+    <div class="meta"><b>C · Klar und barrierearm</b>Atkinson Hyperlegible, eine Schrift, die für schlecht Sehende entwickelt wurde. Schwarz auf Weiß, ein klares Blau. Am besten lesbar, aber am wenigsten eigen. Kontrast Text 17,4 · Akzent 6,7 · Button 6,7.</div></div>
+  </div>
+
+  <div class="note"><b>Meine Empfehlung: B als Grundwelt, dazu die Klarheit von C bei Listen und Schriftgröße.</b> Die Wärme passt zu einer Kanzlei mit Mediation, sie hebt sich vom Blau aller Wettbewerber ab und wirkt trotzdem seriös. Den Aufbau des ersten Bildschirms (Foto, Telefon, Rückruf) übernehmen wir von Gehrmann. Der Schriftzug „Kaiser &amp; Kaiser“ ist hier nur gesetzt. Gestaltet wird er in Phase 4.</div>
+</div>
+</body>
+</html>

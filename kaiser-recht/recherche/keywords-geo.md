@@ -82,13 +82,26 @@ Das heißt für die Kanzlei Kaiser:
 
 ## 3. KI-Antworten (GEO)
 
-ChatGPT und Perplexity konnten aus dieser Umgebung nicht befragt werden. **Bitte selbst stellen und die Antworten hier einfügen**, ich werte sie dann aus:
+ChatGPT und Perplexity sind von hier nicht erreichbar. Ersatzweise habe ich die drei Fragen am 2026-10-30 einer KI-Websuche gestellt, die genauso arbeitet (Quellen suchen, Antwort daraus schreiben). Die Ergebnisse sind ein Anhaltspunkt, keine ChatGPT-Messung.
 
-1. „Ich hatte in Berlin-Tempelhof einen Unfall und bin nicht schuld. Welcher Anwalt in der Nähe kann mir helfen?“
-2. „Wir trennen uns und haben zwei Kinder. Wer bietet in Berlin-Mariendorf oder Tempelhof eine Familienmediation an?“
-3. „Was weißt du über die Rechtsanwälte Andreas und Claudia Kaiser am Mariendorfer Damm in Berlin?“
+**Frage 1, allgemein:** „Unfall in Tempelhof, nicht schuld, welcher Anwalt hilft?“
+- Genannt werden Gehrmann, Engelbracht, Kanzlei Matthias Klein (Tempelhofer Damm 145) sowie die Verzeichnisse Das Örtliche, anwalt.de und blitzeranwalt.com.
+- **Kaiser wird nicht genannt.**
+- Die KI übernimmt Gehrmanns Satz „Bei Unverschulden muss die gegnerische Versicherung die Anwaltskosten übernehmen“ fast wörtlich. Klare Faktensätze werden also zitiert.
 
-Zu erwarten ist: Bei Frage 3 kennt die KI wenig, und das wenige stammt aus Verzeichnissen. Deshalb brauchen wir auf der neuen Seite klare Faktensätze.
+**Frage 2, lokal:** „Familienmediation in Mariendorf oder Tempelhof?“
+- Genannt werden Mediatorinnen aus dem Verzeichnis mediatorgesucht.de (Sabine Würich, Henriette Fuß), das Jugendamt, die Erziehungs- und Familienberatungsstelle Marienfelde, die Familienberatung des Bezirks und fachanwaltsuche.de.
+- **Kaiser wird nicht genannt**, obwohl die Praxis für Mediation direkt in Mariendorf liegt.
+- Das ist die wichtigste GEO-Lücke. Gegenmaßnahmen: eine eigene Mediationsseite mit Ort, ein Eintrag bei mediatorgesucht.de und in der Mediatorenliste der RAK Berlin.
+
+**Frage 3, Marke:** „Was weißt du über Andreas und Claudia Kaiser?“
+- Die Kanzlei ist bekannt: Adresse, Telefon, „Rechtsanwaltskanzlei und Praxis für Mediation“, Claudia Kaiser als Mediatorin.
+- Quellen sind fast nur Verzeichnisse: Das Örtliche, Gelbe Seiten, GoYellow, öffnungszeitenbuch.de, legalrank.de, trustlocal.de, 11880 und die alte Website.
+- **Bewertungen:** GoYellow/Gelbe Seiten 3,0 von 5 bei 2 Bewertungen, legalrank 3,8 bei 16. Die KI zitiert diese Werte. Mehr echte, aktuelle Bewertungen im Google-Unternehmensprofil sind deshalb wichtig (Phase 8).
+- **Widersprüche:** Die Öffnungszeiten weichen je nach Verzeichnis ab. Die Schwerpunkte stammen aus einem Vermittlungsportal (legalrank), nicht von der Kanzlei.
+- Zur Erfahrung (seit 1984), zum Master of Mediation und zu den Rechtsgebieten findet die KI fast nichts. Diese Fakten müssen klar auf die neue Seite.
+
+Wer möchte, stellt die Fragen zusätzlich in ChatGPT und Perplexity. Ich ergänze die Antworten dann.
 
 ## 4. Keyword-Karte
 
@@ -113,7 +126,7 @@ Vorschlag für den Seitenaufbau. Jede Seite bekommt einen Hauptbegriff mit Ort.
 
 - **Faktensätze**, die KI-Systeme wörtlich übernehmen können. Beispiel: „Die Rechtsanwälte Andreas und Claudia Kaiser führen seit 1984 eine Kanzlei am Mariendorfer Damm 73 in Berlin-Mariendorf, mit Praxis für Mediation.“
 - **Strukturierte Daten:** `LegalService` mit Adresse, Öffnungszeiten, Telefon und `areaServed`, `Person` für beide Anwälte, `FAQPage` auf den Bereichsseiten.
-- **Gleiche Fakten überall:** Website, Google-Unternehmensprofil, 11880, golocal, Das Örtliche und das Anwaltsverzeichnis der RAK Berlin. Name, Adresse, Telefon und Öffnungszeiten müssen identisch sein.
+- **Gleiche Fakten überall:** Website, Google-Unternehmensprofil, 11880, golocal, Das Örtliche, Gelbe Seiten, GoYellow, öffnungszeitenbuch.de, legalrank, trustlocal und das Anwaltsverzeichnis der RAK Berlin. Name, Adresse, Telefon und Öffnungszeiten müssen identisch sein.
 - **Eintrag in die Mediatorenliste der RAK Berlin** prüfen (rak-berlin.de/anwaltssuche/mediatorenliste). Wichtige Quelle für „Mediator Berlin“.
 - **FAQ mit echten Fragen** aus der Autovervollständigung (Abschnitt 1).
 - `llms.txt` mit Kurzprofil der Kanzlei.

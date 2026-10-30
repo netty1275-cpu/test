@@ -440,3 +440,12 @@ a:hover .go svg { translate: 4px 0; }
 .photo--s { aspect-ratio: 4 / 5; padding: 14px; font-size: .88rem; box-shadow: none; }
 @media (max-width: 640px) { .person { grid-template-columns: 1fr; } .photo--s { max-width: 220px; } }
 .prose .sign { margin-top: 1.4rem; }
+
+/* Erklärvideo */
+.video { margin: 0 0 1.2rem; }
+.video video { display: block; width: 100%; height: auto; border-radius: 4px; background: var(--petrol); box-shadow: 0 24px 48px -28px rgba(34, 49, 46, .45); }
+.video figcaption { font-size: .92rem; color: var(--muted); margin-top: 10px; }
+.transcript { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.transcript summary { cursor: pointer; padding: 14px 0; font-weight: 600; color: var(--petrol); }
+.transcript summary:hover { color: var(--terra-text); }
+.transcript > div { padding-bottom: 8px; }

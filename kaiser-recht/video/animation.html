@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Mediation erklärt · Kaiser & Kaiser</title>
+<style>
+@font-face { font-family: "Literata"; src: url("../assets/fonts/literata-latin-opsz-normal.woff2") format("woff2-variations"); font-weight: 200 900; }
+@font-face { font-family: "Public Sans"; src: url("../assets/fonts/public-sans-latin-wght-normal.woff2") format("woff2-variations"); font-weight: 100 900; }
+:root { --petrol:#1F4E4A; --petrol-dk:#163A37; --ink:#22312E; --muted:#4C5753; --terra:#A4482A; --terra-text:#933E22; --leinen:#F4EFE6; --paper:#FBF8F2; --line:#D6CCB9; }
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: var(--leinen); }
+body { font-family: "Public Sans", sans-serif; color: var(--ink); position: relative; }
+.scene { position: absolute; inset: 0; opacity: 0; }
+.serif { font-family: "Literata", serif; font-weight: 500; letter-spacing: -.01em; }
+.mark { position: absolute; left: 120px; top: 90px; font: 500 40px/1 "Literata", serif; color: var(--petrol); }
+.mark span { color: var(--terra); }
+.mark small { display: block; margin-top: 10px; font: 600 15px/1 "Public Sans"; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+
+/* 1 */
+#s1, #s6 { background: var(--petrol); color: var(--leinen); }
+#s1 h1 { position: absolute; left: 0; right: 0; top: 330px; text-align: center; font-size: 104px; margin: 0; }
+#s1 .dot { position: absolute; top: 640px; width: 56px; height: 56px; border-radius: 50%; border: 9px solid var(--leinen); }
+#s1 .sub { position: absolute; left: 0; right: 0; top: 780px; text-align: center; font-size: 34px; opacity: .85; }
+
+/* 2 */
+#s2 svg { position: absolute; left: 0; top: 0; }
+.lbl { font: 600 34px "Public Sans"; fill: var(--ink); }
+.lblsub { font: 400 26px "Public Sans"; fill: var(--muted); }
+.xl { font: 600 44px "Literata"; fill: var(--ink); }
+.dest { font: 700 22px "Public Sans"; letter-spacing: .18em; }
+
+/* 3 */
+#s3 .txt { position: absolute; left: 120px; top: 250px; width: 760px; }
+#s3 h2, #s4 h2, #s5 h2 { margin: 0; font-size: 72px; line-height: 1.08; }
+#s3 p { font-size: 40px; line-height: 1.3; color: var(--terra-text); margin: 44px 0 0; font-family: "Literata"; font-weight: 500; }
+.tag { font: 700 22px "Public Sans"; letter-spacing: .18em; text-transform: uppercase; color: var(--terra-text); }
+#s3 .tag { position: absolute; left: 120px; top: 190px; }
+
+/* 4 */
+#s4 h2 { position: absolute; left: 120px; top: 200px; }
+#s4 .item { position: absolute; left: 260px; font-family: "Literata"; font-weight: 500; font-size: 56px; color: var(--ink); }
+#s4 .item small { display: block; font: 400 30px "Public Sans"; color: var(--muted); margin-top: 8px; }
+
+/* 5 */
+#s5 h2 { position: absolute; left: 120px; top: 200px; }
+#s5 .step { position: absolute; width: 300px; text-align: center; transform: translateX(-50%); }
+#s5 .step b { display: block; font: 600 34px/1.2 "Literata"; color: var(--ink); }
+#s5 .num { font: 700 26px "Public Sans"; color: var(--terra-text); display: block; margin-bottom: 6px; }
+
+/* 6 */
+#s6 .big { position: absolute; left: 0; right: 0; top: 250px; text-align: center; font: 500 120px/1 "Literata"; }
+#s6 .big span { color: #E9A98E; }
+#s6 .l1 { position: absolute; left: 0; right: 0; top: 430px; text-align: center; font-size: 44px; }
+#s6 .l2 { position: absolute; left: 0; right: 0; top: 520px; text-align: center; font-size: 34px; opacity: .85; }
+#s6 .cta { position: absolute; left: 50%; top: 680px; transform: translateX(-50%); background: var(--leinen); color: var(--petrol); font: 600 46px "Public Sans"; padding: 30px 54px; border-radius: 6px; white-space: nowrap; }
+#s6 .l3 { position: absolute; left: 0; right: 0; top: 860px; text-align: center; font-size: 30px; opacity: .8; }
+</style>
+</head>
+<body>
+
+<!-- 1: Wenn Reden nicht mehr geht -->
+<section class="scene" id="s1">
+  <h1 class="serif" id="s1h">Wenn Reden nicht mehr geht.</h1>
+  <div class="dot" id="s1a"></div><div class="dot" id="s1b"></div>
+  <div class="sub" id="s1s">Trennung · Erbe · Nachbarn · Kollegen</div>
+</section>
+
+<!-- 2: Zwei Wege -->
+<section class="scene" id="s2">
+  <svg width="1920" height="1080" viewBox="0 0 1920 1080">
+    <path id="t0" d="M420 170 V470" stroke="#1F4E4A" stroke-width="18" fill="none" stroke-linecap="round"/>
+    <path id="tp" d="M420 470 Q420 600 560 600 H1640" stroke="#1F4E4A" stroke-width="18" fill="none" stroke-linecap="round"/>
+    <path id="tt" d="M420 470 V960" stroke="#A4482A" stroke-width="18" fill="none" stroke-linecap="round"/>
+    <g id="st0"><circle cx="420" cy="172" r="20" fill="#FBF8F2" stroke="#22312E" stroke-width="6"/><text class="lbl" x="476" y="184">Ihr Konflikt</text></g>
+    <g id="stx"><circle cx="420" cy="470" r="36" fill="#FBF8F2" stroke="#22312E" stroke-width="9"/><text class="xl" x="490" y="462">Kaiser &amp; Kaiser</text><text class="lblsub" x="490" y="502">Mariendorfer Damm 73</text></g>
+    <g id="stp"><text class="dest" x="1640" y="560" text-anchor="end" fill="#4C5753">RECHT BEKOMMEN</text><circle cx="1640" cy="600" r="20" fill="#FBF8F2" stroke="#22312E" stroke-width="6"/><text class="lbl" x="1640" y="670" text-anchor="end">vor Gericht</text></g>
+    <g id="stt"><circle cx="420" cy="940" r="20" fill="#FBF8F2" stroke="#22312E" stroke-width="6"/><text class="lbl" x="476" y="932" style="fill:#933E22">in der Mediation</text><text class="dest" x="476" y="976" fill="#933E22">LÖSUNG FINDEN</text></g>
+    <text id="s2h" x="1640" y="200" text-anchor="end" class="serif" style="font: 500 84px Literata; fill:#22312E">Zwei Wege.</text>
+  </svg>
+</section>
+
+<!-- 3: Was ist Mediation -->
+<section class="scene" id="s3">
+  
+  <div class="txt"><h2 class="serif" id="s3h">Eine neutrale Mediatorin bringt beide Seiten an einen Tisch.</h2><p id="s3p">Sie entscheiden selbst. Nicht ein Gericht.</p></div>
+  <svg width="1920" height="1080" viewBox="0 0 1920 1080" style="position:absolute;left:0;top:0">
+    <path id="la" d="M1060 760 Q1240 760 1380 560" stroke="#A4482A" stroke-width="16" fill="none" stroke-linecap="round"/>
+    <path id="lb" d="M1700 760 Q1520 760 1380 560" stroke="#A4482A" stroke-width="16" fill="none" stroke-linecap="round"/>
+    <circle id="tisch" cx="1380" cy="520" r="70" fill="#FBF8F2" stroke="#A4482A" stroke-width="14"/>
+    <circle id="pa" cx="1060" cy="760" r="30" fill="#FBF8F2" stroke="#22312E" stroke-width="9"/>
+    <circle id="pb" cx="1700" cy="760" r="30" fill="#FBF8F2" stroke="#22312E" stroke-width="9"/>
+    <text id="tl" x="1380" y="420" text-anchor="middle" style="font:600 30px 'Public Sans';fill:#933E22">ein Tisch</text>
+  </svg>
+</section>
+
+<!-- 4: Vorteile -->
+<section class="scene" id="s4">
+  <h2 class="serif" id="s4h">Ihre Lösung. Ihre Entscheidung.</h2>
+  <svg width="1920" height="1080" viewBox="0 0 1920 1080" style="position:absolute;left:0;top:0">
+    <path id="t4" d="M170 420 V920" stroke="#A4482A" stroke-width="18" fill="none" stroke-linecap="round"/>
+    <circle id="c41" cx="170" cy="440" r="22" fill="#FBF8F2" stroke="#22312E" stroke-width="7"/>
+    <circle id="c42" cx="170" cy="660" r="22" fill="#FBF8F2" stroke="#22312E" stroke-width="7"/>
+    <circle id="c43" cx="170" cy="880" r="22" fill="#FBF8F2" stroke="#22312E" stroke-width="7"/>
+  </svg>
+  <div class="item" id="i41" style="top:400px">Vertraulich<small>Was besprochen wird, bleibt im Raum.</small></div>
+  <div class="item" id="i42" style="top:620px">Sie behalten die Entscheidung<small>Niemand entscheidet über Ihren Kopf hinweg.</small></div>
+  <div class="item" id="i43" style="top:840px">Eine Lösung, die zu Ihrem Fall passt<small>Nicht nur eine Antwort nach Schema.</small></div>
+</section>
+
+<!-- 5: Ablauf -->
+<section class="scene" id="s5">
+  <h2 class="serif">In fünf Schritten zur Vereinbarung</h2>
+  <svg width="1920" height="1080" viewBox="0 0 1920 1080" style="position:absolute;left:0;top:0">
+    <path id="t5" d="M240 580 H1680" stroke="#A4482A" stroke-width="18" fill="none" stroke-linecap="round"/>
+    <g id="c5"></g>
+    <circle id="zug" cx="240" cy="580" r="16" fill="#A4482A"/>
+  </svg>
+  <div id="steps"></div>
+</section>
+
+<!-- 6: Abschluss -->
+<section class="scene" id="s6">
+  <div class="big">Kaiser <span>&amp;</span> Kaiser</div>
+  <div class="l1">Praxis für Mediation in Berlin-Mariendorf</div>
+  <div class="l2">Claudia Kaiser, Rechtsanwältin und Master of Mediation</div>
+  <div class="cta">Informationsgespräch: 030 661 22 54</div>
+  <div class="l3">Mariendorfer Damm 73 · U6 Westphalweg</div>
+</section>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const clamp = (x) => Math.max(0, Math.min(1, x));
+const ease = (x) => 1 - Math.pow(1 - clamp(x), 3);
+const ramp = (t, a, b) => ease((t - a) / (b - a));
+const win = (t, a, b, c, d) => Math.min(ramp(t, a, b), 1 - ramp(t, c, d));
+
+// Halte des Ablaufs aufbauen
+const STEPS = ["Informations­gespräch", "Themen sammeln", "Interessen klären", "Lösungen entwickeln", "Vereinbarung"];
+const X = [240, 600, 960, 1320, 1680];
+STEPS.forEach((s, i) => {
+  const c = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+  c.setAttribute("cx", X[i]); c.setAttribute("cy", 580); c.setAttribute("r", 24);
+  c.setAttribute("fill", "#FBF8F2"); c.setAttribute("stroke", "#22312E"); c.setAttribute("stroke-width", 7); c.id = "c5" + i;
+  $("c5").appendChild(c);
+  const d = document.createElement("div");
+  d.className = "step"; d.id = "s5" + i; d.style.left = X[i] + "px"; d.style.top = (i % 2 ? 640 : 380) + "px";
+  d.innerHTML = '<span class="num">' + (i + 1) + "</span><b>" + s + "</b>";
+  $("steps").appendChild(d);
+});
+
+function draw(el, p) {
+  const L = el.getTotalLength();
+  el.style.strokeDasharray = L; el.style.strokeDashoffset = L * (1 - clamp(p));
+}
+function show(el, p, dy = 24) {
+  el.style.opacity = p; el.style.transform = (el.dataset.base || "") + " translateY(" + (1 - p) * dy + "px)";
+}
+
+function render(t) {
+  // Szenen-Sichtbarkeit
+  $("s1").style.opacity = 1 - ramp(t, 5.6, 6.4);
+  $("s2").style.opacity = win(t, 5.6, 6.4, 13.6, 14.4);
+  $("s3").style.opacity = win(t, 13.6, 14.4, 24.6, 25.4);
+  $("s4").style.opacity = win(t, 24.6, 25.4, 34.6, 35.4);
+  $("s5").style.opacity = win(t, 34.6, 35.4, 51.6, 52.4);
+  $("s6").style.opacity = ramp(t, 51.6, 52.4);
+
+  // 1
+  show($("s1h"), ramp(t, 0.3, 1.5));
+  const gap = 520 + 200 * ramp(t, 0.5, 4.5);
+  $("s1a").style.left = (960 - gap / 2 - 28) + "px"; $("s1b").style.left = (960 + gap / 2 - 28) + "px";
+  $("s1a").style.opacity = $("s1b").style.opacity = ramp(t, 0.8, 1.8);
+  show($("s1s"), ramp(t, 2.2, 3.2));
+
+  // 2
+  draw($("t0"), ramp(t, 6.3, 7.6));
+  $("st0").style.opacity = ramp(t, 6.2, 6.8);
+  $("stx").style.opacity = ramp(t, 7.3, 7.9);
+  draw($("tp"), ramp(t, 8.0, 9.6));
+  draw($("tt"), ramp(t, 8.6, 10.2));
+  $("stp").style.opacity = ramp(t, 9.3, 9.9) * (1 - 0.7 * ramp(t, 11.8, 12.8));
+  $("tp").style.opacity = 1 - 0.7 * ramp(t, 11.8, 12.8);
+  $("stt").style.opacity = ramp(t, 9.9, 10.5);
+  $("s2h").style.opacity = ramp(t, 6.6, 7.6);
+
+  // 3
+  show($("s3h"), ramp(t, 14.4, 15.4));
+  const m = ramp(t, 15.5, 18.5);
+  $("pa").setAttribute("cx", 1060 + 160 * m); $("pb").setAttribute("cx", 1700 - 160 * m);
+  $("la").setAttribute("d", `M${1060 + 160 * m} 760 Q1240 760 1380 590`);
+  $("lb").setAttribute("d", `M${1700 - 160 * m} 760 Q1520 760 1380 590`);
+  draw($("la"), ramp(t, 16.0, 18.5)); draw($("lb"), ramp(t, 16.0, 18.5));
+  const tp = ramp(t, 17.8, 18.8);
+  $("tisch").style.opacity = tp; $("tisch").setAttribute("r", 40 + 30 * tp);
+  $("tl").style.opacity = ramp(t, 18.4, 19.2);
+  show($("s3p"), ramp(t, 20.0, 21.0));
+
+  // 4
+  show($("s4h"), ramp(t, 25.2, 26.2));
+  draw($("t4"), ramp(t, 25.6, 32.0));
+  [["c41", "i41", 26.4], ["c42", "i42", 28.8], ["c43", "i43", 31.2]].forEach(([c, i, a]) => {
+    $(c).style.opacity = ramp(t, a, a + 0.5); show($(i), ramp(t, a + 0.2, a + 1.0), 18);
+  });
+
+  // 5
+  show(document.querySelector("#s5 h2"), ramp(t, 35.2, 36.2));
+  draw($("t5"), ramp(t, 35.8, 38.0));
+  const starts = [37.6, 40.2, 42.8, 45.4, 48.0];
+  starts.forEach((a, i) => {
+    $("c5" + i).style.opacity = ramp(t, a - 0.3, a + 0.2);
+    const el = $("s5" + i); el.dataset.base = "translateX(-50%)"; show(el, ramp(t, a, a + 0.8), 16);
+    $("c5" + i).setAttribute("fill", t > a + 0.3 ? "#A4482A" : "#FBF8F2");
+  });
+  let zx = 240;
+  for (let i = 0; i < 5; i++) if (t >= starts[i] - 1) zx = X[Math.max(0, i - 1)] + (X[i] - X[Math.max(0, i - 1)]) * ramp(t, starts[i] - 1, starts[i]);
+  $("zug").setAttribute("cx", zx); $("zug").style.opacity = ramp(t, 37.0, 37.6);
+
+  // 6: alles sichtbar, sanft
+  document.querySelectorAll("#s6 > div").forEach((el, i) => {
+    if (el.classList.contains("cta")) { el.dataset.base = "translateX(-50%)"; }
+    show(el, ramp(t, 52.4 + i * 0.4, 53.2 + i * 0.4), 20);
+  });
+}
+window.render = render;
+render(0);
+</script>
+</body>
+</html>

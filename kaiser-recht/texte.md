@@ -440,6 +440,11 @@ Mediation ist ein vertrauliches Verfahren, um Konflikte außerhalb des Gerichts 
 
 Das Gesetz kennt nur feste Antworten. In der Mediation finden Sie eine Lösung, die zu Ihrem Fall passt. Am Ende steht eine Vereinbarung, die Sie selbst schließen.
 
+### Erklärvideo
+**H2:** Mediation in 60 Sekunden
+
+Video ohne Ton, alle Aussagen als Text im Bild (Drehbuch: `video/drehbuch.md`). Bildunterschrift: Das Video hat keinen Ton. Alle Aussagen stehen als Text im Bild. Darunter ausklappbar „Textfassung des Videos“ mit den Bildtexten.
+
 ### Wann sinnvoll
 **H2:** Wann Mediation hilft
 

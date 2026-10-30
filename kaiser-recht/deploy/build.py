@@ -34,6 +34,7 @@ FILES = PAGES + [
     "assets/fonts/literata-latin-opsz-normal.woff2", "assets/fonts/public-sans-latin-wght-normal.woff2",
     "assets/img/favicon.svg", "assets/img/favicon-32.png", "assets/img/favicon-512.png",
     "assets/img/apple-touch-icon.png", "assets/img/og-image.png",
+    "assets/img/mediation-poster.jpg", "assets/video/mediation.mp4",
 ]
 if VORSCHAU:
     FILES = [f for f in FILES if f not in ("sitemap.xml", "llms.txt", "anfrage.php")]
@@ -64,7 +65,7 @@ if VORSCHAU:
     open(os.path.join(OUT, ".htaccess"), "w").write(
         "# Vorschau: nicht in Suchmaschinen aufnehmen\n"
         "<IfModule mod_headers.c>\n  Header set X-Robots-Tag \"noindex, nofollow\"\n</IfModule>\n"
-        "AddType font/woff2 .woff2\nAddType image/svg+xml .svg\n"
+        "AddType font/woff2 .woff2\nAddType image/svg+xml .svg\nAddType video/mp4 .mp4\n"
     )
 
 with zipfile.ZipFile(ZIP, "w", zipfile.ZIP_DEFLATED) as z:

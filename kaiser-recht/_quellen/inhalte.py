@@ -190,6 +190,19 @@ PAGES = [
             dict(h2="Was ist Mediation?", id="was", html=p(
                 "Mediation ist ein vertrauliches Verfahren, um Konflikte außerhalb des Gerichts zu lösen. Ich begleite Sie als neutrale Dritte. Ich entscheide nichts und ergreife für niemanden Partei. Ich sorge dafür, dass ein Gespräch wieder möglich wird, auch wenn Sie selbst nicht mehr miteinander reden können.",
                 "Das Gesetz kennt nur feste Antworten. In der Mediation finden Sie eine Lösung, die zu Ihrem Fall passt. Am Ende steht eine Vereinbarung, die Sie selbst schließen.")),
+            dict(h2="Mediation in 60 Sekunden", id="video", html=
+                '<figure class="video"><video controls preload="none" playsinline poster="assets/img/mediation-poster.jpg" width="1920" height="1080" aria-describedby="video-text">'
+                '<source src="assets/video/mediation.mp4" type="video/mp4">'
+                '<a href="assets/video/mediation.mp4">Video herunterladen</a></video>'
+                '<figcaption>Das Video hat keinen Ton. Alle Aussagen stehen als Text im Bild.</figcaption></figure>'
+                '<details class="transcript" id="video-text"><summary>Textfassung des Videos</summary><div>' + p(
+                "Wenn Reden nicht mehr geht: bei Trennung, Erbe, Nachbarn oder unter Kollegen.",
+                "Bei Kaiser &amp; Kaiser gibt es zwei Wege. Recht bekommen: vor Gericht. Oder eine Lösung finden: in der Mediation.",
+                "Eine neutrale Mediatorin bringt beide Seiten an einen Tisch. Sie entscheiden selbst, nicht ein Gericht.",
+                "Was Sie davon haben: Das Gespräch ist vertraulich. Sie behalten die Entscheidung. Und Sie finden eine Lösung, die zu Ihrem Fall passt, nicht nur eine Antwort nach Schema.",
+                "So läuft es ab, in fünf Schritten: Informationsgespräch, Themen sammeln, Interessen klären, Lösungen entwickeln, Vereinbarung.",
+                "Praxis für Mediation in Berlin-Mariendorf. Claudia Kaiser, Rechtsanwältin und Master of Mediation. Informationsgespräch unter 030 661 22 54.")
+                + '</div></details>'),
             dict(h2="Wann Mediation hilft", id="wann", html=p(
                 "Sie müssen nicht warten, bis es eskaliert. Gerade alltägliche Konflikte in der Familie, im Beruf oder mit Nachbarn belasten auf Dauer.")
                 + '<p class="pull">Oft fällt irgendwann der Satz „Mit dem kann man nicht reden“. Dann ist Mediation einen Versuch wert.</p>'),

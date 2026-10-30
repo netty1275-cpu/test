@@ -12,6 +12,7 @@ RewriteRule ^ https://www.kaiser-recht.de%{REQUEST_URI} [L,R=301]
 RedirectMatch 404 ^/(tweak|archiv|logo|recherche|referenzen|deploy|_quellen)(/|$)
 
 AddType font/woff2 .woff2
+AddType video/mp4 .mp4
 AddType image/webp .webp
 AddType image/svg+xml .svg
 AddType text/plain .txt
@@ -26,6 +27,7 @@ AddType text/plain .txt
   ExpiresActive On
   ExpiresByType font/woff2 "access plus 1 year"
   ExpiresByType image/png "access plus 1 month"
+  ExpiresByType video/mp4 "access plus 1 month"
   ExpiresByType image/jpeg "access plus 1 month"
   ExpiresByType image/webp "access plus 1 month"
   ExpiresByType image/svg+xml "access plus 1 month"

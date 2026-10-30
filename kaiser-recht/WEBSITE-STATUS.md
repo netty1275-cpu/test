@@ -10,8 +10,8 @@ Status: ✅ erledigt · 🔄 läuft · ⬜ offen
 | 1 | Fundament | ✅ | 2026-10-30 |
 | 2 | Recherche | ✅ | 2026-10-30 |
 | 3 | Texte | ✅ | 2026-10-30 |
-| 4 | Design-Richtung | 🔄 | 2026-10-30 |
-| 5 | Bauen | ⬜ | |
+| 4 | Design-Richtung | ✅ | 2026-10-30 |
+| 5 | Bauen | 🔄 | 2026-10-30 |
 | 6 | Prüfen und Feinschliff | ⬜ | |
 | 7 | Livegang | ⬜ | |
 | 8 | Danach | ⬜ | |
@@ -56,6 +56,7 @@ Jede Entscheidung der Person mit Datum, damit sie nicht erneut diskutiert wird.
 - 2026-10-30: Seitenaufbau an mich delegiert: Start, Verkehrsunfall, Bußgeld & Strafrecht, Familienrecht, Arbeitsrecht, Mietrecht, Baurecht, Mediation (eigener großer Bereich), Kanzlei, Kontakt & Anfahrt. Verkehrsrecht wird auf Unfall- und Bußgeldseite aufgeteilt.
 - 2026-10-30: Gewählt: Vorbild Seriosität (Gleiss Lutz) und Farbwelt B warm und menschlich (Petrol, Leinen, Terrakotta; Literata + Public Sans). Phase 2 abgenommen.
 - 2026-10-30: Texte Entwurf 1 vorläufig abgenommen. Eigene Texte der Kanzlei kommen später und ersetzen ihn.
+- 2026-10-30: Design-Richtung gewählt: U6-Linienplan „Zwei Wege“ (Recht bekommen in Petrol, Lösung finden in Terrakotta), nach drei Neuwürfelungen. Richtungsvertrag in .impeccable/surfaces/index-html.md.
 - 2026-10-30: Technik: statisches HTML, CSS, etwas JavaScript, ohne Baukasten und ohne WordPress.
 
 ## Offene Fragen an die Person

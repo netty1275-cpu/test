@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-30T18:38:43.212Z",
+        "reason": "Auftraggeberin hat am 2026-10-30 Farbwelt B mit Leinen #F4EFE6 als Grund gewählt (WEBSITE-STATUS.md, Entscheidungen)"
+      }
+    ]
+  }
+}

@@ -137,6 +137,15 @@
         ],
         "createdAt": "2026-10-30T19:08:15.158Z",
         "reason": "Vergleichsseite aus Phase 2, zeigt absichtlich die nicht gewählten Farbwelten A und C mit ihren Schriften; wird nicht ausgeliefert"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "video/animation.html"
+        ],
+        "createdAt": "2026-10-30T19:39:49.922Z",
+        "reason": "Auftraggeberin hat am 2026-10-30 Farbwelt B mit Leinen #F4EFE6 gewählt; das Video übernimmt die Farben der Website (WEBSITE-STATUS.md)"
       }
     ]
   }

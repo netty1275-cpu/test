@@ -6,7 +6,7 @@ Status: ✅ erledigt · 🔄 läuft · ⬜ offen
 
 | Phase | Name | Status | Datum |
 |---|---|---|---|
-| 0 | Einrichten | 🔄 | 2026-10-30 |
+| 0 | Einrichten | ✅ | 2026-10-30 |
 | 1 | Fundament | ⬜ | |
 | 2 | Recherche | ⬜ | |
 | 3 | Texte | ⬜ | |
@@ -19,9 +19,9 @@ Status: ✅ erledigt · 🔄 läuft · ⬜ offen
 ## Ausgangslage
 
 - Bestehende Website oder Marke: https://www.kaiser-recht.de (Rechtsanwälte Andreas und Claudia Kaiser, Kanzlei und Praxis für Mediation, Mariendorfer Damm 73, 12109 Berlin). Neue Seite soll sie ersetzen.
-- Hauptziel der Seite: offen (Vorschlag: Mandatsanfragen/Rückruf)
-- Hosting: offen
-- Werkzeuge: impeccable ✅ (v0.1.18, im Projekt unter .claude/) · Playwright ✅ · DataForSEO ⬜ · Hosting-MCP ⬜ · Formular-Ziel ⬜
+- Hauptziel der Seite: neue Mandanten gewinnen (Anruf, Rückruf, Anfrage)
+- Hosting: bleibt beim bisherigen Anbieter. Laut DNS IONOS (Nameserver ui-dns, IP 217.160.0.14, Apache, Mail über mx00/mx01.ionos.de). Upload als statische Seite.
+- Werkzeuge: impeccable ✅ (v0.1.18, im Projekt unter .claude/) · Playwright ✅ · DataForSEO — (nicht genutzt, Recherche von Hand) · Hosting-MCP ⬜ · Formular-Ziel ⬜
 
 ## Marke
 
@@ -40,10 +40,13 @@ Status: ✅ erledigt · 🔄 läuft · ⬜ offen
 Jede Entscheidung der Person mit Datum, damit sie nicht erneut diskutiert wird.
 
 - 2026-10-30: Projekt ist kaiser-recht.de, nicht architekt-webseite/.
+- 2026-10-30: Hauptziel neue Mandanten. Hosting bleibt, wo es ist. Recherche ohne DataForSEO.
+- 2026-10-30: Technik: statisches HTML, CSS, etwas JavaScript, ohne Baukasten und ohne WordPress.
 
 ## Offene Fragen an die Person
 
-- Hauptziel, Hosting, DataForSEO ja/nein
+- IONOS-Zugang (Kundenlogin oder SFTP) wird in Phase 7 gebraucht; die Person weiß noch nicht, wer ihn hat.
+- Logo, Briefpapier oder andere Markendateien der Kanzlei vorhanden?
 
 ## Update-Ablauf nach dem Livegang
 

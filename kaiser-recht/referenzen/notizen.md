@@ -1,6 +1,6 @@
 # Design-Referenzen
 
-Stand 2026-10-30. Übersicht mit Bildern: `vorschau.html`. Die Auswahl hat die Auftraggeberin an mich delegiert („mach du weiter“). Die Wahl der Farbwelt steht noch aus.
+Stand 2026-10-30. Übersicht mit Bildern: `vorschau.html`. Die Auswahl hat die Auftraggeberin an mich delegiert („mach du weiter“). Gewählt (2026-10-30): Seriosität von Gleiss Lutz als Grundhaltung, Farbwelt B.
 
 ## Gleiss Lutz (gleisslutz.com): Seriosität
 - Übernehmen: ruhiger Serifen-Schriftzug, viel Weiß, Navigation in feinen Versalien, nur eine starke Farbe.

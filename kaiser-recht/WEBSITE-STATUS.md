@@ -8,8 +8,8 @@ Status: ✅ erledigt · 🔄 läuft · ⬜ offen
 |---|---|---|---|
 | 0 | Einrichten | ✅ | 2026-10-30 |
 | 1 | Fundament | ✅ | 2026-10-30 |
-| 2 | Recherche | 🔄 | 2026-10-30 |
-| 3 | Texte | ⬜ | |
+| 2 | Recherche | ✅ | 2026-10-30 |
+| 3 | Texte | 🔄 | 2026-10-30 |
 | 4 | Design-Richtung | ⬜ | |
 | 5 | Bauen | ⬜ | |
 | 6 | Prüfen und Feinschliff | ⬜ | |
@@ -39,6 +39,8 @@ Gemessen am 2026-10-30 von https://www.kaiser-recht.de (`archiv/alte-seite/marke
 
 Nicht Marke: Das Grün #8EC760 kommt nur vom Cookie-Banner.
 
+**Neue Marke ab 2026-10-30 (Farbwelt B, gewählt von der Auftraggeberin):** Petrol #1F4E4A (Buttons, Flächen), Text #22312E, Terrakotta #A4482A (Akzent), Leinen #F4EFE6 (helle Fläche). Überschriften Literata, Fließtext Public Sans. Grundhaltung: Seriosität wie bei Gleiss Lutz, Wärme wie bei Kinfolk, Klarheit der Listen wie bei GOV.UK. Der alte Markenwert oben ist damit abgelöst.
+
 Weitere Funde: Die alte Seite nutzt Matomo mit Cookie-Einwilligung (für Phase 7). Es gibt ein gemeinsames Foto der beiden Anwälte, aber nur 229 × 253 Pixel und sichtbar älter. Die Texte aller Unterseiten liegen in `archiv/alte-seite/`.
 
 ## Entscheidungen
@@ -52,6 +54,7 @@ Jede Entscheidung der Person mit Datum, damit sie nicht erneut diskutiert wird.
 - 2026-10-30: Phase 1 abgenommen. Marineblau ist nicht bindend, eine ganz neue Richtung ist erlaubt. Neuer Schriftzug statt alter Kopfgrafik.
 - 2026-10-30: Neue Fotos kommen später. Bis dahin Platzhalter an festen Bildplätzen.
 - 2026-10-30: Seitenaufbau an mich delegiert: Start, Verkehrsunfall, Bußgeld & Strafrecht, Familienrecht, Arbeitsrecht, Mietrecht, Baurecht, Mediation (eigener großer Bereich), Kanzlei, Kontakt & Anfahrt. Verkehrsrecht wird auf Unfall- und Bußgeldseite aufgeteilt.
+- 2026-10-30: Gewählt: Vorbild Seriosität (Gleiss Lutz) und Farbwelt B warm und menschlich (Petrol, Leinen, Terrakotta; Literata + Public Sans). Phase 2 abgenommen.
 - 2026-10-30: Technik: statisches HTML, CSS, etwas JavaScript, ohne Baukasten und ohne WordPress.
 
 ## Offene Fragen an die Person
@@ -59,10 +62,10 @@ Jede Entscheidung der Person mit Datum, damit sie nicht erneut diskutiert wird.
 - IONOS-Zugang (Kundenlogin oder SFTP) wird in Phase 7 gebraucht; die Person weiß noch nicht, wer ihn hat.
 - Woher kommen die meisten Mandanten (Annahme: Google)?
 - Neue Fotos der Anwälte (kommen, noch kein Termin)
+- Offene Fragen aus texte.md Abschnitt 14 (fachliche Freigabe, Zuständigkeiten, Mediationskosten u. a.)
 - Wer betreut welches Rechtsgebiet? Gibt es Fachanwaltstitel?
 - Online-Fragebogen für Verkehrsunfälle beibehalten?
 - Ohne Tracking (bisher Matomo)?
-- Farbwelt A, B oder C wählen (referenzen/vorschau.html), Empfehlung B
 - ChatGPT/Perplexity: drei Fragen aus recherche/keywords-geo.md Abschnitt 3 stellen und Antworten liefern
 - „Keine Schuld – keine Kosten“ beim Verkehrsunfall: fachlich freigegeben?
 - Was kostet die Mediation, und ist das Informationsgespräch kostenlos?

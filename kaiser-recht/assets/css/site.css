@@ -64,7 +64,7 @@ a { color: var(--petrol); text-underline-offset: .2em; text-decoration-thickness
 a:hover { color: var(--terra-text); }
 :focus-visible { outline: 3px solid var(--terra); outline-offset: 3px; border-radius: 2px; }
 
-h1, h2, h3 { font-family: var(--serif); font-weight: 500; color: inherit; text-wrap: balance; margin: 0; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 500; color: inherit; text-wrap: balance; margin: 0; hyphens: auto; -webkit-hyphens: auto; overflow-wrap: break-word; }
 h1 { font-size: var(--h1); line-height: 1.04; letter-spacing: -.015em; }
 h2 { font-size: var(--h2); line-height: 1.1; letter-spacing: -.01em; }
 h3 { font-size: var(--h3); line-height: 1.25; font-weight: 600; }

@@ -1,0 +1,22 @@
+Versteckte Vorschau der Website Kaiser & Kaiser auf chipundschraube.de
+=====================================================================
+
+1. Bei all-inkl im Dateimanager (KAS) oder per FTP den Web-Ordner von
+   chipundschraube.de öffnen (dort, wo die index-Datei der Seite liegt).
+
+2. kaiser-vorschau-m7q4.zip dort hochladen und entpacken.
+   Es entsteht der Ordner  kaiser-vorschau-m7q4
+
+3. Aufrufen:  https://chipundschraube.de/kaiser-vorschau-m7q4/
+
+4. Empfohlen: Im KAS unter "Tools > Verzeichnisschutz" den Ordner
+   kaiser-vorschau-m7q4 mit Benutzername und Passwort schützen.
+
+Bereits eingebaut:
+- Alle Seiten sind für Suchmaschinen gesperrt (noindex, robots.txt, X-Robots-Tag).
+- Keine Sitemap, kein llms.txt.
+- Das Rückruf-Formular öffnet nur das E-Mail-Programm, es geht nichts an die Kanzlei.
+- Keine Weiterleitung auf kaiser-recht.de.
+
+Wenn die Seite dort nicht richtig aussieht: Bitte prüfen, dass auch der versteckte
+Ordner-Inhalt (.htaccess) mit entpackt wurde und die Unterordner assets/ vollständig sind.

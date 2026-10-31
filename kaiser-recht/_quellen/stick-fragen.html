@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Was wir noch von Ihnen brauchen · Kaiser & Kaiser</title>
+<style>
+@font-face { font-family: "Literata"; src: url("neu/assets/fonts/literata-latin-opsz-normal.woff2") format("woff2-variations"); font-weight: 200 900; }
+@font-face { font-family: "Public Sans"; src: url("neu/assets/fonts/public-sans-latin-wght-normal.woff2") format("woff2-variations"); font-weight: 100 900; }
+:root { --petrol:#1F4E4A; --ink:#22312E; --muted:#4C5753; --terra:#A4482A; --terra-text:#933E22; --leinen:#F4EFE6; --paper:#FBF8F2; --line:#D6CCB9; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--leinen); color: var(--ink); font: 400 18px/1.6 "Public Sans", system-ui, sans-serif; }
+.wrap { max-width: 860px; margin: 0 auto; padding: 48px 32px 80px; }
+.back { display: inline-block; margin-bottom: 32px; color: var(--petrol); font-weight: 600; }
+h1 { font: 500 48px/1.08 "Literata", serif; margin: 0 0 14px; }
+.lead { color: var(--muted); margin: 0 0 40px; }
+h2 { font: 500 26px/1.2 "Literata", serif; margin: 44px 0 14px; }
+ol { list-style: none; counter-reset: q; margin: 0; padding: 0; position: relative; }
+ol::before { content: ""; position: absolute; left: 13px; top: 18px; bottom: 18px; width: 8px; border-radius: 4px; background: var(--petrol); }
+ol.t::before { background: var(--terra); }
+li { counter-increment: q; position: relative; padding: 0 0 20px 58px; }
+li::before { content: counter(q); position: absolute; left: 0; top: 0; width: 34px; height: 34px; border-radius: 50%; background: var(--paper); border: 3.5px solid var(--ink); display: grid; place-items: center; font: 700 14px "Public Sans"; }
+li b { display: block; font-weight: 600; }
+li span { color: var(--muted); }
+.box { margin-top: 44px; background: var(--paper); border-radius: 6px; padding: 24px 28px; box-shadow: 0 0 0 1px var(--line); }
+@media print { .back { display: none; } body { background: #fff; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="START.html">&larr; Zur Übersicht</a>
+  <h1>Was wir noch von Ihnen brauchen</h1>
+  <p class="lead">Damit die neue Website online gehen kann. Diese Seite lässt sich ausdrucken (Strg + P).</p>
+
+  <h2>Fragen an Sie</h2>
+  <ol>
+    <li><b>Wer betreut welches Rechtsgebiet?</b><span>Andreas Kaiser, Claudia Kaiser oder beide.</span></li>
+    <li><b>Gibt es Fachanwaltstitel?</b><span>Auf der bisherigen Seite steht keiner, deshalb nennen wir bisher keinen.</span></li>
+    <li><b>Strafrecht</b><span>Welche Strafsachen übernehmen Sie außer Verkehrsstrafsachen?</span></li>
+    <li><b>Kostenfreie Beratung zu den Gebühren</b><span>Gilt das von der bisherigen Seite weiterhin?</span></li>
+    <li><b>Verkehrsunfall online melden</b><span>Soll der Fragebogen bleiben? Gibt es Fragebogen und Vollmacht als PDF?</span></li>
+    <li><b>Rückruf</b><span>Möchten Sie etwas zur Antwortzeit sagen? Wenn ja, in Ihren eigenen Worten.</span></li>
+    <li><b>Anfahrt</b><span>Gibt es Parkplätze in der Nähe? Ist die Kanzlei mit Aufzug erreichbar?</span></li>
+    <li><b>Persönliche Betreuung</b><span>Stimmt der Satz „Sie sprechen direkt mit Ihrer Anwältin oder Ihrem Anwalt“?</span></li>
+    <li><b>Impressum</b><span>Auf der bisherigen Seite steht „UStId.-Nr.“, die Nummer ist aber eine Steuernummer. Welche Angabe ist richtig?</span></li>
+  </ol>
+
+  <h2>Fragen zur Mediation</h2>
+  <ol class="t">
+    <li><b>Kosten</b><span>Stundensatz oder Pauschale? Wird die Rechnung zwischen den Beteiligten geteilt?</span></li>
+    <li><b>Informationsgespräch</b><span>Ist es kostenlos?</span></li>
+    <li><b>Ablauf</b><span>Stimmen die fünf Schritte: Informationsgespräch, Themen sammeln, Interessen klären, Lösungen entwickeln, Vereinbarung?</span></li>
+    <li><b>Mediationszentrum Harz</b><span>Ist Claudia Kaiser Gründungsmitglied? Soll das auf die Seite?</span></li>
+  </ol>
+
+  <h2>Was wir noch brauchen</h2>
+  <ol>
+    <li><b>Fotos</b><span>Porträts von Andreas und Claudia Kaiser, gern auch von der Kanzlei.</span></li>
+    <li><b>Freigabe der Texte</b><span>Alle Rechtsaussagen auf der Website (zum Beispiel Fristen) prüfen Sie bitte vor der Veröffentlichung. Dafür gibt es eine vollständige Liste.</span></li>
+    <li><b>Zugang zu IONOS</b><span>Für den Upload der neuen Website und eine Absender-Adresse für das Formular.</span></li>
+  </ol>
+
+  <div class="box"><b>Gut zu wissen:</b> Die neue Website setzt keine Cookies und braucht deshalb kein Cookie-Banner. Schriften und Video liegen auf dem eigenen Server, es werden keine Daten an Google oder andere Dienste übertragen.</div>
+</div>
+</body>
+</html>

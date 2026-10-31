@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kaiser & Kaiser · Ihre neue Website</title>
+<style>
+@font-face { font-family: "Literata"; src: url("neu/assets/fonts/literata-latin-opsz-normal.woff2") format("woff2-variations"); font-weight: 200 900; }
+@font-face { font-family: "Public Sans"; src: url("neu/assets/fonts/public-sans-latin-wght-normal.woff2") format("woff2-variations"); font-weight: 100 900; }
+:root { --petrol:#1F4E4A; --petrol-dk:#163A37; --ink:#22312E; --muted:#4C5753; --terra:#A4482A; --terra-text:#933E22; --leinen:#F4EFE6; --paper:#FBF8F2; --line:#D6CCB9; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--leinen); color: var(--ink); font: 400 18px/1.6 "Public Sans", system-ui, sans-serif; }
+::selection { background: var(--terra); color: #fff; }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+header { background: var(--petrol); color: var(--leinen); padding: 44px 0 120px; }
+.brand b { display: block; font: 500 30px/1 "Literata", serif; }
+.brand b span { color: #E9A98E; }
+.brand small { display: block; margin-top: 8px; font: 600 12px/1 "Public Sans"; letter-spacing: .16em; text-transform: uppercase; opacity: .8; }
+h1 { font: 500 clamp(40px, 5vw, 64px)/1.05 "Literata", serif; margin: 64px 0 18px; letter-spacing: -.01em; }
+header p { max-width: 40em; margin: 0; opacity: .9; font-size: 20px; }
+.cards { display: grid; grid-template-columns: 1.25fr 1fr; gap: 28px; margin-top: -80px; }
+.card { display: block; text-decoration: none; color: var(--ink); background: var(--paper); border-radius: 6px; overflow: hidden; box-shadow: 0 30px 60px -30px rgba(22,58,55,.55); transition: translate .25s ease, box-shadow .25s ease; }
+.card:hover { translate: 0 -4px; box-shadow: 0 36px 70px -30px rgba(22,58,55,.65); }
+.card img { display: block; width: 100%; aspect-ratio: 1200 / 630; object-fit: cover; object-position: top center; border-bottom: 1px solid var(--line); }
+.card .t { padding: 24px 28px 28px; }
+.card h2 { font: 500 32px/1.15 "Literata", serif; margin: 0 0 8px; }
+.card p { margin: 0 0 18px; color: var(--muted); }
+.go { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; background: var(--petrol); color: #fff; padding: 14px 20px; border-radius: 3px; }
+.card--alt .go { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--ink); }
+.card:hover .go { background: var(--petrol-dk); color: #fff; }
+.more { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 28px 0 0; }
+.small { display: grid; grid-template-columns: 200px 1fr; align-items: center; gap: 22px; background: var(--paper); border-radius: 6px; padding: 18px; text-decoration: none; color: var(--ink); box-shadow: 0 0 0 1px var(--line); transition: box-shadow .2s ease; }
+.small:hover { box-shadow: 0 0 0 2px var(--terra); }
+.small img { width: 100%; border-radius: 3px; display: block; }
+.small b { display: block; font: 600 22px/1.25 "Literata", serif; }
+.small span { color: var(--muted); font-size: 16px; }
+.small--q { grid-template-columns: 64px 1fr; }
+.small--q i { width: 64px; height: 64px; border-radius: 50%; border: 6px solid var(--petrol); display: grid; place-items: center; font: 700 26px "Literata"; font-style: normal; color: var(--petrol); }
+.hint { margin: 56px 0 64px; padding-top: 28px; border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; font-size: 16px; color: var(--muted); }
+.hint b { display: block; color: var(--ink); font-weight: 600; margin-bottom: 4px; }
+kbd { font: 600 14px "Public Sans"; background: #fff; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px; padding: 1px 7px; color: var(--ink); }
+@media (max-width: 860px) { .cards, .more, .hint { grid-template-columns: 1fr; } .small { grid-template-columns: 120px 1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand"><b>Kaiser <span>&amp;</span> Kaiser</b><small>Rechtsanwälte · Mediation</small></div>
+    <h1>Ihre neue Website</h1>
+    <p>Sehr geehrte Frau Kaiser, sehr geehrter Herr Kaiser, hier können Sie sich in Ruhe die neue Website ansehen und mit der bisherigen vergleichen. Alles läuft direkt von diesem Stick, ohne Internet.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="cards">
+    <a class="card" href="neu/index.html">
+      <img src="neu/assets/img/og-image.png" alt="">
+      <div class="t"><h2>Die neue Website</h2><p>Zwei Wege aus einem Konflikt: vor Gericht oder in der Mediation. Mit Seiten für jedes Rechtsgebiet, Rückruf-Formular und Erklärvideo.</p><span class="go">Neue Website öffnen &rarr;</span></div>
+    </a>
+    <a class="card card--alt" href="alt/index.html">
+      <img src="alt-vorschau.png" alt="">
+      <div class="t"><h2>Die bisherige Website</h2><p>Zum Vergleich: kaiser-recht.de, wie sie heute online ist.</p><span class="go">Bisherige Website öffnen &rarr;</span></div>
+    </a>
+  </div>
+
+  <div class="more">
+    <a class="small" href="neu/mediation.html#video">
+      <img src="neu/assets/img/mediation-poster-960.jpg" alt="">
+      <span><b>Erklärvideo Mediation</b><span>60 Sekunden, ohne Ton</span></span>
+    </a>
+    <a class="small small--q" href="Fragen.html">
+      <i>?</i>
+      <span><b>Was wir noch von Ihnen brauchen</b><span>Offene Fragen und Angaben zum Prüfen</span></span>
+    </a>
+  </div>
+
+  <div class="hint">
+    <div><b>Zurück zu dieser Übersicht</b>Unten links auf jeder Seite: „Zur Übersicht“.</div>
+    <div><b>So sieht es auf dem Handy aus</b>Taste <kbd>F12</kbd> drücken und oben das Handy-Symbol anklicken.</div>
+    <div><b>Ein Entwurf</b>Texte und Angaben sind noch nicht freigegeben. Fotos folgen. Das Formular sendet hier nichts.</div>
+  </div>
+</main>
+</body>
+</html>

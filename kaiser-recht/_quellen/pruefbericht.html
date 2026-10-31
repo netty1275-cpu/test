@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Prüfbericht kaiser-recht.de · 31. Oktober 2026</title>
+<style>
+@font-face { font-family: "Literata"; src: url("../assets/fonts/literata-latin-opsz-normal.woff2") format("woff2-variations"); font-weight: 200 900; }
+@font-face { font-family: "Public Sans"; src: url("../assets/fonts/public-sans-latin-wght-normal.woff2") format("woff2-variations"); font-weight: 100 900; }
+@page { size: A4; margin: 18mm 18mm 20mm; }
+:root { --petrol:#1F4E4A; --ink:#22312E; --muted:#4C5753; --terra-text:#933E22; --leinen:#F4EFE6; --paper:#FBF8F2; --line:#D6CCB9; }
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--ink); font: 400 10.5pt/1.55 "Public Sans", sans-serif; }
+h1, h2, h3 { font-family: "Literata", serif; font-weight: 500; color: var(--petrol); margin: 0; }
+h1 { font-size: 30pt; line-height: 1.08; margin: 0 0 8pt; }
+h2 { font-size: 16pt; margin: 22pt 0 8pt; page-break-after: avoid; }
+h3 { font-size: 11.5pt; font-weight: 600; margin: 12pt 0 4pt; page-break-after: avoid; }
+p { margin: 0 0 7pt; }
+.brand { font: 500 14pt "Literata"; color: var(--petrol); margin-bottom: 36pt; }
+.brand small { display: block; font: 600 7.5pt "Public Sans"; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-top: 3pt; }
+.sub { color: var(--muted); font-size: 11.5pt; margin-bottom: 18pt; }
+.box { background: var(--paper); border: 1px solid var(--line); border-radius: 4px; padding: 10pt 12pt; margin: 10pt 0; page-break-inside: avoid; }
+table { width: 100%; border-collapse: collapse; margin: 6pt 0 10pt; font-size: 9.5pt; page-break-inside: auto; }
+th, td { text-align: left; vertical-align: top; padding: 5pt 6pt; border-bottom: 1px solid var(--line); }
+th { font-weight: 600; color: var(--muted); border-bottom: 1.5px solid var(--ink); }
+tr { page-break-inside: avoid; }
+td.n { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.ok { color: var(--petrol); font-weight: 600; }
+.bad { color: var(--terra-text); font-weight: 600; }
+ul { margin: 0 0 8pt; padding-left: 14pt; }
+li { margin-bottom: 3pt; }
+.shots { display: flex; gap: 14pt; align-items: flex-start; margin: 8pt 0; page-break-inside: avoid; }
+.shots figure { margin: 0; }
+.shots img { border: 1px solid var(--line); display: block; }
+.shots figcaption { font-size: 8.5pt; color: var(--muted); margin-top: 4pt; max-width: 200pt; }
+.small { font-size: 8.5pt; color: var(--muted); }
+.break { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<div class="brand">Kaiser &amp; Kaiser<small>Rechtsanwälte · Mediation</small></div>
+<h1>Prüfbericht zur bisherigen Website</h1>
+<p class="sub">www.kaiser-recht.de · gemessen am 31. Oktober 2026</p>
+
+<div class="box">
+<p><b>Kurz gesagt:</b> Die bisherige Website lädt schnell, und die Cookie-Einwilligung funktioniert. Auf dem Handy ist sie aber kaum lesbar, sie leitet nicht auf eine verschlüsselte Verbindung um, und Google findet wenig, was es auswerten kann. Seit Dezember 2020 wurde die Startseite laut Server nicht mehr geändert.</p>
+</div>
+
+<h3>So wurde geprüft</h3>
+<p>Alle Angaben in diesem Bericht wurden am 31. Oktober 2026 selbst gemessen: Abruf der Seiten und Server-Antworten, Test im Browser auf Computer und Handy (390 Pixel breit), Auswertung des Quelltexts der Startseite und Messung mit Google Lighthouse (Handy). Ergänzt um eine Recherche vom 30. Oktober 2026 zur Auffindbarkeit. Was nicht gemessen wurde, steht nicht im Bericht.</p>
+
+<h2>Was gut ist</h2>
+<ul>
+  <li><span class="ok">Schnell:</span> Lighthouse bewertet die Ladegeschwindigkeit mit 98 von 100.</li>
+  <li><span class="ok">Cookie-Einwilligung funktioniert:</span> Beim ersten Besuch erscheint ein Hinweis mit „Essenziell“ und „Alle akzeptieren“. Im Test wurden vor der Zustimmung keine Cookies gesetzt und keine Daten an fremde Server geschickt, auch nicht an das Statistik-Programm Matomo.</li>
+  <li><span class="ok">Inhalte vorhanden:</span> Alle Rechtsgebiete, die Mediation, Werdegänge mit Fotos, Bürozeiten, Anfahrt und Impressum.</li>
+  <li><span class="ok">Kein Baukasten-System:</span> Die Seite besteht aus einfachen Dateien. Es gibt keine Datenbank und kein System, das ständig Sicherheits-Updates braucht.</li>
+</ul>
+
+<h2 class="break">Was verbessert werden sollte</h2>
+
+<h3>Handy</h3>
+<table>
+  <tr><th style="width:42%">Befund</th><th>Gemessen</th><th style="width:28%">Folge</th></tr>
+  <tr><td>Keine Anpassung an kleine Bildschirme</td><td>Kein „Viewport“-Eintrag im Quelltext. Die Seite ist auf dem Handy 980 Pixel breit und wird verkleinert dargestellt.</td><td>Schrift sehr klein, Menü kaum zu treffen. Die meisten Mandanten suchen heute am Handy.</td></tr>
+</table>
+<div class="shots">
+  <figure><img src="../archiv/alte-seite-handy-2026-10-31.png" width="200" alt=""><figcaption>Startseite auf einem Handy (390 Pixel breit), 31.10.2026. Der Cookie-Hinweis zeigt fehlerhafte Umlaute („gewÃ¤hrleisten“).</figcaption></figure>
+</div>
+
+<h3>Sicherheit</h3>
+<table>
+  <tr><th style="width:42%">Befund</th><th>Gemessen</th><th style="width:28%">Folge</th></tr>
+  <tr><td>Keine Umleitung auf die verschlüsselte Adresse</td><td>http://www.kaiser-recht.de liefert die Seite direkt aus (Status 200), statt auf https:// umzuleiten.</td><td>Besucher, die die Adresse ohne https eintippen, surfen unverschlüsselt.</td></tr>
+  <tr><td>Keine Sicherheits-Header</td><td>Der Server sendet keine der üblichen Schutzangaben (unter anderem Strict-Transport-Security, X-Frame-Options, X-Content-Type-Options, Content-Security-Policy, Referrer-Policy).</td><td>Fehlender Grundschutz, den der Server mit wenigen Zeilen mitliefern könnte.</td></tr>
+</table>
+
+<h3>Auffindbarkeit bei Google und KI-Suchen</h3>
+<table>
+  <tr><th style="width:42%">Befund</th><th>Gemessen</th></tr>
+  <tr><td>Keine robots.txt und keine sitemap.xml</td><td>Beide Adressen liefern „nicht gefunden“ (404).</td></tr>
+  <tr><td>Keine strukturierten Daten</td><td>Keine Angaben für Google zu Kanzlei, Adresse und Öffnungszeiten (schema.org), keine Vorschau-Angaben für WhatsApp, Facebook und LinkedIn (Open Graph), keine Angabe der Hauptadresse (canonical).</td></tr>
+  <tr><td>Tippfehler in der Google-Beschreibung</td><td>Die Beschreibung, die Google anzeigt, beginnt mit „Rechtsanwalskanzlei“.</td></tr>
+  <tr><td>Texte als Bild</td><td>Menü und Kopfzeile mit den Namen bestehen aus Grafiken. 16 von 18 Bildern auf der Startseite haben keinen Alternativtext. Diese Inhalte kann Google nicht lesen. In der Kopfgrafik steht „Rechtanwaltskanzlei“.</td></tr>
+  <tr><td>Überschrift ohne Inhalt</td><td>Die Startseite beginnt mit „Willkommen auf unserer Homepage“, statt mit dem, wonach Mandanten suchen (zum Beispiel Rechtsgebiet und Ort).</td></tr>
+  <tr><td>KI-Suchen kennen die Kanzlei kaum</td><td>Recherche vom 30.10.2026 mit einer KI-Websuche: Auf Fragen wie „Unfall in Tempelhof, welcher Anwalt?“ oder „Familienmediation in Mariendorf?“ wurde die Kanzlei nicht genannt. Auf die direkte Frage nach der Kanzlei stützte sich die Antwort auf Branchenverzeichnisse und nannte dort angezeigte Bewertungen (3,0 von 5 bei 2 Bewertungen, 3,8 bei 16 Bewertungen).</td></tr>
+</table>
+
+<h3>Technik und Pflege</h3>
+<table>
+  <tr><th style="width:42%">Befund</th><th>Gemessen</th></tr>
+  <tr><td>Veraltetes Format</td><td>HTML 4.0 Transitional mit Zeichensatz ISO-8859-1. Folge: fehlerhafte Umlaute an einzelnen Stellen, zum Beispiel im Cookie-Hinweis.</td></tr>
+  <tr><td>Lange nicht geändert</td><td>Letzte Änderung der Startseite laut Server: 16. Dezember 2020.</td></tr>
+  <tr><td>Kein Website-Symbol</td><td>Kein Symbol im Browser-Tab (favicon.ico liefert 404).</td></tr>
+</table>
+
+<h2>Messung mit Google Lighthouse</h2>
+<p>Lighthouse ist ein Prüfwerkzeug von Google. Es bewertet vier Bereiche mit je 0 bis 100 Punkten, gemessen für Handys.</p>
+<table>
+  <tr><th>Bereich</th><th>Bisherige Website</th><th>Neue Website</th></tr>
+  <tr><td>Leistung (Ladezeit)</td><td class="n">98</td><td class="n">99</td></tr>
+  <tr><td>Barrierefreiheit</td><td class="n">75</td><td class="n">100</td></tr>
+  <tr><td>Best Practices</td><td class="n">82</td><td class="n">100</td></tr>
+  <tr><td>Suchmaschinen (SEO)</td><td class="n">91</td><td class="n">100</td></tr>
+</table>
+<p class="small">Bisherige Website: gemessen live am 31.10.2026. Neue Website: gemessen am 30.10.2026 auf dem Entwicklungsrechner, vor dem Hochladen. Die Werte schwanken je nach Messung um einige Punkte.</p>
+
+<h2>Was die neue Website davon löst</h2>
+<ul>
+  <li>Für Handys gebaut, mit Menü und fester Anruf-Leiste.</li>
+  <li>Eine eigene Seite für jedes Rechtsgebiet und für die Mediation, mit Rechtsgebiet und Ort in den Überschriften.</li>
+  <li>Rückruf-Formular statt nur E-Mail-Link.</li>
+  <li>Strukturierte Daten für Google, Vorschaubild für WhatsApp und LinkedIn, sitemap.xml, robots.txt und ein Kurzprofil für KI-Suchen.</li>
+  <li>Keine Cookies, kein Tracking, Schriften auf dem eigenen Server. Damit ist kein Cookie-Hinweis nötig.</li>
+  <li>Moderner Zeichensatz (UTF-8), alle Umlaute korrekt, Website-Symbol im Browser-Tab.</li>
+  <li>Umleitung auf https:// und Sicherheits-Header (X-Frame-Options, X-Content-Type-Options, Referrer-Policy) sind vorbereitet. Sie wirken nach dem Hochladen auf den Server. Strict-Transport-Security und Content-Security-Policy können dabei ergänzt werden.</li>
+</ul>
+
+<div class="box small" style="margin-top:18pt">Dieser Bericht beschreibt technische Messungen und ist keine Rechtsberatung. Grundlage: eigene Messungen am 31. Oktober 2026 und Recherche am 30. Oktober 2026.</div>
+
+</body>
+</html>

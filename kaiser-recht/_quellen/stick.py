@@ -53,7 +53,7 @@ for page in glob.glob(os.path.join(OUT, "**", "*.html"), recursive=True):
 shutil.copy(os.path.join(ROOT, "_quellen", "stick-start.html"), os.path.join(OUT, "START.html"))
 shutil.copy(os.path.join(ROOT, "archiv", "alte-seite", "startseite.png"), os.path.join(OUT, "alt-vorschau.png"))
 shutil.copy(os.path.join(ROOT, "archiv", "entwurf-august-vorschau.png"), os.path.join(OUT, "entwurf-vorschau.png"))
-shutil.copy(os.path.join(ROOT, "archiv", "audit-kaiser-recht-2026-10.pdf"), os.path.join(OUT, "Pruefbericht-bisherige-Website.pdf"))
+shutil.copy(os.path.join(ROOT, "archiv", "Pruefbericht-kaiser-recht-2026-10-31.pdf"), os.path.join(OUT, "Pruefbericht-bisherige-Website.pdf"))
 shutil.copy(os.path.join(ROOT, "_quellen", "stick-fragen.html"), os.path.join(OUT, "Fragen.html"))
 
 zpath = os.path.join(ROOT, "stick", "Kaiser-Website.zip")

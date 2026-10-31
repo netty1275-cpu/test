@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'><rect width='44' height='44' rx='4' fill='%230b0c0c'/><path d='M9 11 L25 22 L9 33' fill='none' stroke='%23f0ebe4' stroke-width='3' stroke-linecap='square'/><path d='M35 11 L19 22 L35 33' fill='none' stroke='%23b4623f' stroke-width='3' stroke-linecap='square'/></svg>">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mediation in Berlin – Claudia Kaiser, Master of Mediation</title>
+<meta name="description" content="Praxis für Mediation in Berlin-Mariendorf. Außergerichtliche Konfliktlösung bei Familien-, Nachbarschafts-, Betriebs- und Schulkonflikten. Claudia Kaiser, Rechtsanwältin und Master of Mediation.">
+<style>
+/* =========================================================
+   Kaiser & Kaiser — gemeinsames Stylesheet (Variante E)
+   Wird von allen Seiten eingebunden. Seitenspezifische
+   Ergänzungen stehen direkt in der jeweiligen HTML-Datei.
+
+   SCHRIFTEN: lokal eingebunden, keine Verbindung zu Google.
+   Die fünf .woff2-Dateien gehören in den Unterordner fonts/.
+   Siehe fonts/ANLEITUNG.md — bis dahin greifen die
+   System-Ersatzschriften unten automatisch.
+   ========================================================= */
+
+/* Schriften: im Entwurfspaket bewusst weggelassen,
+   es greifen die Schriften des jeweiligen Rechners. */
+:root{
+  --black:#0b0c0c;
+  --char:#141617;
+  --char-2:#1b1e1f;
+  --terra:#b4623f;
+  --terra-l:#d08659;
+  --cream:#f0ebe4;
+  --grey:#9a9b99;
+  --grey-2:#b9b8b4;
+  --line:rgba(240,235,228,.14);
+  --line-2:rgba(240,235,228,.08);
+
+  /* Typo-Skala */
+  --t-display:clamp(44px,7.4vw,104px);
+  --t-h2:clamp(30px,4vw,56px);
+  --t-h3:clamp(20px,1.7vw,26px);
+  --t-lead:clamp(16.5px,1.25vw,19px);
+  --t-body:16px;
+
+  /* Rhythmus */
+  --sp-sec:clamp(76px,10vw,140px);
+  --gut:clamp(28px,5vw,80px);
+  --pad:clamp(20px,4vw,48px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--black);color:var(--cream);
+  font-size:var(--t-body);line-height:1.72;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.lock{overflow:hidden}
+h1,h2,h3,.serif{font-family:'Instrument Serif',Georgia,Cambria,'Times New Roman',serif;font-weight:400;line-height:1.06;letter-spacing:-.012em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--terra-l);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:var(--pad)}
+.tag{font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--terra-l);font-weight:500;display:block}
+.skip{position:absolute;left:-9999px;top:0;background:var(--terra);color:#fff;padding:12px 18px;z-index:200}
+.skip:focus{left:12px;top:12px}
+
+/* ---------- Header ---------- */
+header{position:fixed;inset:0 0 auto 0;z-index:100;transition:background .35s,border-color .35s;border-bottom:1px solid transparent}
+header.solid{background:rgba(11,12,12,.9);backdrop-filter:blur(16px);border-bottom-color:var(--line-2)}
+.head{display:flex;justify-content:space-between;align-items:center;height:76px;max-width:1220px;margin:0 auto;padding-inline:var(--pad)}
+.brand{font-family:'Instrument Serif',Georgia,Cambria,serif;font-size:21px;letter-spacing:.015em;white-space:nowrap}
+.brand em{font-style:italic;color:var(--terra-l)}
+.brand small{display:block;font-family:'Inter',system-ui,Arial,sans-serif;font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--grey);margin-top:3px}
+.nav-d{display:flex;align-items:center;gap:clamp(18px,2.2vw,32px);font-size:14px;color:var(--grey-2)}
+.nav-d a{position:relative;padding:6px 0;transition:color .2s}
+.nav-d a::after{content:"";position:absolute;left:0;right:100%;bottom:2px;height:1px;background:var(--terra-l);transition:right .3s}
+.nav-d a:hover{color:var(--cream)}
+.nav-d a:hover::after{right:0}
+.call{border:1px solid var(--terra);color:var(--terra-l);padding:9px 20px;font-size:13.5px;transition:.25s;white-space:nowrap}
+.call:hover{background:var(--terra);color:#fff}
+.call::after{display:none}
+.burger{display:none;width:42px;height:42px;border:1px solid var(--line);background:none;cursor:pointer;position:relative}
+.burger i{position:absolute;left:12px;right:12px;height:1px;background:var(--cream);transition:.3s}
+.burger i:nth-child(1){top:16px}.burger i:nth-child(2){top:21px}.burger i:nth-child(3){top:26px}
+body.menu .burger i:nth-child(1){transform:translateY(5px) rotate(45deg)}
+body.menu .burger i:nth-child(2){opacity:0}
+body.menu .burger i:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+.nav-m{position:fixed;inset:0;background:var(--black);z-index:95;display:flex;flex-direction:column;justify-content:center;
+  padding:0 var(--pad);opacity:0;visibility:hidden;transition:.35s}
+body.menu .nav-m{opacity:1;visibility:visible}
+.nav-m a{font-family:'Instrument Serif',Georgia,Cambria,serif;font-size:clamp(28px,8vw,44px);padding:14px 0;border-bottom:1px solid var(--line-2)}
+.nav-m .m-tel{font-family:'Inter',system-ui,Arial,sans-serif;font-size:15px;color:var(--terra-l);border:0;margin-top:32px;letter-spacing:.02em}
+
+/* Sprungziele: der feste Kopf darf die Überschrift nicht verdecken */
+h2[id],h3[id]{scroll-margin-top:96px}
+@media(max-width:900px){section[id]{scroll-margin-top:90px}}
+
+/* ---------- Hero ---------- */
+.hero{min-height:100svh;position:relative;display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.hero-media{position:absolute;inset:0;z-index:-2;
+  background:
+    linear-gradient(168deg,#0a0b0b 0%,#070808 46%,#040505 100%)}
+.hero-media::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(11,12,12,.72) 0%,rgba(11,12,12,.12) 34%,rgba(11,12,12,.55) 74%,rgba(11,12,12,.96) 100%)}
+.grain{position:absolute;inset:-50%;z-index:-1;opacity:.07;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+  animation:none}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-2%)}80%{transform:translate(3%,1%)}100%{transform:translate(0,0)}}
+.ph-note{position:absolute;top:96px;right:var(--pad);z-index:2;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(240,235,228,.4);border:1px solid var(--line-2);padding:6px 10px}
+.hero-in{position:relative;z-index:2;width:100%;padding-bottom:clamp(44px,6vw,80px);padding-top:120px}
+.hero h1{font-size:var(--t-display);max-width:14ch;margin-top:22px;text-wrap:balance}
+.hero h1 em{font-style:italic;color:var(--terra-l)}
+.hero-row{display:grid;grid-template-columns:minmax(0,1.35fr) auto;gap:var(--gut);align-items:end;
+  margin-top:clamp(30px,4vw,48px);padding-top:clamp(24px,3vw,34px);border-top:1px solid var(--line)}
+.hero-row p{max-width:48ch;color:var(--grey-2);font-weight:300;font-size:var(--t-lead)}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:15px 28px;font-size:14.5px;transition:.25s;white-space:nowrap;letter-spacing:.01em}
+.btn-fill{background:var(--terra);color:#fff}
+.btn-fill:hover{background:var(--terra-l)}
+.btn-line{border:1px solid rgba(240,235,228,.26)}
+.btn-line:hover{border-color:var(--cream);background:rgba(240,235,228,.06)}
+.scroll-hint{position:absolute;left:var(--pad);bottom:20px;z-index:3;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--grey);display:flex;align-items:center;gap:10px}
+.scroll-hint i{display:block;width:30px;height:1px;background:var(--terra);transform-origin:left;animation:pulse 2.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scaleX(.3);opacity:.5}50%{transform:scaleX(1);opacity:1}}
+
+/* ---------- Reveal ---------- */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.7,.25,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none !important;transition-duration:.01ms !important;scroll-behavior:auto}
+  .rv{opacity:1;transform:none}
+}
+
+/* ---------- Statement ---------- */
+.statement{padding-block:var(--sp-sec);background:var(--char);border-top:1px solid var(--line-2)}
+.statement .big{font-family:'Instrument Serif',Georgia,Cambria,serif;font-size:clamp(27px,3.5vw,48px);line-height:1.24;max-width:19ch;margin-top:22px;text-wrap:balance}
+.statement .big em{font-style:italic;color:var(--terra-l)}
+.statement .cols{display:grid;grid-template-columns:1fr 1fr;gap:var(--gut);margin-top:clamp(34px,4vw,52px)}
+.statement p{color:var(--grey);font-weight:300;font-size:16.5px;line-height:1.82;max-width:46ch}
+
+/* ---------- Rechtsgebiete ---------- */
+.areas{padding-block:var(--sp-sec)}
+.areas .grid{display:grid;grid-template-columns:minmax(230px,.72fr) minmax(0,1.28fr);gap:var(--gut);align-items:start}
+.areas .sticky{position:sticky;top:118px}
+.areas h2{font-size:var(--t-h2);margin:20px 0 18px;text-wrap:balance}
+.areas .sticky p{color:var(--grey);font-weight:300;font-size:15.5px;max-width:32ch}
+.areas .sticky .count{margin-top:26px;padding-top:20px;border-top:1px solid var(--line-2);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey)}
+.a-item{border-top:1px solid var(--line-2);padding:clamp(22px,2.4vw,32px) 0;display:grid;grid-template-columns:46px minmax(0,1fr) 24px;gap:20px;
+  align-items:start;transition:background .3s,padding .3s;position:relative}
+.a-item:last-child{border-bottom:1px solid var(--line-2)}
+.a-item .n{font-family:'Instrument Serif',Georgia,Cambria,serif;font-size:15px;color:var(--terra);padding-top:5px}
+.a-item h3{font-size:var(--t-h3);margin-bottom:7px}
+.a-item p{color:var(--grey);font-weight:300;font-size:15.5px;max-width:48ch}
+.a-item .arw{color:var(--terra);opacity:0;transform:translateX(-6px);transition:.3s;justify-self:end;padding-top:4px}
+.a-item:hover{background:linear-gradient(90deg,rgba(180,98,63,.09),transparent 72%);padding-left:14px}
+.a-item:hover .arw{opacity:1;transform:none}
+
+/* ---------- Mediation (heller Bruch) ---------- */
+.med{background:var(--cream);color:#191919;padding-block:var(--sp-sec)}
+.med .tag{color:var(--terra)}
+.med .top{display:grid;grid-template-columns:1fr 1fr;gap:var(--gut);align-items:end;margin-bottom:clamp(44px,5vw,72px)}
+.med h2{font-size:var(--t-h2);color:#121212;margin-top:20px;max-width:15ch;text-wrap:balance}
+.med h2 em{font-style:italic;color:var(--terra)}
+.med .top p{color:#5c5a56;font-weight:300;font-size:var(--t-lead);max-width:48ch}
+/* Mediatorin-Karte auf der Startseite */
+.med-person{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:clamp(24px,3vw,44px);
+  align-items:center;border-top:1px solid #d6cec3;border-bottom:1px solid #d6cec3;padding-block:clamp(28px,3.4vw,44px)}
+.med-person .mp-ph{aspect-ratio:9/10;position:relative;overflow:hidden;background:linear-gradient(158deg,#cdc4b7,#a9a094);filter:grayscale(1);transition:filter .6s}
+.med-person:hover .mp-ph{filter:grayscale(0)}
+.med-person .mp-ph::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 58% 26%,rgba(180,98,63,.4),transparent 68%)}
+.med-person .mp-ph .lbl{position:absolute;left:14px;bottom:12px;z-index:2;font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(25,25,25,.5)}
+.med-person .mp-name{font-family:'Instrument Serif',Georgia,Cambria,serif;font-size:clamp(24px,2.6vw,34px);color:#121212;line-height:1.1}
+.med-person .mp-qual{display:inline-block;border:1px solid var(--terra);color:var(--terra);padding:6px 14px;
+  font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;margin:12px 0 18px}
+.med-person p{font-family:'Instrument Serif',Georgia,Cambria,serif;font-size:clamp(18px,1.9vw,24px);
+  line-height:1.42;color:#3a3833;max-width:44ch}
+
+/* Einsatzbereiche als Kacheln */
+.med-fields{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:#d6cec3;margin-top:clamp(30px,3.4vw,48px);border:1px solid #d6cec3}
+.med-fields a{background:var(--cream);padding:24px 20px 26px;transition:background .25s}
+.med-fields a:hover{background:#e6ded2}
+.med-fields h3{font-family:'Inter',system-ui,Arial,sans-serif;font-size:15.5px;font-weight:500;
+  color:#121212;letter-spacing:0;margin-bottom:8px;line-height:1.3}
+.med-fields span{display:block;font-size:13.5px;color:#6b6862;font-weight:300;line-height:1.6}
+.med-foot{margin-top:clamp(36px,4vw,56px);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;
+  padding-top:26px;border-top:1px solid #d6cec3}
+.med-foot p{color:#5c5a56;font-weight:300;max-width:52ch;font-size:15.5px}
+.btn-dark{background:#191919;color:var(--cream);padding:15px 28px;font-size:14.5px;transition:.25s}
+.btn-dark:hover{background:var(--terra);color:#fff}
+
+/* ---------- Team ---------- */
+.team{padding-block:var(--sp-sec);background:var(--char)}
+.team h2{font-size:var(--t-h2);margin-top:18px}
+.team .grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--gut);margin-top:clamp(38px,4vw,58px)}
+.pc .ph{aspect-ratio:4/4.5;position:relative;overflow:hidden;background:linear-gradient(158deg,#2a2d2f,#151617);filter:grayscale(1) contrast(1.03);transition:filter .6s}
+.pc:hover .ph{filter:grayscale(0)}
+.pc .ph::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 58% 28%,rgba(180,98,63,.36),transparent 66%)}
+.pc .ph .lbl{position:absolute;left:20px;bottom:18px;z-index:2;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(240,235,228,.45)}
+.pc .meta{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-top:18px;margin-top:20px;border-top:1px solid var(--line-2);flex-wrap:wrap}
+.pc h3{font-size:clamp(22px,2.2vw,28px)}
+.pc .role{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--terra-l);white-space:nowrap}
+.pc p{color:var(--grey);font-weight:300;font-size:15.5px;margin-top:12px;max-width:42ch}
+
+/* ---------- Kontakt ---------- */
+.kontakt{padding-block:var(--sp-sec);position:relative;overflow:hidden}
+.kontakt::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 66% 58% at 84% 26%,rgba(180,98,63,.24),transparent 64%)}
+.kontakt .wrap{position:relative;z-index:2}
+.kontakt h2{font-size:clamp(34px,5vw,74px);margin:18px 0 clamp(34px,4vw,48px);max-width:13ch;text-wrap:balance}
+.k-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--gut);align-items:start}
+.big-tel{font-family:'Instrument Serif',Georgia,Cambria,serif;font-size:clamp(28px,3.4vw,44px);color:var(--terra-l);display:inline-block;
+  margin-bottom:30px;border-bottom:1px solid rgba(208,134,89,.35);transition:.25s;letter-spacing:-.01em}
+.big-tel:hover{color:var(--cream);border-color:var(--cream)}
+.kv{display:grid;grid-template-columns:88px 1fr;row-gap:12px;font-size:15.5px;color:var(--grey-2)}
+.kv dt{font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--grey);padding-top:6px}
+.f{margin-bottom:22px}
+.f label{display:block;font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--grey);margin-bottom:8px}
+.f input,.f textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);padding:11px 0;
+  color:var(--cream);font-family:inherit;font-size:16.5px;transition:border-color .25s}
+.f input::placeholder,.f textarea::placeholder{color:rgba(240,235,228,.25)}
+.f input:focus,.f textarea:focus{outline:none;border-color:var(--terra)}
+.consent{display:flex;gap:11px;align-items:flex-start;font-size:13px;color:var(--grey);margin:6px 0 24px;line-height:1.6}
+.consent input{width:16px;height:16px;margin-top:4px;accent-color:var(--terra);flex-shrink:0}
+.consent a{border-bottom:1px solid var(--line)}
+.send{background:var(--terra);color:#fff;border:0;padding:16px 36px;font-family:inherit;font-size:15px;cursor:pointer;transition:.25s}
+.send:hover{background:var(--cream);color:var(--black)}
+
+/* ---------- Sticky Anrufleiste (mobil) ---------- */
+.mobile-bar{position:fixed;left:0;right:0;bottom:0;z-index:90;display:none;grid-template-columns:1fr 1fr;
+  background:rgba(11,12,12,.94);backdrop-filter:blur(14px);border-top:1px solid var(--line-2)}
+.mobile-bar a{padding:15px;text-align:center;font-size:14px}
+.mobile-bar a:first-child{border-right:1px solid var(--line-2);color:var(--terra-l)}
+
+footer{border-top:1px solid var(--line-2);padding:30px 0 42px;font-size:13.5px;color:var(--grey)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+footer a:hover{color:var(--terra-l)}
+footer .links{display:flex;gap:22px;flex-wrap:wrap}
+
+@media(max-width:1000px){
+  .nav-d{display:none}.burger{display:block}
+  .hero-row,.statement .cols,.areas .grid,.med .top,.team .grid,.k-grid{grid-template-columns:1fr}
+  .areas .sticky{position:static}
+  .mobile-bar{display:grid}
+  footer{padding-bottom:88px}
+  .scroll-hint{display:none}
+  .hero{min-height:auto}
+  .hero-in{padding-top:132px}
+  .med-fields{grid-template-columns:1fr 1fr}
+}
+@media(max-width:620px){
+  .med-fields{grid-template-columns:1fr}
+  .med-person{grid-template-columns:1fr;gap:20px}
+  .med-person .mp-ph{max-width:180px}
+  .a-item{grid-template-columns:34px minmax(0,1fr);gap:14px}
+  .a-item .arw{display:none}
+  .kv{grid-template-columns:1fr;row-gap:4px}
+  .kv dt{padding-top:12px}
+}
+</style>
+<style>
+/* ---------- Nur für diese Seite ---------- */
+.sub-hero{position:relative;overflow:hidden;isolation:isolate;padding-top:150px;padding-bottom:clamp(52px,6vw,84px)}
+.sub-hero .hero-media{position:absolute;inset:0;z-index:-2;
+  background:
+    linear-gradient(168deg,#0a0b0b 0%,#070808 52%,#040505 100%)}
+.sub-hero .hero-media::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(11,12,12,.7) 0%,rgba(11,12,12,.2) 40%,rgba(11,12,12,.94) 100%)}
+.crumb{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);margin-bottom:24px}
+.crumb a{border-bottom:1px solid var(--line)}
+.crumb a:hover{color:var(--terra-l)}
+.sub-hero h1{font-size:clamp(38px,6.4vw,86px);max-width:15ch;margin-top:18px;text-wrap:balance}
+.sub-hero h1 em{font-style:italic;color:var(--terra-l)}
+.sub-hero .lead{max-width:52ch;color:var(--grey-2);font-weight:300;font-size:var(--t-lead);
+  margin-top:clamp(26px,3vw,38px);padding-top:clamp(22px,2.6vw,30px);border-top:1px solid var(--line)}
+
+/* Person-Karte */
+.mediator{background:var(--char);padding-block:var(--sp-sec);border-top:1px solid var(--line-2)}
+.mediator .grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:var(--gut);align-items:center}
+.mediator .ph{aspect-ratio:4/4.5;position:relative;overflow:hidden;
+  background:linear-gradient(158deg,#2a2d2f,#151617);filter:grayscale(1);transition:filter .6s}
+.mediator .grid:hover .ph{filter:grayscale(0)}
+.mediator .ph::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 58% 28%,rgba(180,98,63,.36),transparent 66%)}
+.mediator .ph .lbl{position:absolute;left:20px;bottom:18px;z-index:2;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(240,235,228,.45)}
+.mediator h2{font-size:var(--t-h2);margin:16px 0 10px}
+.mediator .qual{display:inline-block;border:1px solid var(--terra);color:var(--terra-l);
+  padding:7px 16px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:26px}
+.mediator p{color:var(--grey);font-weight:300;font-size:16.5px;line-height:1.82;max-width:48ch;margin-bottom:16px}
+
+/* Fließtext-Abschnitt */
+.prose{padding-block:var(--sp-sec)}
+.prose .grid{display:grid;grid-template-columns:minmax(200px,.62fr) minmax(0,1.38fr);gap:var(--gut);align-items:start}
+.prose h2{font-size:var(--t-h2);text-wrap:balance;margin-top:16px}
+.prose .sticky{position:sticky;top:118px}
+.prose p{color:var(--grey);font-weight:300;font-size:16.5px;line-height:1.82;max-width:60ch;margin-bottom:20px}
+.prose p strong{color:var(--cream);font-weight:400}
+.prose p:last-child{margin-bottom:0}
+
+/* Pull-Quote */
+.pull{background:var(--cream);color:#191919;padding-block:clamp(60px,7vw,104px)}
+.pull blockquote{font-family:'Instrument Serif',Georgia,Cambria,serif;font-size:clamp(28px,4.4vw,60px);
+  line-height:1.18;max-width:16ch;color:#121212;text-wrap:balance}
+.pull .after{margin-top:clamp(26px,3vw,38px);padding-top:24px;border-top:1px solid #d6cec3;
+  color:#5c5a56;font-weight:300;font-size:var(--t-lead);max-width:54ch}
+
+/* Bereiche */
+.fields{padding-block:var(--sp-sec)}
+.fields .head{display:grid;grid-template-columns:minmax(200px,.62fr) minmax(0,1.38fr);gap:var(--gut);
+  align-items:end;margin-bottom:clamp(40px,4.5vw,64px);height:auto;max-width:none;padding:0}
+.fields h2{font-size:var(--t-h2);text-wrap:balance;margin-top:16px}
+.fields .head p{color:var(--grey);font-weight:300;font-size:var(--t-lead);max-width:50ch}
+.f-item{border-top:1px solid var(--line-2);padding:clamp(24px,2.6vw,34px) 0;
+  display:grid;grid-template-columns:46px minmax(0,1fr) minmax(0,1.05fr);gap:clamp(20px,3vw,44px);
+  align-items:start;transition:background .3s,padding .3s}
+.f-item:last-of-type{border-bottom:1px solid var(--line-2)}
+.f-item:hover{background:linear-gradient(90deg,rgba(180,98,63,.08),transparent 74%);padding-left:14px}
+.f-item .n{font-family:'Instrument Serif',Georgia,Cambria,serif;font-size:15px;color:var(--terra);padding-top:5px}
+.f-item h3{font-size:var(--t-h3);margin-bottom:8px}
+.f-item .what{color:var(--grey);font-weight:300;font-size:15.5px;max-width:40ch}
+.f-item ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;padding-top:4px}
+.f-item li{border:1px solid var(--line);padding:6px 13px;font-size:13.5px;color:var(--grey-2);font-weight:300}
+
+/* Vergleich */
+.compare{background:var(--char);padding-block:var(--sp-sec)}
+.compare h2{font-size:var(--t-h2);margin:16px 0 clamp(36px,4vw,54px);text-wrap:balance;max-width:20ch}
+.c-table{border-top:1px solid var(--line)}
+.c-row{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.1fr) minmax(0,1.1fr);
+  gap:clamp(16px,3vw,44px);padding:22px 0;border-bottom:1px solid var(--line-2);align-items:start}
+.c-row.hd{border-bottom:1px solid var(--line);padding-bottom:14px}
+.c-row.hd span{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--grey)}
+.c-row.hd .mid{color:var(--terra-l)}
+.c-row .k{color:var(--grey);font-size:14.5px;font-weight:300}
+.c-row .mid{color:var(--cream);font-size:15.5px;font-weight:300}
+.c-row .oth{color:var(--grey);font-size:15.5px;font-weight:300}
+
+/* Ablauf */
+.steps-sec{padding-block:var(--sp-sec)}
+.steps-sec h2{font-size:var(--t-h2);margin:16px 0 clamp(38px,4vw,58px);text-wrap:balance;max-width:18ch}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.steps div{padding:28px 26px 32px 0;border-right:1px solid var(--line-2)}
+.steps div:last-child{border-right:0;padding-right:0}
+.steps .n{font-family:'Instrument Serif',Georgia,Cambria,serif;font-size:26px;color:var(--terra);display:block;margin-bottom:16px;line-height:1}
+.steps h3{font-family:'Inter',system-ui,Arial,sans-serif;font-size:16.5px;font-weight:500;margin-bottom:8px;letter-spacing:0}
+.steps p{font-size:14.5px;color:var(--grey);font-weight:300}
+
+/* CTA */
+.cta-band{background:var(--cream);color:#191919;padding-block:clamp(56px,6vw,92px)}
+.cta-band .in{display:flex;justify-content:space-between;align-items:center;gap:var(--gut);flex-wrap:wrap}
+.cta-band h2{font-size:clamp(26px,3.4vw,46px);color:#121212;max-width:18ch;text-wrap:balance}
+.cta-band p{color:#5c5a56;font-weight:300;margin-top:14px;max-width:46ch;font-size:15.5px}
+
+@media(max-width:1000px){
+  .mediator .grid,.prose .grid,.fields .head{grid-template-columns:1fr}
+  .prose .sticky{position:static}
+  .f-item{grid-template-columns:36px minmax(0,1fr);gap:14px}
+  .f-item ul{grid-column:2}
+  .steps{grid-template-columns:1fr 1fr}
+  .steps div:nth-child(2n){border-right:0;padding-right:0}
+  .c-row{grid-template-columns:1fr;gap:6px;padding:18px 0}
+  .c-row.hd{display:none}
+  .c-row .k{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase}
+  .c-row .mid::before{content:"Mediation: ";color:var(--terra-l)}
+  .c-row .oth::before{content:"Gericht: ";color:var(--grey)}
+  .mediator .ph{max-width:340px}
+}
+@media(max-width:620px){
+  .steps{grid-template-columns:1fr}
+  .steps div{border-right:0;padding-right:0;border-top:1px solid var(--line-2)}
+  .steps{border-top:0}
+}
+
+/* ---------- Nur für dieses Vorschau-Paket ----------
+   Die endgültigen Schriften liegen hier nicht bei; es greifen
+   die Schriften des jeweiligen Rechners (meist Georgia und
+   Segoe UI). Die sind etwas breiter und runder, deshalb hier
+   ein wenig mehr Zeilenabstand, damit die grossen Ueber-
+   schriften nicht gedrungen wirken. Faellt in der fertigen
+   Fassung wieder weg. */
+h1,h2,h3,.serif,blockquote{line-height:1.14;letter-spacing:-.018em}
+.hero h1{font-size:clamp(40px,6.4vw,88px)}
+.statement .big{line-height:1.3}
+.med-person p{line-height:1.5}
+
+/* ---------- Fotos ---------- */
+.ph img,.mp-ph img,.mediator .ph img{position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:50% 22%;display:block}
+.pc{max-width:360px}
+.pc .ph{width:100%}
+.pc .ph::after{background:radial-gradient(ellipse at 58% 28%,rgba(180,98,63,.2),transparent 70%)}
+.med-person .mp-ph::after{background:radial-gradient(ellipse at 58% 26%,rgba(180,98,63,.22),transparent 72%)}
+.mediator .ph{max-width:360px}
+/* Foto im Kanzlei-Abschnitt */
+.statement .cols{grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,.7fr)}
+.duo{position:relative}
+.duo .frame{position:relative;aspect-ratio:229/253;overflow:hidden;max-width:290px;
+  background:linear-gradient(158deg,#2a2d2f,#151617);filter:grayscale(1);transition:filter .6s}
+.duo:hover .frame{filter:grayscale(0)}
+.duo .frame::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse at 60% 24%,rgba(180,98,63,.18),transparent 72%)}
+.duo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.duo figcaption{margin-top:14px;max-width:290px;font-size:10.5px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--grey);line-height:1.7}
+@media(max-width:1000px){
+  .statement .cols{grid-template-columns:1fr}
+  .duo .frame,.duo figcaption{max-width:240px}
+  .pc{max-width:280px}
+  .mediator .ph{max-width:260px}
+}
+
+/* ---------- Logo in der Kopfzeile ---------- */
+.brand{display:flex;align-items:center;line-height:0;white-space:normal}
+.brand .logo{display:block;height:44px;width:auto;color:var(--cream)}
+.brand:hover .logo{opacity:.9}
+@media(max-width:620px){ .brand .logo{height:36px} }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+
+<header id="hdr">
+  <div class="head">
+    <a href="index.html" class="brand">
+    <svg class="logo" viewBox="0 0 203 44" width="203" height="44" role="img" aria-label="Kaiser &amp; Kaiser, Rechtsanwälte und Mediation">
+      <path d="M2 8 L18 22 L2 36" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="square"/>
+      <path d="M28 8 L12 22 L28 36" fill="none" stroke="#b4623f" stroke-width="2.1" stroke-linecap="square"/>
+      <text x="40" y="25" font-family="'Instrument Serif',Georgia,Cambria,'Times New Roman',serif" font-size="20" fill="currentColor">Kaiser <tspan font-style="italic" fill="#d08659">&amp;</tspan> Kaiser</text>
+      <text x="41" y="38" font-family="'Inter',system-ui,Arial,sans-serif" font-size="6.6" letter-spacing="2.2" fill="currentColor" opacity=".6">RECHTSANWÄLTE <tspan fill="#d08659" opacity="1" font-size="7.6">§</tspan> MEDIATION</text>
+    </svg>
+    </a>
+    <nav class="nav-d" aria-label="Hauptnavigation">
+      <a href="index.html#kanzlei">Kanzlei</a>
+      <a href="index.html#gebiete">Rechtsgebiete</a>
+      <a href="mediation.html" aria-current="page">Mediation</a>
+      <a href="index.html#team">Team</a>
+      <a href="index.html#kontakt" class="call">Rückruf anfordern</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navm">
+      <i></i><i></i><i></i>
+    </button>
+  </div>
+</header>
+
+<nav class="nav-m" id="navm" aria-label="Mobile Navigation">
+  <a href="index.html#kanzlei">Kanzlei</a>
+  <a href="index.html#gebiete">Rechtsgebiete</a>
+  <a href="mediation.html">Mediation</a>
+  <a href="index.html#team">Team</a>
+  <a href="index.html#kontakt">Kontakt</a>
+  <a href="tel:+493066122554" class="m-tel">030 – 661 22 54</a>
+</nav>
+
+<main id="inhalt">
+
+<section class="sub-hero">
+  <div class="hero-media" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">Startseite</a> &nbsp;/&nbsp; Mediation</div>
+    <span class="tag">Praxis für Mediation</span>
+    <h1>Das Gesetz kennt nur <em>schematische</em> Antworten.</h1>
+    <p class="lead">Mediation eröffnet die Möglichkeit einer individuellen Lösung Ihres individuellen Konflikts — vertraulich, außergerichtlich und in Ihrer eigenen Entscheidungsbefugnis.</p>
+  </div>
+</section>
+
+<section class="mediator">
+  <div class="wrap">
+    <div class="grid rv">
+      <div class="ph"><img src="bilder/claudia-kaiser.jpg" alt="Claudia Kaiser, Rechtsanwältin und Master of Mediation" width="368" height="492" loading="lazy"></div>
+      <div>
+        <span class="tag">Ihre Mediatorin</span>
+        <h2>Claudia Kaiser</h2>
+        <div class="qual">Rechtsanwältin · Master of Mediation</div>
+        <p>Als Mediatorin begleite ich Sie als neutrale dritte Person durch das Gespräch. Ich entscheide nicht und ich vertrete keine Seite — ich sorge dafür, dass ein Gespräch überhaupt wieder möglich wird und dass es zu einem Ergebnis führt.</p>
+        <p>Weil ich zugleich Rechtsanwältin bin, weiß ich, was am Ende rechtlich tragfähig sein muss. Die Vereinbarung, die Sie schließen, ist deshalb keine gute Absicht, sondern belastbar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="prose" id="was">
+  <div class="wrap">
+    <div class="grid">
+      <div class="sticky rv"><span class="tag">Grundlagen</span><h2>Was ist Mediation?</h2></div>
+      <div class="rv">
+        <p>Mediation ist ein unkompliziertes Verfahren zur <strong>außergerichtlichen Konfliktlösung.</strong> Sie eröffnet die Möglichkeit, Konflikte in einem vertraulichen Rahmen zu lösen. Dabei werden die Konfliktparteien von einer neutralen dritten Person begleitet — der Mediatorin.</p>
+        <p>Durch die fachliche Gesprächsbegleitung wird nicht nur ein Gespräch möglich, zu dem die Beteiligten sich allein nicht mehr in der Lage sehen. Sie sorgt auch dafür, dass dieses Gespräch effizient bleibt und auf eine interessengerechte, zukunftsorientierte Lösung zuläuft.</p>
+        <p><strong>Sie behalten die Kontrolle.</strong> Anders als im Gerichtsverfahren bleibt die Entscheidungsbefugnis bei Ihnen und wird nicht in die Hände eines Dritten gelegt. Am Ende steht eine Vereinbarung, die die Beteiligten im Rahmen der Rechtsordnung eigenverantwortlich schließen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pull">
+  <div class="wrap rv">
+    <blockquote>„Mit dem kann man doch nicht reden!"</blockquote>
+    <p class="after">Mit diesem Satz wurde schon manche wertvolle Beziehung einfach beendet. Dabei verdient jede Beziehung eine Chance, bevor der Zustand der großen Sprachlosigkeit einsetzt.</p>
+  </div>
+</section>
+
+<section class="prose" id="wann">
+  <div class="wrap">
+    <div class="grid">
+      <div class="sticky rv"><span class="tag">Der richtige Zeitpunkt</span><h2>Wann ist Mediation sinnvoll?</h2></div>
+      <div class="rv">
+        <p>Um die Vorteile einer Mediation nutzen zu können, müssen Sie nicht warten, bis das Kind in den Brunnen gefallen ist. Es sind gerade die <strong>alltäglichen Auseinandersetzungen</strong>, die den Alltag belasten — in der Familie, mit dem Partner oder den Kindern, im Berufsleben mit Kollegen oder dem Arbeitgeber, mit Mitmietern und Nachbarn.</p>
+        <p>Die Beteiligten stecken fest in bekannten Verhaltensmustern, die einen konstruktiven Austausch unmöglich erscheinen lassen. Endlose, ergebnislose Diskussionen sind die Folge — Diskussionen, von denen Sie schon vorher wissen, dass am Ende nichts steht, weil nur die immer gleichen Argumente ausgetauscht werden.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="prose" id="erster-schritt" style="padding-top:0">
+  <div class="wrap">
+    <div class="grid">
+      <div class="sticky rv"><span class="tag">Den Anfang machen</span><h2>Der erste Schritt</h2></div>
+      <div class="rv">
+        <p>Den berühmten ersten Schritt geht niemand gern als Erster — und schon gar nicht gern allein. Als neutrale Dritte kann Ihre Mediatorin die <strong>Einladung zum ersten gemeinsamen Gespräch</strong> aussprechen und damit eine Begegnung auf neutralem Boden ermöglichen.</p>
+        <p>Dieses erste Informationsgespräch gibt den Beteiligten Raum, aufeinander zuzugehen und zunächst nur zu klären, ob und inwieweit auf beiden Seiten die Bereitschaft und das Interesse an einer Klärung besteht. Es verpflichtet zu nichts Weiterem.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fields" id="bereiche">
+  <div class="wrap">
+    <div class="head rv">
+      <div><span class="tag">Einsatzbereiche</span></div>
+      <div><h2>Worin ich Sie unterstütze</h2>
+        <p>Von der Trennung über den Konflikt im Betrieb bis zur Moderation eines Elternabends.</p></div>
+    </div>
+
+    <article class="f-item rv">
+      <span class="n">01</span>
+      <div><h3>Familienmediation</h3><p class="what">Wo Beziehungen weitergehen, auch wenn die Partnerschaft endet — etwa als Eltern.</p></div>
+      <ul><li>Trennung und Scheidung</li><li>Umgangs- und Sorgerechtsfragen</li><li>Generationskonflikte</li><li>Familienkonflikte</li><li>Erbauseinandersetzungen</li></ul>
+    </article>
+
+    <article class="f-item rv">
+      <span class="n">02</span>
+      <div><h3>Nachbarschaftskonflikte</h3><p class="what">Wer Tür an Tür wohnt, muss auch nach dem Streit noch miteinander auskommen.</p></div>
+      <ul><li>Streit unter Mitmietern</li><li>Eigentümergemeinschaft</li><li>Lärm und Nutzung</li><li>Grundstücksgrenzen</li></ul>
+    </article>
+
+    <article class="f-item rv">
+      <span class="n">03</span>
+      <div><h3>Betriebe und Unternehmen</h3><p class="what">Ungelöste Konflikte am Arbeitsplatz kosten mehr als das Verfahren, das ihnen folgt.</p></div>
+      <ul><li>Mobbing</li><li>Kündigung</li><li>Sonstige arbeitsrechtliche Konflikte</li><li>Konflikte im Team</li></ul>
+    </article>
+
+    <article class="f-item rv">
+      <span class="n">04</span>
+      <div><h3>Schulmediation</h3><p class="what">Ein eigenes Feld mit eigenen Regeln — zwischen Schülern, Eltern und Lehrkräften.</p></div>
+      <ul><li>Vermittlung bei Schulkonflikten</li><li>Moderation von Elternabenden</li><li>Schulkonferenzen</li></ul>
+    </article>
+
+    <article class="f-item rv">
+      <span class="n">05</span>
+      <div><h3>Moderation</h3><p class="what">Auch ohne akuten Konflikt: Sitzungen, die zu einem Ergebnis kommen sollen.</p></div>
+      <ul><li>Sitzungen</li><li>Konferenzen</li><li>Versammlungen</li></ul>
+    </article>
+  </div>
+</section>
+
+<section class="compare">
+  <div class="wrap rv">
+    <span class="tag">Zum Vergleich</span>
+    <h2>Mediation und Gerichtsverfahren</h2>
+    <div class="c-table">
+      <div class="c-row hd"><span></span><span class="mid">Mediation</span><span>Gerichtsverfahren</span></div>
+      <div class="c-row"><span class="k">Wer entscheidet</span><span class="mid">Die Beteiligten selbst</span><span class="oth">Das Gericht</span></div>
+      <div class="c-row"><span class="k">Ergebnis</span><span class="mid">Eine individuelle Lösung, die beide tragen</span><span class="oth">Ein Urteil nach schematischen Vorgaben</span></div>
+      <div class="c-row"><span class="k">Öffentlichkeit</span><span class="mid">Vertraulich</span><span class="oth">Verhandlung grundsätzlich öffentlich</span></div>
+      <div class="c-row"><span class="k">Verhältnis danach</span><span class="mid">Bleibt in der Regel tragfähig</span><span class="oth">Häufig endgültig zerrüttet</span></div>
+      <div class="c-row"><span class="k">Dauer</span><span class="mid">Wenige Sitzungen, Termine nach Absprache</span><span class="oth">Von der Terminlage des Gerichts abhängig</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="steps-sec">
+  <div class="wrap">
+    <div class="rv"><span class="tag">Ablauf</span><h2>Wie eine Mediation abläuft</h2></div>
+    <div class="steps rv">
+      <div><span class="n">01</span><h3>Informationsgespräch</h3><p>Wir klären, ob Mediation für Ihren Fall geeignet ist. Ohne weitere Verpflichtung.</p></div>
+      <div><span class="n">02</span><h3>Themen sammeln</h3><p>Alle Streitpunkte kommen auf den Tisch — auch die unbequemen.</p></div>
+      <div><span class="n">03</span><h3>Interessen klären</h3><p>Was steht hinter der Position der Gegenseite? Hier entstehen die Lösungen.</p></div>
+      <div><span class="n">04</span><h3>Vereinbarung</h3><p>Das Ergebnis wird rechtlich belastbar formuliert und festgehalten.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band" id="kontakt">
+  <div class="wrap in rv">
+    <div>
+      <h2>Möchten Sie sich zunächst informieren?</h2>
+      <p>Für ein Informationsgespräch stehe ich Ihnen nach vorheriger Terminvereinbarung gerne zur Verfügung.</p>
+    </div>
+    <div class="btns">
+      <a href="tel:+493066122554" class="btn btn-dark">030 – 661 22 54</a>
+      <a href="#kontakt" class="btn" style="border:1px solid #c3bbb0;color:#191919">Rückruf anfordern</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer><div class="wrap">
+  <span>© 2026 Rechtsanwälte Andreas &amp; Claudia Kaiser</span>
+  <div class="links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="verguetung.html">Vergütung</a></div>
+</div></footer>
+
+<div class="mobile-bar">
+  <a href="tel:+493066122554">Anrufen</a>
+  <a href="index.html#kontakt">Rückruf</a>
+</div>
+
+<script>
+// Kaiser & Kaiser — gemeinsames Skript
+// Sticky-Header, Mobilmenue, Einblenden beim Scrollen.
+
+(function(){
+  var hdr=document.getElementById('hdr'),burger=document.getElementById('burger');
+  var onScroll=function(){hdr.classList.toggle('solid',window.scrollY>50)};
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var toggle=function(open){
+    document.body.classList.toggle('menu',open);
+    document.body.classList.toggle('lock',open);
+    burger.setAttribute('aria-expanded',open?'true':'false');
+    burger.setAttribute('aria-label',open?'Menü schließen':'Menü öffnen');
+  };
+  burger.addEventListener('click',function(){toggle(!document.body.classList.contains('menu'))});
+  document.querySelectorAll('#navm a').forEach(function(a){a.addEventListener('click',function(){toggle(false)})});
+  addEventListener('keydown',function(e){if(e.key==='Escape')toggle(false)});
+
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+    },{threshold:.1,rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%3)*70+'ms';io.observe(el)});
+  }
+})();
+</script>
+<a href="../START.html" style="position:fixed;left:16px;bottom:16px;z-index:2147483647;background:#22312E;color:#F4EFE6;font:600 15px/1 system-ui,sans-serif;text-decoration:none;padding:12px 16px;border-radius:999px;box-shadow:0 8px 20px -8px rgba(0,0,0,.5)">&larr; Zur Übersicht</a>
+</body>
+</html>

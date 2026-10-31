@@ -1,0 +1,30 @@
+/* CSS-Definitionsdatei, die Site-weite Stylesheets enth‰lt */
+BODY { font-family: Arial, Helvetica, Univers, 'Zurich BT', sans-serif; font-size: 9pt;}
+ A:active { font-family: Arial, Helvetica, Univers, 'Zurich BT', sans-serif; font-size: 10pt; font-weight: normal; font-style: normal;}
+ .Subheads { font-family: 'Arial Black', 'Helvetica Black', 'LB Helvetica Black', 'Univers Black', 'Zurich Blk BT', sans-serif; font-size: x-small;}
+ .Quotes { font-family: 'Times New Roman', Times, 'Times NewRoman', serif; font-size: medium; font-style: italic;}
+ .Footnotes { font-family: Arial, Helvetica, Univers, 'Zurich BT', sans-serif; font-size: x-small;}
+ A:link { font-family: Arial, Helvetica, Univers, 'Zurich BT', sans-serif; font-size: 10pt; font-weight: normal; font-style: normal;}
+ .Titel { font-family: Arial, Helvetica, Univers, 'Zurich BT', sans-serif; font-size: x-small; font-style: italic;}
+ .Danksagung { font-family: 'Times New Roman', Times, 'Times NewRoman', serif; font-size: x-small; font-weight: bold; text-align: center;}
+ .Caption { font-family: Arial, Helvetica, Univers, 'Zurich BT', sans-serif; font-size: x-small; font-style: italic;}
+ .Code { font-family: 'Courier New', Courier, monospace; color: rgb(0,0,0);}
+ .Untertitel { font-family: 'Arial Black', 'Helvetica Black', 'LB Helvetica Black', 'Univers Black', 'Zurich Blk BT', sans-serif; font-size: x-small;}
+ .‹berschrift1 { font-size: x-large; font-weight: bold;}
+ UL { font-family: Arial, Helvetica, Univers, 'Zurich BT', sans-serif; font-size: 10pt; font-weight: normal; font-style: normal;}
+ .‹berschrift2 { font-size: large; font-weight: bold;}
+ A:hover { font-family: Arial, Helvetica, Univers, 'Zurich BT', sans-serif; font-size: 10pt; font-weight: normal; font-style: normal;}
+ A:visited { font-family: Arial, Helvetica, Univers, 'Zurich BT', sans-serif; font-size: 10pt; font-weight: normal; font-style: normal;}
+ .‹berschrift3 { font-size: medium; font-weight: bold;}
+ .‹berschrift4 { font-weight: bold;}
+ .Credits { font-family: 'Times New Roman', Times, 'Times NewRoman', serif; font-size: x-small; font-weight: bold; text-align: center;}
+ .TextObject { font-family: Arial, Helvetica, Univers, 'Zurich BT', sans-serif; font-size: 9pt;}
+ .‹berschrift5 { font-size: x-small; font-weight: bold;}
+ P { font-family: Arial, Helvetica, Univers, 'Zurich BT', sans-serif; font-size: 9pt; font-weight: normal; font-style: normal;}
+ .Zitate { font-family: 'Times New Roman', Times, 'Times NewRoman', serif; font-size: medium; font-style: italic;}
+ .Fuﬂnoten { font-family: Arial, Helvetica, Univers, 'Zurich BT', sans-serif; font-size: x-small;}
+ .‹berschrift6 { font-size: large; font-weight: bold;}
+ A { font-family: Arial, Helvetica, Univers, 'Zurich BT', sans-serif; font-size: 10pt; font-weight: normal; font-style: normal;}
+ .‹berschrift { font-size: x-large; font-weight: bold;}
+ .Adresse { font-style: italic;}
+ 

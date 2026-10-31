@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'><rect width='44' height='44' rx='4' fill='%230b0c0c'/><path d='M9 11 L25 22 L9 33' fill='none' stroke='%23f0ebe4' stroke-width='3' stroke-linecap='square'/><path d='M35 11 L19 22 L35 33' fill='none' stroke='%23b4623f' stroke-width='3' stroke-linecap='square'/></svg>">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Impressum – Kaiser &amp; Kaiser Rechtsanwälte Berlin</title>
+<meta name="description" content="Impressum der Rechtsanwaltskanzlei Andreas und Claudia Kaiser, Mariendorfer Damm 73, 12109 Berlin. Angaben nach DDG, Aufsichtsbehörde und Berufsrecht.">
+<style>
+/* =========================================================
+   Kaiser & Kaiser — gemeinsames Stylesheet (Variante E)
+   Wird von allen Seiten eingebunden. Seitenspezifische
+   Ergänzungen stehen direkt in der jeweiligen HTML-Datei.
+
+   SCHRIFTEN: lokal eingebunden, keine Verbindung zu Google.
+   Die fünf .woff2-Dateien gehören in den Unterordner fonts/.
+   Siehe fonts/ANLEITUNG.md — bis dahin greifen die
+   System-Ersatzschriften unten automatisch.
+   ========================================================= */
+
+/* Schriften: im Entwurfspaket bewusst weggelassen,
+   es greifen die Schriften des jeweiligen Rechners. */
+:root{
+  --black:#0b0c0c;
+  --char:#141617;
+  --char-2:#1b1e1f;
+  --terra:#b4623f;
+  --terra-l:#d08659;
+  --cream:#f0ebe4;
+  --grey:#9a9b99;
+  --grey-2:#b9b8b4;
+  --line:rgba(240,235,228,.14);
+  --line-2:rgba(240,235,228,.08);
+
+  /* Typo-Skala */
+  --t-display:clamp(44px,7.4vw,104px);
+  --t-h2:clamp(30px,4vw,56px);
+  --t-h3:clamp(20px,1.7vw,26px);
+  --t-lead:clamp(16.5px,1.25vw,19px);
+  --t-body:16px;
+
+  /* Rhythmus */
+  --sp-sec:clamp(76px,10vw,140px);
+  --gut:clamp(28px,5vw,80px);
+  --pad:clamp(20px,4vw,48px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--black);color:var(--cream);
+  font-size:var(--t-body);line-height:1.72;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.lock{overflow:hidden}
+h1,h2,h3,.serif{font-family:'Instrument Serif',Georgia,Cambria,'Times New Roman',serif;font-weight:400;line-height:1.06;letter-spacing:-.012em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--terra-l);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:var(--pad)}
+.tag{font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--terra-l);font-weight:500;display:block}
+.skip{position:absolute;left:-9999px;top:0;background:var(--terra);color:#fff;padding:12px 18px;z-index:200}
+.skip:focus{left:12px;top:12px}
+
+/* ---------- Header ---------- */
+header{position:fixed;inset:0 0 auto 0;z-index:100;transition:background .35s,border-color .35s;border-bottom:1px solid transparent}
+header.solid{background:rgba(11,12,12,.9);backdrop-filter:blur(16px);border-bottom-color:var(--line-2)}
+.head{display:flex;justify-content:space-between;align-items:center;height:76px;max-width:1220px;margin:0 auto;padding-inline:var(--pad)}
+.brand{font-family:'Instrument Serif',Georgia,Cambria,serif;font-size:21px;letter-spacing:.015em;white-space:nowrap}
+.brand em{font-style:italic;color:var(--terra-l)}
+.brand small{display:block;font-family:'Inter',system-ui,Arial,sans-serif;font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--grey);margin-top:3px}
+.nav-d{display:flex;align-items:center;gap:clamp(18px,2.2vw,32px);font-size:14px;color:var(--grey-2)}
+.nav-d a{position:relative;padding:6px 0;transition:color .2s}
+.nav-d a::after{content:"";position:absolute;left:0;right:100%;bottom:2px;height:1px;background:var(--terra-l);transition:right .3s}
+.nav-d a:hover{color:var(--cream)}
+.nav-d a:hover::after{right:0}
+.call{border:1px solid var(--terra);color:var(--terra-l);padding:9px 20px;font-size:13.5px;transition:.25s;white-space:nowrap}
+.call:hover{background:var(--terra);color:#fff}
+.call::after{display:none}
+.burger{display:none;width:42px;height:42px;border:1px solid var(--line);background:none;cursor:pointer;position:relative}
+.burger i{position:absolute;left:12px;right:12px;height:1px;background:var(--cream);transition:.3s}
+.burger i:nth-child(1){top:16px}.burger i:nth-child(2){top:21px}.burger i:nth-child(3){top:26px}
+body.menu .burger i:nth-child(1){transform:translateY(5px) rotate(45deg)}
+body.menu .burger i:nth-child(2){opacity:0}
+body.menu .burger i:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+.nav-m{position:fixed;inset:0;background:var(--black);z-index:95;display:flex;flex-direction:column;justify-content:center;
+  padding:0 var(--pad);opacity:0;visibility:hidden;transition:.35s}
+body.menu .nav-m{opacity:1;visibility:visible}
+.nav-m a{font-family:'Instrument Serif',Georgia,Cambria,serif;font-size:clamp(28px,8vw,44px);padding:14px 0;border-bottom:1px solid var(--line-2)}
+.nav-m .m-tel{font-family:'Inter',system-ui,Arial,sans-serif;font-size:15px;color:var(--terra-l);border:0;margin-top:32px;letter-spacing:.02em}
+
+/* Sprungziele: der feste Kopf darf die Überschrift nicht verdecken */
+h2[id],h3[id]{scroll-margin-top:96px}
+@media(max-width:900px){section[id]{scroll-margin-top:90px}}
+
+/* ---------- Hero ---------- */
+.hero{min-height:100svh;position:relative;display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.hero-media{position:absolute;inset:0;z-index:-2;
+  background:
+    linear-gradient(168deg,#0a0b0b 0%,#070808 46%,#040505 100%)}
+.hero-media::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(11,12,12,.72) 0%,rgba(11,12,12,.12) 34%,rgba(11,12,12,.55) 74%,rgba(11,12,12,.96) 100%)}
+.grain{position:absolute;inset:-50%;z-index:-1;opacity:.07;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+  animation:none}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-2%)}80%{transform:translate(3%,1%)}100%{transform:translate(0,0)}}
+.ph-note{position:absolute;top:96px;right:var(--pad);z-index:2;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(240,235,228,.4);border:1px solid var(--line-2);padding:6px 10px}
+.hero-in{position:relative;z-index:2;width:100%;padding-bottom:clamp(44px,6vw,80px);padding-top:120px}
+.hero h1{font-size:var(--t-display);max-width:14ch;margin-top:22px;text-wrap:balance}
+.hero h1 em{font-style:italic;color:var(--terra-l)}
+.hero-row{display:grid;grid-template-columns:minmax(0,1.35fr) auto;gap:var(--gut);align-items:end;
+  margin-top:clamp(30px,4vw,48px);padding-top:clamp(24px,3vw,34px);border-top:1px solid var(--line)}
+.hero-row p{max-width:48ch;color:var(--grey-2);font-weight:300;font-size:var(--t-lead)}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:15px 28px;font-size:14.5px;transition:.25s;white-space:nowrap;letter-spacing:.01em}
+.btn-fill{background:var(--terra);color:#fff}
+.btn-fill:hover{background:var(--terra-l)}
+.btn-line{border:1px solid rgba(240,235,228,.26)}
+.btn-line:hover{border-color:var(--cream);background:rgba(240,235,228,.06)}
+.scroll-hint{position:absolute;left:var(--pad);bottom:20px;z-index:3;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--grey);display:flex;align-items:center;gap:10px}
+.scroll-hint i{display:block;width:30px;height:1px;background:var(--terra);transform-origin:left;animation:pulse 2.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scaleX(.3);opacity:.5}50%{transform:scaleX(1);opacity:1}}
+
+/* ---------- Reveal ---------- */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.7,.25,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none !important;transition-duration:.01ms !important;scroll-behavior:auto}
+  .rv{opacity:1;transform:none}
+}
+
+/* ---------- Statement ---------- */
+.statement{padding-block:var(--sp-sec);background:var(--char);border-top:1px solid var(--line-2)}
+.statement .big{font-family:'Instrument Serif',Georgia,Cambria,serif;font-size:clamp(27px,3.5vw,48px);line-height:1.24;max-width:19ch;margin-top:22px;text-wrap:balance}
+.statement .big em{font-style:italic;color:var(--terra-l)}
+.statement .cols{display:grid;grid-template-columns:1fr 1fr;gap:var(--gut);margin-top:clamp(34px,4vw,52px)}
+.statement p{color:var(--grey);font-weight:300;font-size:16.5px;line-height:1.82;max-width:46ch}
+
+/* ---------- Rechtsgebiete ---------- */
+.areas{padding-block:var(--sp-sec)}
+.areas .grid{display:grid;grid-template-columns:minmax(230px,.72fr) minmax(0,1.28fr);gap:var(--gut);align-items:start}
+.areas .sticky{position:sticky;top:118px}
+.areas h2{font-size:var(--t-h2);margin:20px 0 18px;text-wrap:balance}
+.areas .sticky p{color:var(--grey);font-weight:300;font-size:15.5px;max-width:32ch}
+.areas .sticky .count{margin-top:26px;padding-top:20px;border-top:1px solid var(--line-2);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey)}
+.a-item{border-top:1px solid var(--line-2);padding:clamp(22px,2.4vw,32px) 0;display:grid;grid-template-columns:46px minmax(0,1fr) 24px;gap:20px;
+  align-items:start;transition:background .3s,padding .3s;position:relative}
+.a-item:last-child{border-bottom:1px solid var(--line-2)}
+.a-item .n{font-family:'Instrument Serif',Georgia,Cambria,serif;font-size:15px;color:var(--terra);padding-top:5px}
+.a-item h3{font-size:var(--t-h3);margin-bottom:7px}
+.a-item p{color:var(--grey);font-weight:300;font-size:15.5px;max-width:48ch}
+.a-item .arw{color:var(--terra);opacity:0;transform:translateX(-6px);transition:.3s;justify-self:end;padding-top:4px}
+.a-item:hover{background:linear-gradient(90deg,rgba(180,98,63,.09),transparent 72%);padding-left:14px}
+.a-item:hover .arw{opacity:1;transform:none}
+
+/* ---------- Mediation (heller Bruch) ---------- */
+.med{background:var(--cream);color:#191919;padding-block:var(--sp-sec)}
+.med .tag{color:var(--terra)}
+.med .top{display:grid;grid-template-columns:1fr 1fr;gap:var(--gut);align-items:end;margin-bottom:clamp(44px,5vw,72px)}
+.med h2{font-size:var(--t-h2);color:#121212;margin-top:20px;max-width:15ch;text-wrap:balance}
+.med h2 em{font-style:italic;color:var(--terra)}
+.med .top p{color:#5c5a56;font-weight:300;font-size:var(--t-lead);max-width:48ch}
+/* Mediatorin-Karte auf der Startseite */
+.med-person{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:clamp(24px,3vw,44px);
+  align-items:center;border-top:1px solid #d6cec3;border-bottom:1px solid #d6cec3;padding-block:clamp(28px,3.4vw,44px)}
+.med-person .mp-ph{aspect-ratio:9/10;position:relative;overflow:hidden;background:linear-gradient(158deg,#cdc4b7,#a9a094);filter:grayscale(1);transition:filter .6s}
+.med-person:hover .mp-ph{filter:grayscale(0)}
+.med-person .mp-ph::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 58% 26%,rgba(180,98,63,.4),transparent 68%)}
+.med-person .mp-ph .lbl{position:absolute;left:14px;bottom:12px;z-index:2;font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(25,25,25,.5)}
+.med-person .mp-name{font-family:'Instrument Serif',Georgia,Cambria,serif;font-size:clamp(24px,2.6vw,34px);color:#121212;line-height:1.1}
+.med-person .mp-qual{display:inline-block;border:1px solid var(--terra);color:var(--terra);padding:6px 14px;
+  font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;margin:12px 0 18px}
+.med-person p{font-family:'Instrument Serif',Georgia,Cambria,serif;font-size:clamp(18px,1.9vw,24px);
+  line-height:1.42;color:#3a3833;max-width:44ch}
+
+/* Einsatzbereiche als Kacheln */
+.med-fields{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:#d6cec3;margin-top:clamp(30px,3.4vw,48px);border:1px solid #d6cec3}
+.med-fields a{background:var(--cream);padding:24px 20px 26px;transition:background .25s}
+.med-fields a:hover{background:#e6ded2}
+.med-fields h3{font-family:'Inter',system-ui,Arial,sans-serif;font-size:15.5px;font-weight:500;
+  color:#121212;letter-spacing:0;margin-bottom:8px;line-height:1.3}
+.med-fields span{display:block;font-size:13.5px;color:#6b6862;font-weight:300;line-height:1.6}
+.med-foot{margin-top:clamp(36px,4vw,56px);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;
+  padding-top:26px;border-top:1px solid #d6cec3}
+.med-foot p{color:#5c5a56;font-weight:300;max-width:52ch;font-size:15.5px}
+.btn-dark{background:#191919;color:var(--cream);padding:15px 28px;font-size:14.5px;transition:.25s}
+.btn-dark:hover{background:var(--terra);color:#fff}
+
+/* ---------- Team ---------- */
+.team{padding-block:var(--sp-sec);background:var(--char)}
+.team h2{font-size:var(--t-h2);margin-top:18px}
+.team .grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--gut);margin-top:clamp(38px,4vw,58px)}
+.pc .ph{aspect-ratio:4/4.5;position:relative;overflow:hidden;background:linear-gradient(158deg,#2a2d2f,#151617);filter:grayscale(1) contrast(1.03);transition:filter .6s}
+.pc:hover .ph{filter:grayscale(0)}
+.pc .ph::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 58% 28%,rgba(180,98,63,.36),transparent 66%)}
+.pc .ph .lbl{position:absolute;left:20px;bottom:18px;z-index:2;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(240,235,228,.45)}
+.pc .meta{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-top:18px;margin-top:20px;border-top:1px solid var(--line-2);flex-wrap:wrap}
+.pc h3{font-size:clamp(22px,2.2vw,28px)}
+.pc .role{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--terra-l);white-space:nowrap}
+.pc p{color:var(--grey);font-weight:300;font-size:15.5px;margin-top:12px;max-width:42ch}
+
+/* ---------- Kontakt ---------- */
+.kontakt{padding-block:var(--sp-sec);position:relative;overflow:hidden}
+.kontakt::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 66% 58% at 84% 26%,rgba(180,98,63,.24),transparent 64%)}
+.kontakt .wrap{position:relative;z-index:2}
+.kontakt h2{font-size:clamp(34px,5vw,74px);margin:18px 0 clamp(34px,4vw,48px);max-width:13ch;text-wrap:balance}
+.k-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--gut);align-items:start}
+.big-tel{font-family:'Instrument Serif',Georgia,Cambria,serif;font-size:clamp(28px,3.4vw,44px);color:var(--terra-l);display:inline-block;
+  margin-bottom:30px;border-bottom:1px solid rgba(208,134,89,.35);transition:.25s;letter-spacing:-.01em}
+.big-tel:hover{color:var(--cream);border-color:var(--cream)}
+.kv{display:grid;grid-template-columns:88px 1fr;row-gap:12px;font-size:15.5px;color:var(--grey-2)}
+.kv dt{font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--grey);padding-top:6px}
+.f{margin-bottom:22px}
+.f label{display:block;font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--grey);margin-bottom:8px}
+.f input,.f textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);padding:11px 0;
+  color:var(--cream);font-family:inherit;font-size:16.5px;transition:border-color .25s}
+.f input::placeholder,.f textarea::placeholder{color:rgba(240,235,228,.25)}
+.f input:focus,.f textarea:focus{outline:none;border-color:var(--terra)}
+.consent{display:flex;gap:11px;align-items:flex-start;font-size:13px;color:var(--grey);margin:6px 0 24px;line-height:1.6}
+.consent input{width:16px;height:16px;margin-top:4px;accent-color:var(--terra);flex-shrink:0}
+.consent a{border-bottom:1px solid var(--line)}
+.send{background:var(--terra);color:#fff;border:0;padding:16px 36px;font-family:inherit;font-size:15px;cursor:pointer;transition:.25s}
+.send:hover{background:var(--cream);color:var(--black)}
+
+/* ---------- Sticky Anrufleiste (mobil) ---------- */
+.mobile-bar{position:fixed;left:0;right:0;bottom:0;z-index:90;display:none;grid-template-columns:1fr 1fr;
+  background:rgba(11,12,12,.94);backdrop-filter:blur(14px);border-top:1px solid var(--line-2)}
+.mobile-bar a{padding:15px;text-align:center;font-size:14px}
+.mobile-bar a:first-child{border-right:1px solid var(--line-2);color:var(--terra-l)}
+
+footer{border-top:1px solid var(--line-2);padding:30px 0 42px;font-size:13.5px;color:var(--grey)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+footer a:hover{color:var(--terra-l)}
+footer .links{display:flex;gap:22px;flex-wrap:wrap}
+
+@media(max-width:1000px){
+  .nav-d{display:none}.burger{display:block}
+  .hero-row,.statement .cols,.areas .grid,.med .top,.team .grid,.k-grid{grid-template-columns:1fr}
+  .areas .sticky{position:static}
+  .mobile-bar{display:grid}
+  footer{padding-bottom:88px}
+  .scroll-hint{display:none}
+  .hero{min-height:auto}
+  .hero-in{padding-top:132px}
+  .med-fields{grid-template-columns:1fr 1fr}
+}
+@media(max-width:620px){
+  .med-fields{grid-template-columns:1fr}
+  .med-person{grid-template-columns:1fr;gap:20px}
+  .med-person .mp-ph{max-width:180px}
+  .a-item{grid-template-columns:34px minmax(0,1fr);gap:14px}
+  .a-item .arw{display:none}
+  .kv{grid-template-columns:1fr;row-gap:4px}
+  .kv dt{padding-top:12px}
+}
+</style>
+<style>
+/* ---------- Nur fuer die Rechtsseiten ---------- */
+.sub-hero{position:relative;overflow:hidden;isolation:isolate;padding-top:150px;padding-bottom:clamp(44px,5vw,72px)}
+.sub-hero .hero-media{position:absolute;inset:0;z-index:-2;
+  background:
+    linear-gradient(168deg,#0a0b0b 0%,#070808 52%,#040505 100%)}
+.sub-hero .hero-media::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(11,12,12,.7) 0%,rgba(11,12,12,.2) 40%,rgba(11,12,12,.94) 100%)}
+.crumb{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);margin-bottom:24px}
+.crumb a{border-bottom:1px solid var(--line)}
+.crumb a:hover{color:var(--terra-l)}
+.sub-hero h1{font-size:clamp(34px,5.4vw,68px);max-width:16ch;margin-top:18px;text-wrap:balance}
+.sub-hero h1 em{font-style:italic;color:var(--terra-l)}
+.sub-hero .lead{max-width:56ch;color:var(--grey-2);font-weight:300;font-size:var(--t-lead);
+  margin-top:clamp(24px,3vw,34px);padding-top:clamp(20px,2.4vw,28px);border-top:1px solid var(--line)}
+
+.legal{padding-block:clamp(56px,7vw,104px)}
+.legal .cols{display:grid;grid-template-columns:minmax(190px,.5fr) minmax(0,1.5fr);gap:var(--gut);align-items:start}
+.toc{position:sticky;top:110px;border-top:1px solid var(--line);padding-top:18px}
+.toc span{display:block;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);margin-bottom:14px}
+.toc a{display:block;font-size:14px;color:var(--grey-2);font-weight:300;padding:5px 0;transition:color .2s}
+.toc a:hover{color:var(--terra-l)}
+.legal .body{max-width:68ch}
+.legal h2{font-size:clamp(24px,2.8vw,38px);margin:clamp(38px,4vw,58px) 0 16px;padding-top:clamp(30px,3vw,42px);
+  border-top:1px solid var(--line-2);text-wrap:balance;scroll-margin-top:110px}
+.legal h2:first-child{margin-top:0;padding-top:0;border-top:0}
+.legal h3{font-family:'Inter',system-ui,Arial,sans-serif;font-size:16.5px;font-weight:500;letter-spacing:0;
+  color:var(--cream);margin:26px 0 8px;line-height:1.5}
+.legal p{color:var(--grey);font-weight:300;font-size:16px;line-height:1.82;margin-bottom:16px}
+.legal p strong{color:var(--cream);font-weight:400}
+.legal ul{list-style:none;margin:0 0 18px}
+.legal li{color:var(--grey);font-weight:300;font-size:15.5px;line-height:1.75;padding:5px 0 5px 22px;position:relative}
+.legal li::before{content:"";position:absolute;left:0;top:16px;width:9px;height:1px;background:var(--terra)}
+.legal a.ext{color:var(--terra-l);border-bottom:1px solid rgba(208,134,89,.4)}
+.legal a.ext:hover{border-bottom-color:var(--terra-l)}
+.legal dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px clamp(18px,3vw,34px);
+  border-top:1px solid var(--line-2);padding-top:20px;margin-bottom:20px}
+.legal dt{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--grey);padding-top:5px}
+.legal dd{color:var(--cream);font-weight:300;font-size:15.5px;line-height:1.7}
+.card{border:1px solid var(--line);padding:clamp(20px,2.4vw,30px);margin:26px 0}
+.card p:last-child{margin-bottom:0}
+.note{border-left:2px solid var(--terra);background:rgba(180,98,63,.07);padding:20px clamp(18px,2.2vw,26px);margin:26px 0}
+.note b{display:block;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--terra-l);
+  font-weight:500;margin-bottom:10px}
+.note p{color:var(--grey-2);font-size:15px;margin-bottom:0}
+.gap{color:var(--terra-l);border-bottom:1px dashed var(--terra);font-style:normal}
+@media(max-width:1000px){
+  .legal .cols{grid-template-columns:1fr}
+  .toc{position:static}
+  .legal dl{grid-template-columns:1fr;gap:2px}
+  .legal dd{margin-bottom:12px}
+}
+h1,h2,h3,.serif{line-height:1.14;letter-spacing:-.018em}
+
+/* ---------- Logo in der Kopfzeile ---------- */
+.brand{display:flex;align-items:center;line-height:0;white-space:normal}
+.brand .logo{display:block;height:44px;width:auto;color:var(--cream)}
+.brand:hover .logo{opacity:.9}
+@media(max-width:620px){ .brand .logo{height:36px} }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+
+<header id="hdr">
+  <div class="head">
+    <a href="index.html" class="brand">
+    <svg class="logo" viewBox="0 0 203 44" width="203" height="44" role="img" aria-label="Kaiser &amp; Kaiser, Rechtsanwälte und Mediation">
+      <path d="M2 8 L18 22 L2 36" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="square"/>
+      <path d="M28 8 L12 22 L28 36" fill="none" stroke="#b4623f" stroke-width="2.1" stroke-linecap="square"/>
+      <text x="40" y="25" font-family="'Instrument Serif',Georgia,Cambria,'Times New Roman',serif" font-size="20" fill="currentColor">Kaiser <tspan font-style="italic" fill="#d08659">&amp;</tspan> Kaiser</text>
+      <text x="41" y="38" font-family="'Inter',system-ui,Arial,sans-serif" font-size="6.6" letter-spacing="2.2" fill="currentColor" opacity=".6">RECHTSANWÄLTE <tspan fill="#d08659" opacity="1" font-size="7.6">§</tspan> MEDIATION</text>
+    </svg>
+    </a>
+    <nav class="nav-d" aria-label="Hauptnavigation">
+      <a href="index.html#kanzlei">Kanzlei</a>
+      <a href="index.html#gebiete">Rechtsgebiete</a>
+      <a href="mediation.html">Mediation</a>
+      <a href="index.html#team">Team</a>
+      <a href="index.html#kontakt" class="call">Rückruf anfordern</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navm">
+      <i></i><i></i><i></i>
+    </button>
+  </div>
+</header>
+
+<nav class="nav-m" id="navm" aria-label="Mobile Navigation">
+  <a href="index.html#kanzlei">Kanzlei</a>
+  <a href="index.html#gebiete">Rechtsgebiete</a>
+  <a href="mediation.html">Mediation</a>
+  <a href="index.html#team">Team</a>
+  <a href="index.html#kontakt">Kontakt</a>
+  <a href="tel:+493066122554" class="m-tel">030 – 661 22 54</a>
+</nav>
+
+<main id="inhalt">
+
+<section class="sub-hero">
+  <div class="hero-media" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">Startseite</a> &nbsp;/&nbsp; Impressum</div>
+    <span class="tag">Pflichtangaben</span>
+    <h1>Wer hinter dieser <em>Seite</em> steht.</h1>
+    <p class="lead">Angaben nach dem Digitale-Dienste-Gesetz, berufsrechtliche Hinweise und Haftungsfragen – an einer Stelle zusammengefasst.</p>
+  </div>
+</section>
+
+<section class="legal">
+  <div class="wrap">
+    <div class="cols">
+      <nav class="toc" aria-label="Inhalt dieser Seite">
+      <span>Auf dieser Seite</span>
+      <a href="#anbieter">Anbieter</a>
+      <a href="#beruf">Beruf und Aufsicht</a>
+      <a href="#versicherung">Versicherung</a>
+      <a href="#haftung">Haftung</a>
+      <a href="#streit">Streitbeilegung</a>
+      <a href="#barrierefreiheit">Barrierefreiheit</a>
+      <a href="#hinweise">Sprachform</a>
+      </nav>
+      <div class="body">
+        <h2 id="anbieter">Anbieter und Verantwortliche</h2>
+        <p>Informationen gemäß den Anforderungen des Digitale-Dienste-Gesetzes (DDG).</p>
+        <dl>
+          <dt>Verantwortlich</dt><dd>Andreas Kaiser, Rechtsanwalt<br>Claudia Kaiser, Rechtsanwältin</dd>
+          <dt>Anschrift</dt><dd>Mariendorfer Damm 73<br>12109 Berlin</dd>
+          <dt>Telefon</dt><dd><a class="ext" href="tel:+493066122554">030 – 661 22 54</a> und <a class="ext" href="tel:+493066122555">030 – 661 22 55</a></dd>
+          <dt>Telefax</dt><dd>030 – 661 15 50</dd>
+          <dt>E-Mail</dt><dd><a class="ext" href="mailto:kanzlei@kaiser-recht.de">kanzlei@kaiser-recht.de</a></dd>
+          <dt>Steuernummer</dt><dd>Fa. Neukölln-Süd 16/371/60329</dd>
+          <dt>V.i.S.d.P.</dt><dd>Andreas Kaiser und Claudia Kaiser, Anschrift wie oben<br><small style="color:var(--grey)">(Verantwortliche gemäß § 18 Abs. 2 MStV)</small></dd>
+        </dl>
+
+        <h2 id="beruf">Berufsbezeichnung und Aufsicht</h2>
+        <h3>Berufsbezeichnungen</h3>
+        <p>Die gesetzlichen Berufsbezeichnungen „Rechtsanwalt“ und „Rechtsanwältin“ wurden in der Bundesrepublik Deutschland im Land Berlin verliehen.</p>
+        <h3>Zuständige Aufsichtsbehörde</h3>
+        <div class="card">
+          <p><strong>Rechtsanwaltskammer Berlin</strong><br>
+          Littenstraße 9, 10179 Berlin<br>
+          Telefon: 030 – 30 69 31 0 · Telefax: 030 – 30 69 31 99<br>
+          E-Mail: <a class="ext" href="mailto:info@rak-berlin.org">info@rak-berlin.org</a><br>
+          Internet: <a class="ext" href="https://www.rak-berlin.de" target="_blank" rel="noopener">www.rak-berlin.de</a></p>
+        </div>
+        <h3>Berufsrechtliche Regelungen</h3>
+        <p>Für Rechtsanwältinnen und Rechtsanwälte gelten:</p>
+        <ul>
+          <li>Bundesrechtsanwaltsordnung (BRAO)</li>
+          <li>Berufsregeln für Rechtsanwälte (BORA)</li>
+          <li>Berufsregeln der Rechtsanwälte der Europäischen Union (CCBE)</li>
+          <li>Fachanwaltsordnung (FAO)</li>
+          <li>Gerichtskostengesetz (GKG)</li>
+          <li>Gesetz über die Vergütung der Rechtsanwältinnen und Rechtsanwälte (RVG)</li>
+        </ul>
+        <p>Die Regelungen sind bei der Bundesrechtsanwaltskammer unter <a class="ext" href="https://www.brak.de" target="_blank" rel="noopener">www.brak.de</a> einsehbar.</p>
+
+        <h2 id="versicherung">Berufshaftpflichtversicherung</h2>
+        <dl>
+          <dt>Versicherer</dt><dd>Allianz Versicherungs-AG, 10900 Berlin</dd>
+          <dt>Geltungsbereich</dt><dd>Versichert ist die berufliche Tätigkeit in Deutschland, in den Mitgliedsländern der EU, in der Türkei und in den Staaten auf dem Gebiet der ehemaligen Sowjetunion einschließlich Litauen, Estland und Lettland.</dd>
+        </dl>
+
+        <h2 id="haftung">Haftungshinweise</h2>
+        <h3>Haftung für Inhalte</h3>
+        <p>Als Diensteanbieter sind wir nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+        <h3>Haftung für Links</h3>
+        <p>Von unserer Website wird auch auf externe Angebote im Internet verwiesen. Die Inhalte der verlinkten Seiten sind von Institutionen oder Unternehmen gestaltet, auf die wir keinen Einfluss haben. Wir machen uns die dort aufgeführten Inhalte nicht zu eigen; für Angebote Dritter wird keine Haftung übernommen. Sollten Ihnen auf dieser Internetseite oder auf einer verlinkten Seite bedenkliche oder rechtswidrige Inhalte auffallen, sind wir für einen Hinweis dankbar. Sobald klare Anhaltspunkte für Rechtsverstöße vorliegen, heben wir die Verlinkung auf.</p>
+        <h3>Haftung für E-Mail</h3>
+        <p>Der Versand von E-Mails an uns hat keine fristwahrende Wirkung. Kommunikation per E-Mail über das Internet ist unsicher; fremde Einsichtnahme und Datenmanipulation sind möglich. Wir bitten um Verständnis, dass wir weder für den Inhalt noch für die inhaltliche Manipulation von E-Mails haften. In unserer Kanzlei treffen wir alle angemessenen Vorkehrungen zum Schutz vor Viren und bitten Sie, ebenfalls Virenschutz einzusetzen und Dateianhänge vor dem Versand oder Öffnen zu prüfen. Für Schäden infolge etwaiger Viren übernehmen wir keine Haftung.</p>
+        <h3>Urheberrecht</h3>
+        <p>Das Layout der Homepage, die verwendeten Grafiken und Bilder, die Sammlung sowie die einzelnen Beiträge sind urheberrechtlich geschützt. Alle Rechte, auch die der fotomechanischen Wiedergabe, der Vervielfältigung und der Verbreitung mittels besonderer Verfahren (zum Beispiel Datenverarbeitung, Datenträger und Datennetze), auch teilweise, behalten wir uns vor.</p>
+
+        <h2 id="streit">Außergerichtliche Streitbeilegung</h2>
+        <p>Information nach §§ 36 und 37 VSBG: An einem Verfahren zur Streitbeilegung bei einer Verbraucherschlichtungsstelle nehmen wir nicht teil. Unsere zuständigen Aufsichtsbehörden vermitteln auf Antrag bei Streitigkeiten, etwa anlässlich einer Honorarrechnung oder der Nichtherausgabe von Unterlagen, zwischen Mitgliedern der Kammer und ihren Auftraggebern. Es handelt sich dabei um ein Mediationsverfahren. An anderen Vermittlungsverfahren nehmen wir nicht teil.</p>
+
+        <h2 id="barrierefreiheit">Barrierefreiheit</h2>
+        <p>Wir legen Wert auf eine barrierearme Gestaltung dieser Website. Ziel ist es, allen Nutzerinnen und Nutzern – unabhängig von technischen Voraussetzungen oder individuellen Einschränkungen – einen möglichst einfachen Zugang zu allen Inhalten zu ermöglichen. Wir orientieren uns an der Barrierefreie-Informationstechnik-Verordnung (BITV 2.0) und den Web Content Accessibility Guidelines (WCAG).</p>
+        <p>Sollten Ihnen Barrieren auffallen oder benötigen Sie Unterstützung bei der Nutzung dieser Website, freuen wir uns über Ihre Rückmeldung an <a class="ext" href="mailto:kanzlei@kaiser-recht.de">kanzlei@kaiser-recht.de</a> unter Angabe der betroffenen Seite.</p>
+        <h3>Schlichtungsstelle</h3>
+        <div class="card">
+          <p><strong>Schlichtungsstelle nach dem Behindertengleichstellungsgesetz</strong><br>
+          bei dem Beauftragten der Bundesregierung für die Belange von Menschen mit Behinderungen<br>
+          Mauerstraße 53, 10117 Berlin<br>
+          Telefon: <a class="ext" href="tel:+4930185272805">+49 30 18 527-2805</a> · Telefax: +49 30 18 527-2901<br>
+          E-Mail: <a class="ext" href="mailto:info@schlichtungsstelle-bgg.de">info@schlichtungsstelle-bgg.de</a></p>
+        </div>
+
+        <h2 id="hinweise">Sprachliche Gleichstellung</h2>
+        <p>Aus Gründen der besseren Lesbarkeit wird auf die gleichzeitige Verwendung männlicher, weiblicher und diverser Sprachformen verzichtet. Sämtliche Personenbezeichnungen gelten gleichermaßen für alle Geschlechter.</p>
+
+        <div class="note">
+          <b>Vor Veröffentlichung prüfen</b>
+          <p>Übernommen von der bestehenden Seite kaiser-recht.de. Bitte prüfen, ob Steuernummer, Versicherer und Kontaktdaten noch aktuell sind – und ob eine Umsatzsteuer-Identifikationsnummer nach § 27a UStG ergänzt werden soll (bisher ist nur die Steuernummer angegeben). Der Abschnitt zur Realisierung der Website ist zu ergänzen, sobald feststeht, wer die neue Seite betreut.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer><div class="wrap">
+  <span>© 2026 Rechtsanwälte Andreas &amp; Claudia Kaiser</span>
+  <div class="links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="verguetung.html">Vergütung</a></div>
+</div></footer>
+
+<div class="mobile-bar">
+  <a href="tel:+493066122554">Anrufen</a>
+  <a href="index.html#kontakt">Rückruf</a>
+</div>
+
+<script>
+// Kaiser & Kaiser — gemeinsames Skript
+// Sticky-Header, Mobilmenue, Einblenden beim Scrollen.
+
+(function(){
+  var hdr=document.getElementById('hdr'),burger=document.getElementById('burger');
+  var onScroll=function(){hdr.classList.toggle('solid',window.scrollY>50)};
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var toggle=function(open){
+    document.body.classList.toggle('menu',open);
+    document.body.classList.toggle('lock',open);
+    burger.setAttribute('aria-expanded',open?'true':'false');
+    burger.setAttribute('aria-label',open?'Menü schließen':'Menü öffnen');
+  };
+  burger.addEventListener('click',function(){toggle(!document.body.classList.contains('menu'))});
+  document.querySelectorAll('#navm a').forEach(function(a){a.addEventListener('click',function(){toggle(false)})});
+  addEventListener('keydown',function(e){if(e.key==='Escape')toggle(false)});
+
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+    },{threshold:.1,rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%3)*70+'ms';io.observe(el)});
+  }
+})();
+</script>
+<a href="../START.html" style="position:fixed;left:16px;bottom:16px;z-index:2147483647;background:#22312E;color:#F4EFE6;font:600 15px/1 system-ui,sans-serif;text-decoration:none;padding:12px 16px;border-radius:999px;box-shadow:0 8px 20px -8px rgba(0,0,0,.5)">&larr; Zur Übersicht</a>
+</body>
+</html>

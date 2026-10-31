@@ -43,6 +43,10 @@ header p { max-width: 40em; margin: 0; opacity: .9; font-size: 20px; }
 .hint { margin: 56px 0 64px; padding-top: 28px; border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; font-size: 16px; color: var(--muted); }
 .hint b { display: block; color: var(--ink); font-weight: 600; margin-bottom: 4px; }
 kbd { font: 600 14px "Public Sans"; background: #fff; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px; padding: 1px 7px; color: var(--ink); }
+.card--zeitung { display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; margin-top: 28px; }
+.card--zeitung img { border-bottom: 0; border-right: 1px solid var(--line); height: 100%; }
+.card--zeitung .when { color: #A61E17; }
+@media (max-width: 860px) { .card--zeitung { grid-template-columns: 1fr; } .card--zeitung img { border-right: 0; border-bottom: 1px solid var(--line); } }
 @media (max-width: 1000px) { .cards { grid-template-columns: 1fr 1fr; } .card--new { grid-column: 1 / -1; } }
 @media (max-width: 860px) { .cards, .more, .hint { grid-template-columns: 1fr; } .small { grid-template-columns: 120px 1fr; } }
 </style>
@@ -52,7 +56,7 @@ kbd { font: 600 14px "Public Sans"; background: #fff; border: 1px solid var(--li
   <div class="wrap">
     <div class="brand"><b>Kaiser <span>&amp;</span> Kaiser</b><small>Rechtsanwälte · Mediation</small></div>
     <h1>Ihre neue Website</h1>
-    <p>Sehr geehrte Frau Kaiser, sehr geehrter Herr Kaiser, hier können Sie sich in Ruhe die neue Website ansehen und mit der bisherigen Website und dem ersten Entwurf vom August vergleichen. Alles läuft direkt von diesem Stick, ohne Internet.</p>
+    <p>Sehr geehrte Frau Kaiser, sehr geehrter Herr Kaiser, hier können Sie sich in Ruhe die neue Website ansehen und mit der bisherigen Website, dem ersten Entwurf vom August und einer Alternative im Stil einer Tageszeitung vergleichen. Alles läuft direkt von diesem Stick, ohne Internet.</p>
   </div>
 </header>
 
@@ -71,6 +75,11 @@ kbd { font: 600 14px "Public Sans"; background: #fff; border: 1px solid var(--li
       <div class="t"><span class="when">Oktober 2026 · neu</span><h2>Die neue Website</h2><p>Zwei Wege aus einem Konflikt: vor Gericht oder in der Mediation. Mit Seiten für jedes Rechtsgebiet, Rückruf-Formular und Erklärvideo.</p><span class="go">Neue Website öffnen &rarr;</span></div>
     </a>
   </div>
+
+  <a class="card card--zeitung" href="entwurf-zeitung/index.html">
+    <img src="zeitung-vorschau.png" alt="">
+    <div class="t"><span class="when">Oktober 2026 · Alternative</span><h2>Im Stil einer Tageszeitung</h2><p>Die gleichen Inhalte, anders erzählt: die Startseite als Titelseite, die Rechtsgebiete als Ressorts, die Mediation als Hintergrundstück. Zum Vergleich gibt es hier nur die Startseite.</p><span class="go">Alternative öffnen &rarr;</span></div>
+  </a>
 
   <div class="more">
     <a class="small" href="neu/mediation.html#video">

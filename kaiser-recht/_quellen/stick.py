@@ -20,6 +20,12 @@ shutil.copytree(os.path.join(ROOT, "vorschau"), os.path.join(OUT, "neu"))
 with zipfile.ZipFile(ALT_ZIP) as z:
     z.extractall(OUT)
 os.rename(os.path.join(OUT, "alte-seite-kaiser-recht"), os.path.join(OUT, "alt"))
+with zipfile.ZipFile(os.path.join(ROOT, "archiv", "entwurf-august-2026.zip")) as z:
+    z.extractall(os.path.join(OUT, "entwurf-august"))
+for f in ("LIESMICH-fuer-den-Provider.txt", "robots.txt"):
+    p = os.path.join(OUT, "entwurf-august", f)
+    if os.path.exists(p):
+        os.remove(p)
 for f in (".htaccess", "robots.txt"):
     p = os.path.join(OUT, "neu", f)
     if os.path.exists(p):
@@ -46,6 +52,7 @@ for page in glob.glob(os.path.join(OUT, "**", "*.html"), recursive=True):
 
 shutil.copy(os.path.join(ROOT, "_quellen", "stick-start.html"), os.path.join(OUT, "START.html"))
 shutil.copy(os.path.join(ROOT, "archiv", "alte-seite", "startseite.png"), os.path.join(OUT, "alt-vorschau.png"))
+shutil.copy(os.path.join(ROOT, "archiv", "entwurf-august-vorschau.png"), os.path.join(OUT, "entwurf-vorschau.png"))
 shutil.copy(os.path.join(ROOT, "_quellen", "stick-fragen.html"), os.path.join(OUT, "Fragen.html"))
 
 zpath = os.path.join(ROOT, "stick", "Kaiser-Website.zip")

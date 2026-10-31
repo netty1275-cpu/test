@@ -18,7 +18,11 @@ header { background: var(--petrol); color: var(--leinen); padding: 44px 0 120px;
 .brand small { display: block; margin-top: 8px; font: 600 12px/1 "Public Sans"; letter-spacing: .16em; text-transform: uppercase; opacity: .8; }
 h1 { font: 500 clamp(40px, 5vw, 64px)/1.05 "Literata", serif; margin: 64px 0 18px; letter-spacing: -.01em; }
 header p { max-width: 40em; margin: 0; opacity: .9; font-size: 20px; }
-.cards { display: grid; grid-template-columns: 1.25fr 1fr; gap: 28px; margin-top: -80px; }
+.cards { display: grid; grid-template-columns: 1fr 1fr 1.35fr; gap: 24px; margin-top: -80px; align-items: start; }
+.when { display: block; font: 600 14px/1 "Public Sans"; color: var(--muted); margin-bottom: 10px; }
+.card--new { box-shadow: 0 0 0 3px var(--petrol), 0 30px 60px -30px rgba(22,58,55,.55); }
+.card--new .when { color: var(--terra-text); }
+.card--alt h2 { font-size: 26px; }
 .card { display: block; text-decoration: none; color: var(--ink); background: var(--paper); border-radius: 6px; overflow: hidden; box-shadow: 0 30px 60px -30px rgba(22,58,55,.55); transition: translate .25s ease, box-shadow .25s ease; }
 .card:hover { translate: 0 -4px; box-shadow: 0 36px 70px -30px rgba(22,58,55,.65); }
 .card img { display: block; width: 100%; aspect-ratio: 1200 / 630; object-fit: cover; object-position: top center; border-bottom: 1px solid var(--line); }
@@ -39,6 +43,7 @@ header p { max-width: 40em; margin: 0; opacity: .9; font-size: 20px; }
 .hint { margin: 56px 0 64px; padding-top: 28px; border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; font-size: 16px; color: var(--muted); }
 .hint b { display: block; color: var(--ink); font-weight: 600; margin-bottom: 4px; }
 kbd { font: 600 14px "Public Sans"; background: #fff; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px; padding: 1px 7px; color: var(--ink); }
+@media (max-width: 1000px) { .cards { grid-template-columns: 1fr 1fr; } .card--new { grid-column: 1 / -1; } }
 @media (max-width: 860px) { .cards, .more, .hint { grid-template-columns: 1fr; } .small { grid-template-columns: 120px 1fr; } }
 </style>
 </head>
@@ -47,19 +52,23 @@ kbd { font: 600 14px "Public Sans"; background: #fff; border: 1px solid var(--li
   <div class="wrap">
     <div class="brand"><b>Kaiser <span>&amp;</span> Kaiser</b><small>Rechtsanwälte · Mediation</small></div>
     <h1>Ihre neue Website</h1>
-    <p>Sehr geehrte Frau Kaiser, sehr geehrter Herr Kaiser, hier können Sie sich in Ruhe die neue Website ansehen und mit der bisherigen vergleichen. Alles läuft direkt von diesem Stick, ohne Internet.</p>
+    <p>Sehr geehrte Frau Kaiser, sehr geehrter Herr Kaiser, hier können Sie sich in Ruhe die neue Website ansehen und mit der bisherigen Website und dem ersten Entwurf vom August vergleichen. Alles läuft direkt von diesem Stick, ohne Internet.</p>
   </div>
 </header>
 
 <main class="wrap">
   <div class="cards">
-    <a class="card" href="neu/index.html">
-      <img src="neu/assets/img/og-image.png" alt="">
-      <div class="t"><h2>Die neue Website</h2><p>Zwei Wege aus einem Konflikt: vor Gericht oder in der Mediation. Mit Seiten für jedes Rechtsgebiet, Rückruf-Formular und Erklärvideo.</p><span class="go">Neue Website öffnen &rarr;</span></div>
-    </a>
     <a class="card card--alt" href="alt/index.html">
       <img src="alt-vorschau.png" alt="">
-      <div class="t"><h2>Die bisherige Website</h2><p>Zum Vergleich: kaiser-recht.de, wie sie heute online ist.</p><span class="go">Bisherige Website öffnen &rarr;</span></div>
+      <div class="t"><span class="when">Heute online</span><h2>Die bisherige Website</h2><p>kaiser-recht.de, wie sie im Moment zu sehen ist.</p><span class="go">Öffnen &rarr;</span></div>
+    </a>
+    <a class="card card--alt" href="entwurf-august/index.html">
+      <img src="entwurf-vorschau.png" alt="">
+      <div class="t"><span class="when">August 2026</span><h2>Der erste Entwurf</h2><p>Die Ansichtsfassung vom 19. August, dunkel und reduziert.</p><span class="go">Öffnen &rarr;</span></div>
+    </a>
+    <a class="card card--new" href="neu/index.html">
+      <img src="neu/assets/img/og-image.png" alt="">
+      <div class="t"><span class="when">Oktober 2026 · neu</span><h2>Die neue Website</h2><p>Zwei Wege aus einem Konflikt: vor Gericht oder in der Mediation. Mit Seiten für jedes Rechtsgebiet, Rückruf-Formular und Erklärvideo.</p><span class="go">Neue Website öffnen &rarr;</span></div>
     </a>
   </div>
 

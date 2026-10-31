@@ -32,7 +32,7 @@ header p { max-width: 40em; margin: 0; opacity: .9; font-size: 20px; }
 .go { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; background: var(--petrol); color: #fff; padding: 14px 20px; border-radius: 3px; }
 .card--alt .go { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--ink); }
 .card:hover .go { background: var(--petrol-dk); color: #fff; }
-.more { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 28px 0 0; }
+.more { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 24px; margin: 28px 0 0; }
 .small { display: grid; grid-template-columns: 200px 1fr; align-items: center; gap: 22px; background: var(--paper); border-radius: 6px; padding: 18px; text-decoration: none; color: var(--ink); box-shadow: 0 0 0 1px var(--line); transition: box-shadow .2s ease; }
 .small:hover { box-shadow: 0 0 0 2px var(--terra); }
 .small img { width: 100%; border-radius: 3px; display: block; }
@@ -40,10 +40,11 @@ header p { max-width: 40em; margin: 0; opacity: .9; font-size: 20px; }
 .small span { color: var(--muted); font-size: 16px; }
 .small--q { grid-template-columns: 64px 1fr; }
 .small--q i { width: 64px; height: 64px; border-radius: 50%; border: 6px solid var(--petrol); display: grid; place-items: center; font: 700 26px "Literata"; font-style: normal; color: var(--petrol); }
+.small--q:first-of-type i { border-color: var(--terra); color: var(--terra-text); }
 .hint { margin: 56px 0 64px; padding-top: 28px; border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; font-size: 16px; color: var(--muted); }
 .hint b { display: block; color: var(--ink); font-weight: 600; margin-bottom: 4px; }
 kbd { font: 600 14px "Public Sans"; background: #fff; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px; padding: 1px 7px; color: var(--ink); }
-@media (max-width: 1000px) { .cards { grid-template-columns: 1fr 1fr; } .card--new { grid-column: 1 / -1; } }
+@media (max-width: 1000px) { .cards { grid-template-columns: 1fr 1fr; } .card--new { grid-column: 1 / -1; } .more { grid-template-columns: 1fr; } }
 @media (max-width: 860px) { .cards, .more, .hint { grid-template-columns: 1fr; } .small { grid-template-columns: 120px 1fr; } }
 </style>
 </head>
@@ -76,6 +77,10 @@ kbd { font: 600 14px "Public Sans"; background: #fff; border: 1px solid var(--li
     <a class="small" href="neu/mediation.html#video">
       <img src="neu/assets/img/mediation-poster-960.jpg" alt="">
       <span><b>Erklärvideo Mediation</b><span>60 Sekunden, ohne Ton</span></span>
+    </a>
+    <a class="small small--q" href="Pruefbericht-bisherige-Website.pdf">
+      <i>%</i>
+      <span><b>Prüfbericht zur bisherigen Website</b><span>Technik, Sicherheit, Datenschutz und Auffindbarkeit (PDF, 17 Seiten)</span></span>
     </a>
     <a class="small small--q" href="Fragen.html">
       <i>?</i>

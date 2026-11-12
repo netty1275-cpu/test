@@ -475,7 +475,7 @@ body { margin: 0; background: var(--grau); color: var(--tinte); font-family: var
   var STANDARD = [[0, 's0'], [500, 's1'], [2000, 's2'], [3000, 's3'], [3600, 's4'], [4100, 's5'], [4600, 's6'], [5600, 's7'], [7000, 's8'], [7400, 's9']];
   var ABLAUF = { a: STANDARD, b: STANDARD, c: STANDARD,
     e: [[0, 's0'], [500, 's1'], [2000, 's2'], [3000, 's3'], [4000, 's4'], [4500, 's5'], [5000, 's6'], [6200, 's7'], [6700, 't1'], [8300, 't3'], [9400, 'tp'], [10100, 's8'], [10500, 's9']],
-    f: [[0, 's0'], [500, 's1'], [2000, 's2'], [3000, 's3'], [4400, 's4'], [4900, 'u0'], [5200, 'u1'], [6500, 'u2'], [7100, 'u3'], [8100, 'up'], [9700, 'ux'], [10100, 's5'], [10400, 's6'], [11100, 's9']],
+    f: [[0, 's0'], [500, 's1'], [2000, 's2'], [3000, 's3'], [5600, 's4'], [6200, 'u0'], [6700, 'u1'], [8800, 'u2'], [10200, 'u3'], [11900, 'up'], [15200, 'ux'], [15700, 's5'], [16100, 's6'], [17600, 's9']],
     d: [[0, 's0'], [400, 's1'], [1900, 's2'], [2700, 's3'], [3800, 'sp'], [5300, 's4'], [5800, 's5'], [6300, 's6'], [7300, 's7'], [8700, 's8'], [9100, 's9']] };
   var SUCHE = 'Umzugshelfer Berlin';                  // pro Kunde: Gewerbe und Ort
   var tipp = document.getElementById('tipp');
@@ -518,7 +518,7 @@ body { margin: 0; background: var(--grau); color: var(--tinte); font-family: var
 
   function tippen(feld) {
     if (ruhig) { feld.textContent = SUCHE; return; }
-    SUCHE.split('').forEach(function (z, i) { später(function () { feld.textContent = SUCHE.slice(0, i + 1); }, i * 65); });
+    SUCHE.split('').forEach(function (z, i) { später(function () { feld.textContent = SUCHE.slice(0, i + 1); }, i * 85); });
   }
 
   function start(v) {

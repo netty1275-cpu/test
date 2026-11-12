@@ -194,6 +194,9 @@ body { margin: 0; background: var(--grau); color: var(--tinte); font-family: var
 .nur-f { display: none; }
 .vorspann[data-v="f"] .nur-f { display: inline; }
 .u0 .buehne2 .feld { opacity: 1; transform: none; }
+.buehne2 .feld { position: relative; }
+.buehne2 .bsp { position: absolute; left: 16px; top: -19px; margin: 0; color: var(--v-leise); }
+.buehne2 .tipp { overflow: hidden; text-overflow: ellipsis; }
 .g-zeile { position: absolute; left: 0; right: 0; top: 0; height: 44px; padding: 10px 14px; border-radius: 8px; background: #24272c; opacity: 0; transition: transform .9s cubic-bezier(.6, 0, .2, 1), opacity .5s; }
 .g-zeile::before, .g-zeile::after { content: ""; display: block; height: 8px; border-radius: 4px; background: #454a51; }
 .g-zeile::before { width: 55%; } .g-zeile::after { width: 82%; margin-top: 8px; opacity: .6; }

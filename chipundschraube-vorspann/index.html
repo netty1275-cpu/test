@@ -51,7 +51,7 @@ body { margin: 0; background: var(--grau); color: var(--tinte); font-family: var
   display: none; position: absolute; left: 50%; top: 46%; width: 300px; height: 300px; margin: -150px 0 0 -150px; perspective: 900px;
   transition: top .9s cubic-bezier(.6, 0, .2, 1), transform .9s cubic-bezier(.6, 0, .2, 1);
 }
-.vorspann[data-v="a"] .logo[data-v="a"], .vorspann[data-v="b"] .logo[data-v="b"], .vorspann[data-v="c"] .logo[data-v="c"], .vorspann[data-v="d"] .logo[data-v="d"] { display: block; }
+.vorspann[data-v="a"] .logo[data-v="a"], .vorspann[data-v="b"] .logo[data-v="b"], .vorspann[data-v="c"] .logo[data-v="c"], .vorspann[data-v="d"] .logo[data-v="d"], .vorspann[data-v="e"] .logo[data-v="e"] { display: block; }
 .s4 .logo { top: 15%; transform: scale(.56); }
 .s4 .logo[data-v="b"], .s4 .logo[data-v="c"] { top: 19%; }
 
@@ -152,6 +152,32 @@ body { margin: 0; background: var(--grau); color: var(--tinte); font-family: var
 .s4 .d-zeichen { opacity: 1; }
 @keyframes blinken { 50% { opacity: 0; } }
 
+/* ---------- Entwurf 5: Logo aus 1 und 2, danach die Suche aus 4 ---------- */
+.ebene { position: absolute; inset: 0; transform: rotateX(60deg) rotateZ(-35deg); }
+.ebene svg { width: 100%; height: 100%; overflow: visible; }
+.logo[data-v="e"] .bahn { stroke: var(--gelb); stroke-dashoffset: 100; transition: stroke-dashoffset .9s ease-out; }
+.s3 .logo[data-v="e"] .bahn { stroke-dashoffset: 0; }
+.logo[data-v="e"] .auge { fill: var(--gelb); opacity: 0; transition: opacity .3s .8s; }
+.s3 .logo[data-v="e"] .auge { opacity: 1; }
+.s4 .logo[data-v="e"] { top: 13%; transform: scale(.5); }
+.szene { display: none; position: relative; width: 100%; margin-top: 14px; text-align: left; }
+.vorspann[data-v="e"] .szene { display: block; }
+.vorspann[data-v="e"] .klapptafel { display: none; }
+.vorspann[data-v="e"] .inhalt { top: 31%; }
+.vorspann[data-v="e"] .satz { margin-top: 12px; font-size: 16px; }
+.szene .feld { height: 44px; opacity: 1; transform: none; }
+.bsp { margin-left: auto; font-family: var(--tafel); font-size: 11px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: #6b7078; }
+.szene .treffer { height: 117px; margin-top: 12px; }
+.reihe { position: absolute; left: 0; right: 0; top: 0; height: 35px; padding: 8px 14px; border-radius: 7px; background: #24272c; transition: transform .9s cubic-bezier(.6, 0, .2, 1); }
+.reihe::before, .reihe::after { content: ""; display: block; height: 7px; border-radius: 4px; background: #454a51; }
+.reihe::before { width: 55%; } .reihe::after { width: 82%; margin-top: 5px; opacity: .6; }
+.reihe:nth-child(2) { transform: translateY(41px); }
+.reihe--ihr { transform: translateY(82px); display: flex; align-items: center; background: #2c2710; box-shadow: inset 0 0 0 2px var(--gelb); color: var(--gelb-hell); font-size: 15px; font-weight: 700; }
+.reihe--ihr::before, .reihe--ihr::after { display: none; }
+.t3 .reihe:nth-child(1) { transform: translateY(41px); } .t3 .reihe:nth-child(2) { transform: translateY(82px); } .t3 .reihe--ihr { transform: translateY(0); }
+.szene .anfrage { top: 96px; }
+.tp .szene .anfrage { opacity: 1; transform: none; }
+
 /* ---------- Text ---------- */
 .inhalt {
   position: absolute; left: 0; right: 0; top: 34%; bottom: 0; margin: 0 auto; max-width: 460px;
@@ -193,6 +219,7 @@ body { margin: 0; background: var(--grau); color: var(--tinte); font-family: var
     <button type="button" data-v="b" aria-label="Entwurf 2: Platine">2</button>
     <button type="button" data-v="c" aria-label="Entwurf 3: Prägung">3</button>
     <button type="button" data-v="d" aria-label="Entwurf 4: Suche">4</button>
+    <button type="button" data-v="e" aria-label="Entwurf 5: Logo und Suche">5</button>
   </div>
 
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -290,10 +317,64 @@ body { margin: 0; background: var(--grau); color: var(--tinte); font-family: var
     <svg class="d-zeichen"><use href="#cs"/></svg>
   </div>
 
+  <div class="logo" data-v="e" aria-hidden="true">
+    <div class="ring"></div>
+    <div class="ebene"><svg viewBox="0 0 300 300"><g class="bahnen">
+      <path class="bahn" pathLength="100" d="M50 124H30L8 102V60"/><circle class="auge" cx="8" cy="60" r="5"/>
+      <path class="bahn" pathLength="100" d="M50 176H34L14 196V262"/><circle class="auge" cx="14" cy="262" r="5"/>
+      <path class="bahn" pathLength="100" d="M250 124H272L292 104V50"/><circle class="auge" cx="292" cy="50" r="5"/>
+      <path class="bahn" pathLength="100" d="M250 176H266L288 198V256"/><circle class="auge" cx="288" cy="256" r="5"/>
+      <path class="bahn" pathLength="100" d="M190 95V60L214 36"/><circle class="auge" cx="214" cy="36" r="5"/>
+      <path class="bahn" pathLength="100" d="M110 205V242L86 266"/><circle class="auge" cx="86" cy="266" r="5"/>
+    </g></svg></div>
+    <svg class="schraube" viewBox="0 0 46 190">
+      <defs>
+        <linearGradient id="metall2" x1="0" x2="1" y1="0" y2="0">
+          <stop offset="0" stop-color="#2a2d32"/><stop offset=".28" stop-color="#9a9fa6"/><stop offset=".45" stop-color="#e6e8ea"/>
+          <stop offset=".7" stop-color="#737880"/><stop offset="1" stop-color="#22252a"/>
+        </linearGradient>
+        <clipPath id="schaft2"><path d="M0 0H46V150L23 190 0 150Z"/></clipPath>
+      </defs>
+      <path d="M0 0H46V150L23 190 0 150Z" fill="url(#metall2)"/>
+      <g clip-path="url(#schaft2)">
+        <g class="gewinde" fill="none" stroke-linecap="round">
+          <g stroke="#15171A" stroke-opacity=".8" stroke-width="3.5">
+            <path d="M-2 -24Q23 -8 48 -32"/><path d="M-2 -8Q23 8 48 -16"/><path d="M-2 8Q23 24 48 0"/><path d="M-2 24Q23 40 48 16"/><path d="M-2 40Q23 56 48 32"/><path d="M-2 56Q23 72 48 48"/><path d="M-2 72Q23 88 48 64"/><path d="M-2 88Q23 104 48 80"/><path d="M-2 104Q23 120 48 96"/><path d="M-2 120Q23 136 48 112"/><path d="M-2 136Q23 152 48 128"/><path d="M-2 152Q23 168 48 144"/><path d="M-2 168Q23 184 48 160"/><path d="M-2 184Q23 200 48 176"/>
+          </g>
+          <g stroke="#fff" stroke-opacity=".35" stroke-width="1" transform="translate(0 3)">
+            <path d="M-2 -24Q23 -8 48 -32"/><path d="M-2 -8Q23 8 48 -16"/><path d="M-2 8Q23 24 48 0"/><path d="M-2 24Q23 40 48 16"/><path d="M-2 40Q23 56 48 32"/><path d="M-2 56Q23 72 48 48"/><path d="M-2 72Q23 88 48 64"/><path d="M-2 88Q23 104 48 80"/><path d="M-2 104Q23 120 48 96"/><path d="M-2 120Q23 136 48 112"/><path d="M-2 136Q23 152 48 128"/><path d="M-2 152Q23 168 48 144"/><path d="M-2 168Q23 184 48 160"/><path d="M-2 184Q23 200 48 176"/>
+          </g>
+        </g>
+      </g>
+    </svg>
+    <div class="modell">
+      <div class="koerper">
+        <div class="wand wand--h"></div><div class="wand wand--l"></div><div class="wand wand--r"></div><div class="wand wand--v"></div>
+        <div class="bein bein--l bein--1"></div><div class="bein bein--l bein--2"></div>
+        <div class="bein bein--r bein--1"></div><div class="bein bein--r bein--2"></div>
+        <div class="oben"><div class="schlitz"></div></div>
+      </div>
+    </div>
+  </div>
+
   <div class="inhalt">
     <p class="marke auf auf--5">Chip und Schraube<small>Webseiten aus Berlin-Wedding</small></p>
     <p class="satz auf auf--6">Wir haben Ihre Webseite neu gebaut. <strong>Nicht, damit sie schöner aussieht.</strong> Ihre jetzige kann bleiben, wie sie ist.</p>
     <div class="klapptafel auf auf--7" id="klapptafel" role="img" aria-label="Es geht um Anfragen"></div>
+    <div class="szene auf auf--7" role="img" aria-label="Beispiel: Ein Kunde sucht nach Ihrem Gewerbe, Ihr Betrieb rückt in der Liste nach oben, eine Anfrage kommt an.">
+      <div class="feld">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l5 5"/></svg>
+        <span class="tipp" id="tipp2"></span><span class="bsp">Beispiel</span>
+      </div>
+      <div class="treffer">
+        <div class="reihe"></div><div class="reihe"></div>
+        <div class="reihe reihe--ihr">Ihr Betrieb</div>
+      </div>
+      <div class="anfrage">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M5.2 1.5h2.6l1.3 4-1.8 1.4a10 10 0 0 0 5.8 5.8l1.4-1.8 4 1.3v2.6c0 1-.8 1.8-1.8 1.7C9 16.200 3.800 11 3.500 3.300 3.400 2.300 4.200 1.500 5.200 1.500z"/></svg>
+        Neue Anfrage
+      </div>
+    </div>
     <p class="satz auf auf--8">Damit Kunden Sie bei Google finden und sich bei Ihnen melden.</p>
     <button class="los auf auf--9" type="button" id="los">Entwurf ansehen</button>
   </div>
@@ -307,9 +388,11 @@ body { margin: 0; background: var(--grau); color: var(--tinte); font-family: var
   var ZEILEN = ['ES GEHT UM', 'ANFRAGEN  '];          // je 10 Felder
   var STANDARD = [[0, 's0'], [500, 's1'], [2000, 's2'], [3000, 's3'], [3600, 's4'], [4100, 's5'], [4600, 's6'], [5600, 's7'], [7000, 's8'], [7400, 's9']];
   var ABLAUF = { a: STANDARD, b: STANDARD, c: STANDARD,
+    e: [[0, 's0'], [500, 's1'], [2000, 's2'], [3000, 's3'], [4000, 's4'], [4500, 's5'], [5000, 's6'], [6200, 's7'], [6700, 't1'], [8300, 't3'], [9400, 'tp'], [10100, 's8'], [10500, 's9']],
     d: [[0, 's0'], [400, 's1'], [1900, 's2'], [2700, 's3'], [3800, 'sp'], [5300, 's4'], [5800, 's5'], [6300, 's6'], [7300, 's7'], [8700, 's8'], [9100, 's9']] };
   var SUCHE = 'Umzugshelfer Berlin';                  // pro Kunde: Gewerbe und Ort
   var tipp = document.getElementById('tipp');
+  var tipp2 = document.getElementById('tipp2');
   var knoepfe = document.querySelectorAll('.wahl button');
   var aktuell = 'a';
   var ABC = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -345,9 +428,9 @@ body { margin: 0; background: var(--grau); color: var(--tinte); font-family: var
     });
   }
 
-  function tippen() {
-    if (ruhig) { tipp.textContent = SUCHE; return; }
-    SUCHE.split('').forEach(function (z, i) { später(function () { tipp.textContent = SUCHE.slice(0, i + 1); }, i * 65); });
+  function tippen(feld) {
+    if (ruhig) { feld.textContent = SUCHE; return; }
+    SUCHE.split('').forEach(function (z, i) { später(function () { feld.textContent = SUCHE.slice(0, i + 1); }, i * 65); });
   }
 
   function start(v) {
@@ -355,15 +438,16 @@ body { margin: 0; background: var(--grau); color: var(--tinte); font-family: var
     timer.forEach(clearTimeout); timer = [];
     tafel.className = 'vorspann';
     tafel.dataset.v = aktuell;
-    tipp.textContent = '';
+    tipp.textContent = ''; tipp2.textContent = '';
     Array.prototype.forEach.call(knoepfe, function (k) { k.setAttribute('aria-pressed', String(k.dataset.v === aktuell)); });
     kachelnBauen();
     void tafel.offsetWidth;                            // Animationen sauber neu starten
     ABLAUF[aktuell].forEach(function (schritt) {
       später(function () {
         tafel.classList.add(schritt[1]);
-        if (schritt[1] === 's7') klappen();
-        if (schritt[1] === 's1' && aktuell === 'd') tippen();
+        if (schritt[1] === 's7' && aktuell !== 'e') klappen();
+        if (schritt[1] === 's1' && aktuell === 'd') tippen(tipp);
+        if (schritt[1] === 't1') tippen(tipp2);
       }, ruhig ? 0 : schritt[0]);
     });
   }
@@ -375,7 +459,7 @@ body { margin: 0; background: var(--grau); color: var(--tinte); font-family: var
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') schliessen(); });
   document.getElementById('nochmal').addEventListener('click', function () { start(); });
   Array.prototype.forEach.call(knoepfe, function (k) { k.addEventListener('click', function () { start(k.dataset.v); }); });
-  start('a');
+  start('e');
 })();
 </script>
 </body>

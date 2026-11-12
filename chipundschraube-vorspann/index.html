@@ -31,20 +31,29 @@ body { margin: 0; background: var(--grau); color: var(--tinte); font-family: var
 
 /* ---------- Tafel ---------- */
 .vorspann {
-  position: fixed; inset: 0; z-index: 1000; overflow: hidden; color: var(--grau);
-  background: radial-gradient(120% 70% at 50% 38%, #262a30 0%, var(--blatt) 62%);
+  --v-bg1: #262a30; --v-bg2: var(--blatt); --v-text: var(--grau); --v-leise: var(--leise); --v-stark: #fff; --v-rand: rgba(255, 255, 255, .3); --v-fokus: var(--gelb-hell);
+  position: fixed; inset: 0; z-index: 1000; overflow: hidden; color: var(--v-text);
+  background: radial-gradient(120% 70% at 50% 38%, var(--v-bg1) 0%, var(--v-bg2) 62%);
   transition: transform .9s cubic-bezier(.7, 0, .2, 1);
 }
 .vorspann.zu { transform: translateY(-100%); }
-.vorspann :focus-visible { outline: 2px solid var(--gelb-hell); outline-offset: 3px; }
-.ueberspringen { position: absolute; z-index: 2; top: calc(10px + env(safe-area-inset-top, 0px)); right: 10px; padding: 12px; font: inherit; font-size: 14px; color: var(--leise); background: none; border: 0; cursor: pointer; }
+.vorspann[data-v="c"] { --v-bg1: #f3f3f0; --v-bg2: #d9d9d4; --v-text: var(--tinte); --v-leise: #4A4F55; --v-stark: #000; --v-rand: rgba(0, 0, 0, .35); --v-fokus: var(--tinte); }
+.vorspann :focus-visible { outline: 2px solid var(--v-fokus); outline-offset: 3px; }
+.ueberspringen { position: absolute; z-index: 2; top: calc(10px + env(safe-area-inset-top, 0px)); right: 10px; padding: 12px; font: inherit; font-size: 14px; color: var(--v-leise); background: none; border: 0; cursor: pointer; }
+
+/* Auswahl der Entwürfe (nur in dieser Vorschau) */
+.wahl { position: absolute; z-index: 2; top: calc(12px + env(safe-area-inset-top, 0px)); left: max(12px, env(safe-area-inset-left, 0px)); display: flex; gap: 6px; }
+.wahl button { width: 38px; height: 38px; border-radius: 8px; border: 1px solid var(--v-rand); background: none; color: var(--v-leise); font: inherit; font-weight: 700; cursor: pointer; }
+.wahl button[aria-pressed="true"] { background: var(--gelb); border-color: var(--gelb); color: var(--tinte); }
 
 /* ---------- 3D-Logo ---------- */
 .logo {
-  position: absolute; left: 50%; top: 46%; width: 300px; height: 300px; margin: -150px 0 0 -150px; perspective: 900px;
+  display: none; position: absolute; left: 50%; top: 46%; width: 300px; height: 300px; margin: -150px 0 0 -150px; perspective: 900px;
   transition: top .9s cubic-bezier(.6, 0, .2, 1), transform .9s cubic-bezier(.6, 0, .2, 1);
 }
+.vorspann[data-v="a"] .logo[data-v="a"], .vorspann[data-v="b"] .logo[data-v="b"], .vorspann[data-v="c"] .logo[data-v="c"], .vorspann[data-v="d"] .logo[data-v="d"] { display: block; }
 .s4 .logo { top: 15%; transform: scale(.56); }
+.s4 .logo[data-v="b"], .s4 .logo[data-v="c"] { top: 19%; }
 
 .ring { position: absolute; left: 50%; top: 50%; width: 130px; height: 130px; margin: -65px 0 0 -65px; border-radius: 50%; border: 2px solid var(--gelb); opacity: 0; }
 .s3 .ring { animation: ring .9s ease-out; }
@@ -85,6 +94,64 @@ body { margin: 0; background: var(--grau); color: var(--tinte); font-family: var
 @keyframes lauf { to { transform: translateY(16px); } }
 @keyframes ring { from { opacity: .9; transform: scaleY(.5) scale(.5); } to { opacity: 0; transform: scaleY(.5) scale(3); } }
 
+
+/* ---------- Entwurf 2: Platine (Blick von oben) ---------- */
+.platine { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.bahnen { transition: opacity .8s; }
+.s4 .bahnen { opacity: .5; }
+.bahn { fill: none; stroke: #4a4f57; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 100; stroke-dashoffset: 100; transition: stroke-dashoffset 1.3s ease-out, stroke .4s; }
+.s1 .bahn { stroke-dashoffset: 0; }
+.auge { fill: #4a4f57; opacity: 0; transition: opacity .3s 1.2s, fill .4s; }
+.s1 .auge { opacity: 1; }
+.s3 .bahn { stroke: var(--gelb); } .s3 .auge { fill: var(--gelb); }
+.s3 .bahnen { filter: drop-shadow(0 0 5px rgba(240, 180, 0, .55)); }
+.b-chip, .b-kopf { transform-origin: 150px 150px; opacity: 0; }
+.b-chip { transform: scale(.8); transition: transform .6s cubic-bezier(.2, .7, .2, 1), opacity .5s; }
+.s0 .b-chip { opacity: 1; transform: none; }
+.b-kopf { transform: rotate(-600deg) scale(1.5); transition: transform 2.3s cubic-bezier(.2, .7, .2, 1), opacity .4s; }
+.s1 .b-kopf { opacity: 1; transform: none; }
+.b-schlitz { fill: #5d4f1c; transition: fill .25s; }
+.s3 .b-schlitz { fill: var(--gelb-hell); filter: drop-shadow(0 0 6px rgba(240, 180, 0, .9)); }
+.logo[data-v="b"] .ring { width: 90px; height: 90px; margin: -45px 0 0 -45px; }
+.s3 .logo[data-v="b"] .ring { animation-name: ring-rund; }
+@keyframes ring-rund { from { opacity: .9; transform: scale(.8); } to { opacity: 0; transform: scale(3.2); } }
+
+/* ---------- Entwurf 3: Prägung (hell, Zeichen als dickes Schild) ---------- */
+.schatten { position: absolute; left: 50%; top: 50%; width: 160px; height: 24px; margin: 100px 0 0 -80px; border-radius: 50%; background: radial-gradient(rgba(0, 0, 0, .32), transparent 70%); opacity: 0; transition: opacity .8s; }
+.s0 .schatten { opacity: 1; }
+.praegung { position: absolute; left: 50%; top: 50%; width: 170px; height: 182px; margin: -91px 0 0 -85px; transform-style: preserve-3d; opacity: 0; transform: rotateY(-18deg) rotateX(6deg); }
+.s0 .praegung { opacity: 1; animation: c-ein .8s cubic-bezier(.2, .7, .2, 1) both; }
+.s1 .praegung { animation: c-dreh 2.2s cubic-bezier(.45, 0, .2, 1) both; }
+.praegung svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; color: #4b5057; --schlitz: #4b5057; }
+.praegung .vorn { color: var(--tinte); --schlitz: #8a7422; }
+.s3 .praegung .vorn { --schlitz: var(--gelb); }
+@keyframes c-ein { from { opacity: 0; transform: translateY(-50px) rotateY(-120deg) rotateX(6deg); } to { opacity: 1; transform: rotateY(-18deg) rotateX(6deg); } }
+@keyframes c-dreh { from { transform: rotateY(-18deg) rotateX(6deg); } to { transform: rotateY(-378deg) rotateX(6deg); } }
+
+/* ---------- Entwurf 4: Suche (der Eintrag wandert nach oben) ---------- */
+.such { position: absolute; inset: 0; padding: 20px 6px 0; transition: opacity .5s; }
+.s4 .such { opacity: 0; }
+.feld { display: flex; align-items: center; gap: 10px; height: 50px; padding: 0 18px; border-radius: 25px; background: #f4f4f1; color: var(--tinte); font-size: 17px; font-weight: 600; opacity: 0; transform: translateY(10px); transition: opacity .5s, transform .5s; }
+.s0 .feld { opacity: 1; transform: none; }
+.feld svg { flex: none; width: 20px; height: 20px; }
+.tipp::after { content: ""; display: inline-block; width: 2px; height: 1.1em; margin-left: 2px; vertical-align: -.15em; background: currentColor; animation: blinken 1s steps(1) infinite; }
+.treffer { position: relative; height: 200px; margin-top: 18px; }
+.zeile { position: absolute; left: 0; right: 0; top: 0; height: 44px; padding: 10px 14px; border-radius: 8px; background: #24272c; opacity: 0; transition: transform .9s cubic-bezier(.6, 0, .2, 1), opacity .5s; }
+.zeile::before, .zeile::after { content: ""; display: block; height: 8px; border-radius: 4px; background: #454a51; }
+.zeile::before { width: 55%; } .zeile::after { width: 82%; margin-top: 8px; opacity: .6; }
+.zeile:nth-child(2) { transform: translateY(52px); } .zeile:nth-child(3) { transform: translateY(104px); }
+.zeile--ihr { transform: translateY(156px); display: flex; align-items: center; background: #2c2710; box-shadow: inset 0 0 0 2px var(--gelb); color: var(--gelb-hell); font-size: 16px; font-weight: 700; }
+.zeile--ihr::before, .zeile--ihr::after { display: none; }
+.s2 .zeile { opacity: 1; }
+.s3 .zeile:nth-child(1) { transform: translateY(52px); } .s3 .zeile:nth-child(2) { transform: translateY(104px); } .s3 .zeile:nth-child(3) { transform: translateY(156px); }
+.s3 .zeile--ihr { transform: translateY(0); }
+.anfrage { position: absolute; right: 0; top: 146px; display: flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 22px; background: var(--gelb); color: var(--tinte); font-size: 16px; font-weight: 700; box-shadow: 0 8px 24px rgba(0, 0, 0, .5); opacity: 0; transform: scale(.6); transform-origin: 80% 0; transition: opacity .3s, transform .45s cubic-bezier(.3, 1.6, .5, 1); }
+.anfrage svg { width: 18px; height: 18px; }
+.sp .anfrage { opacity: 1; transform: none; }
+.d-zeichen { position: absolute; left: 50%; top: 50%; width: 150px; height: 161px; margin: -80px 0 0 -75px; overflow: visible; color: #d3d5d8; --schlitz: var(--blatt); opacity: 0; transition: opacity .5s .25s; }
+.s4 .d-zeichen { opacity: 1; }
+@keyframes blinken { 50% { opacity: 0; } }
+
 /* ---------- Text ---------- */
 .inhalt {
   position: absolute; left: 0; right: 0; top: 34%; bottom: 0; margin: 0 auto; max-width: 460px;
@@ -95,9 +162,9 @@ body { margin: 0; background: var(--grau); color: var(--tinte); font-family: var
 .s5 .auf--5, .s6 .auf--6, .s7 .auf--7, .s8 .auf--8, .s9 .auf--9 { opacity: 1; transform: none; }
 
 .marke { margin: 0; font-family: var(--kopf); font-weight: 800; font-size: 25px; letter-spacing: -.02em; line-height: 1.1; }
-.marke small { display: block; margin-top: 6px; font-family: var(--tafel); font-weight: 500; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--leise); }
+.marke small { display: block; margin-top: 6px; font-family: var(--tafel); font-weight: 500; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--v-leise); }
 .satz { margin: 18px 0 0; font-size: 17px; line-height: 1.4; }
-.satz strong { font-weight: 600; color: #fff; }
+.satz strong { font-weight: 600; color: var(--v-stark); }
 
 .klapptafel { margin-top: 18px; width: 100%; padding: 8px; border-radius: 8px; background: var(--stahl); display: grid; grid-template-columns: repeat(10, 1fr); gap: 3px; }
 .kachel { position: relative; aspect-ratio: 3 / 4; display: grid; place-items: center; border-radius: 3px; background: #17191c; color: var(--grau); font-family: var(--tafel); font-weight: 700; font-size: clamp(18px, 6vw, 28px); line-height: 1; perspective: 200px; }
@@ -118,10 +185,28 @@ body { margin: 0; background: var(--grau); color: var(--tinte); font-family: var
   <button type="button" id="nochmal">Vorspann noch einmal abspielen</button>
 </main>
 
-<div class="vorspann" id="vorspann" role="dialog" aria-modal="true" aria-label="Kurz vorab: Wer wir sind und wofür diese Seite gebaut ist">
+<div class="vorspann" data-v="a" id="vorspann" role="dialog" aria-modal="true" aria-label="Kurz vorab: Wer wir sind und wofür diese Seite gebaut ist">
   <button class="ueberspringen" type="button" id="ueberspringen">Überspringen</button>
 
-  <div class="logo" aria-hidden="true">
+  <div class="wahl" role="group" aria-label="Entwurf wählen">
+    <button type="button" data-v="a" aria-label="Entwurf 1: Eindrehen">1</button>
+    <button type="button" data-v="b" aria-label="Entwurf 2: Platine">2</button>
+    <button type="button" data-v="c" aria-label="Entwurf 3: Prägung">3</button>
+    <button type="button" data-v="d" aria-label="Entwurf 4: Suche">4</button>
+  </div>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="cs" viewBox="4 2 56 60">
+      <g fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="15" y="5" width="34" height="17" rx="3.5" fill="currentColor"/>
+        <path d="M15 10.5H8.5M15 16.5H8.5M49 10.5H55.5M49 16.5H55.5"/>
+        <path d="M24 22V46L32 58L40 46V22M24 33L40 29M24 42L40 38"/>
+        <path d="M25 13.5H39" stroke="var(--schlitz)"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <div class="logo" data-v="a" aria-hidden="true">
     <div class="ring"></div>
     <svg class="schraube" viewBox="0 0 46 190">
       <defs>
@@ -153,6 +238,58 @@ body { margin: 0; background: var(--grau); color: var(--tinte); font-family: var
     </div>
   </div>
 
+  <div class="logo" data-v="b" aria-hidden="true">
+    <div class="ring"></div>
+    <svg class="platine" viewBox="0 0 300 300">
+      <defs>
+        <linearGradient id="bchip" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5b6068"/><stop offset=".7" stop-color="#3a3e44"/></linearGradient>
+        <radialGradient id="bkopf" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#eceef0"/><stop offset=".5" stop-color="#9a9fa6"/><stop offset="1" stop-color="#4d5158"/></radialGradient>
+      </defs>
+      <g class="bahnen">
+        <path class="bahn" pathLength="100" d="M50 128H30L8 106V72"/><circle class="auge" cx="8" cy="72" r="5"/>
+        <path class="bahn" pathLength="100" d="M50 172H34L14 192V262"/><circle class="auge" cx="14" cy="262" r="5"/>
+        <path class="bahn" pathLength="100" d="M250 128H272L292 108V78"/><circle class="auge" cx="292" cy="78" r="5"/>
+        <path class="bahn" pathLength="100" d="M250 172H266L288 194V246"/><circle class="auge" cx="288" cy="246" r="5"/>
+        <path class="bahn" pathLength="100" d="M190 95V68L212 46"/><circle class="auge" cx="212" cy="46" r="5"/>
+        <path class="bahn" pathLength="100" d="M110 205V236L88 258"/><circle class="auge" cx="88" cy="258" r="5"/>
+      </g>
+      <g class="b-chip">
+        <rect x="65" y="104" width="170" height="110" rx="6" fill="#0c0d0f"/>
+        <rect x="46" y="121" width="22" height="14" fill="#c9ccd0"/><rect x="46" y="165" width="22" height="14" fill="#c9ccd0"/>
+        <rect x="232" y="121" width="22" height="14" fill="#c9ccd0"/><rect x="232" y="165" width="22" height="14" fill="#c9ccd0"/>
+        <rect x="65" y="95" width="170" height="110" rx="6" fill="url(#bchip)" stroke="rgba(255,255,255,.18)"/>
+        <circle cx="81" cy="111" r="4.5" fill="rgba(0,0,0,.35)"/>
+      </g>
+      <g class="b-kopf">
+        <circle cx="150" cy="150" r="34" fill="url(#bkopf)" stroke="#111315" stroke-width="2"/>
+        <rect class="b-schlitz" x="123" y="143" width="54" height="14" rx="7"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="logo" data-v="c" aria-hidden="true">
+    <div class="schatten"></div>
+    <div class="praegung"><svg style="transform:translateZ(-13.0px)" class="vorn"><use href="#cs"/></svg><svg style="transform:translateZ(-10.4px)"><use href="#cs"/></svg><svg style="transform:translateZ(-7.8px)"><use href="#cs"/></svg><svg style="transform:translateZ(-5.2px)"><use href="#cs"/></svg><svg style="transform:translateZ(-2.6px)"><use href="#cs"/></svg><svg style="transform:translateZ(0.0px)"><use href="#cs"/></svg><svg style="transform:translateZ(2.6px)"><use href="#cs"/></svg><svg style="transform:translateZ(5.2px)"><use href="#cs"/></svg><svg style="transform:translateZ(7.8px)"><use href="#cs"/></svg><svg style="transform:translateZ(10.4px)"><use href="#cs"/></svg><svg style="transform:translateZ(13.0px)" class="vorn"><use href="#cs"/></svg></div>
+  </div>
+
+  <div class="logo" data-v="d" aria-hidden="true">
+    <div class="such">
+      <div class="feld">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l5 5"/></svg>
+        <span class="tipp" id="tipp"></span>
+      </div>
+      <div class="treffer">
+        <div class="zeile"></div><div class="zeile"></div><div class="zeile"></div>
+        <div class="zeile zeile--ihr">Ihr Betrieb</div>
+      </div>
+      <div class="anfrage">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M5.2 1.5h2.6l1.3 4-1.8 1.4a10 10 0 0 0 5.8 5.8l1.4-1.8 4 1.3v2.6c0 1-.8 1.8-1.8 1.7C9 16.200 3.800 11 3.500 3.300 3.400 2.300 4.200 1.500 5.200 1.500z"/></svg>
+        Neue Anfrage
+      </div>
+    </div>
+    <svg class="d-zeichen"><use href="#cs"/></svg>
+  </div>
+
   <div class="inhalt">
     <p class="marke auf auf--5">Chip und Schraube<small>Webseiten aus Berlin-Wedding</small></p>
     <p class="satz auf auf--6">Wir haben Ihre Webseite neu gebaut. <strong>Nicht, damit sie schöner aussieht.</strong> Ihre jetzige kann bleiben, wie sie ist.</p>
@@ -168,7 +305,13 @@ body { margin: 0; background: var(--grau); color: var(--tinte); font-family: var
   var klapp = document.getElementById('klapptafel');
   var ruhig = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var ZEILEN = ['ES GEHT UM', 'ANFRAGEN  '];          // je 10 Felder
-  var ABLAUF = [[0, 's0'], [500, 's1'], [2000, 's2'], [3000, 's3'], [3600, 's4'], [4100, 's5'], [4600, 's6'], [5600, 's7'], [7000, 's8'], [7400, 's9']];
+  var STANDARD = [[0, 's0'], [500, 's1'], [2000, 's2'], [3000, 's3'], [3600, 's4'], [4100, 's5'], [4600, 's6'], [5600, 's7'], [7000, 's8'], [7400, 's9']];
+  var ABLAUF = { a: STANDARD, b: STANDARD, c: STANDARD,
+    d: [[0, 's0'], [400, 's1'], [1900, 's2'], [2700, 's3'], [3800, 'sp'], [5300, 's4'], [5800, 's5'], [6300, 's6'], [7300, 's7'], [8700, 's8'], [9100, 's9']] };
+  var SUCHE = 'Umzugshelfer Berlin';                  // pro Kunde: Gewerbe und Ort
+  var tipp = document.getElementById('tipp');
+  var knoepfe = document.querySelectorAll('.wahl button');
+  var aktuell = 'a';
   var ABC = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   var timer = [];
 
@@ -202,15 +345,25 @@ body { margin: 0; background: var(--grau); color: var(--tinte); font-family: var
     });
   }
 
-  function start() {
+  function tippen() {
+    if (ruhig) { tipp.textContent = SUCHE; return; }
+    SUCHE.split('').forEach(function (z, i) { später(function () { tipp.textContent = SUCHE.slice(0, i + 1); }, i * 65); });
+  }
+
+  function start(v) {
+    if (v) aktuell = v;
     timer.forEach(clearTimeout); timer = [];
     tafel.className = 'vorspann';
+    tafel.dataset.v = aktuell;
+    tipp.textContent = '';
+    Array.prototype.forEach.call(knoepfe, function (k) { k.setAttribute('aria-pressed', String(k.dataset.v === aktuell)); });
     kachelnBauen();
     void tafel.offsetWidth;                            // Animationen sauber neu starten
-    ABLAUF.forEach(function (schritt) {
+    ABLAUF[aktuell].forEach(function (schritt) {
       später(function () {
         tafel.classList.add(schritt[1]);
         if (schritt[1] === 's7') klappen();
+        if (schritt[1] === 's1' && aktuell === 'd') tippen();
       }, ruhig ? 0 : schritt[0]);
     });
   }
@@ -220,8 +373,9 @@ body { margin: 0; background: var(--grau); color: var(--tinte); font-family: var
   document.getElementById('los').addEventListener('click', schliessen);
   document.getElementById('ueberspringen').addEventListener('click', schliessen);
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') schliessen(); });
-  document.getElementById('nochmal').addEventListener('click', start);
-  start();
+  document.getElementById('nochmal').addEventListener('click', function () { start(); });
+  Array.prototype.forEach.call(knoepfe, function (k) { k.addEventListener('click', function () { start(k.dataset.v); }); });
+  start('a');
 })();
 </script>
 </body>

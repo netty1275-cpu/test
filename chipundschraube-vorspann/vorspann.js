@@ -202,7 +202,7 @@
         (kurz
           ? '<p class="cs-satz cs-auf cs-auf6">Ihr Entwurf ist noch online. Er hat weiterhin nur eine Aufgabe: <strong>Anfragen bringen.</strong></p>' +
             (daten.telefon ? '<p class="cs-tel cs-auf cs-auf6">Fragen dazu? <a href="tel:' + text(daten.telefon.replace(/[^\d+]/g, '')) + '">' + text(daten.telefon) + '</a></p>' : '')
-          : '<p class="cs-satz cs-auf cs-auf6">Wir haben Ihnen eine zweite Webseite gebaut. Ihre jetzige bleibt, wie sie ist. Die neue hat nur eine Aufgabe: <strong>Anfragen bringen.</strong></p>') +
+          : '<p class="cs-satz cs-auf cs-auf6">Ich habe Ihnen eine zweite Webseite gebaut. Ihre jetzige bleibt, wie sie ist. Die neue hat nur eine Aufgabe: <strong>Anfragen bringen.</strong></p>') +
         '<button class="cs-los cs-auf cs-auf9" type="button">Entwurf ansehen</button>' +
       '</div>';
 

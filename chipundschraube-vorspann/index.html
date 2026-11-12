@@ -479,10 +479,34 @@ body { margin: 0; background: var(--grau); color: var(--tinte); font-family: var
     e: [[0, 's0'], [500, 's1'], [2000, 's2'], [3000, 's3'], [4000, 's4'], [4500, 's5'], [5000, 's6'], [6200, 's7'], [6700, 't1'], [8300, 't3'], [9400, 'tp'], [10100, 's8'], [10500, 's9']],
     f: [[0, 's0'], [500, 's1'], [2000, 's2'], [3000, 's3'], [5600, 's4'], [6200, 'u0'], [6700, 'u1'], [8800, 'u2'], [10200, 'u3'], [11900, 'up'], [15200, 'ux'], [15700, 's5'], [16100, 's6'], [17600, 's9']],
     d: [[0, 's0'], [400, 's1'], [1900, 's2'], [2700, 's3'], [3800, 'sp'], [5300, 's4'], [5800, 's5'], [6300, 's6'], [7300, 's7'], [8700, 's8'], [9100, 's9']] };
-  // ---- Pro Kunde einstellen: nur diese zwei Zeilen ----
-  var FIRMA = 'Rubin Umzüge';                         // Name des Betriebs, erscheint in der Trefferliste
-  var SUCHE = 'Umzugshelfer Berlin';                  // Gewerbe und Ort, wird ins Suchfeld getippt
-  // ------------------------------------------------------
+  // ---- Pro Kunde: Name des Betriebs und Suchbegriff (Gewerbe und Ort) ----
+  var angaben = new URLSearchParams(location.search);
+  var FIRMA = angaben.get('firma') || 'Rubin Umzüge';
+  var SUCHE = angaben.get('suche') || 'Umzugshelfer Berlin';
+  // -------------------------------------------------------------------------
+
+  // Kurzformen eines Firmennamens, von vollständig bis knapp. Nichts davon wird von Hand gepflegt.
+  function kurzformen(name) {
+    var liste = [];
+    function dazu(n) { n = n.replace(/\s+/g, ' ').replace(/^[\s,;:&·|–-]+|[\s,;:&·|–-]+$/g, ''); if (n && liste.indexOf(n) < 0) liste.push(n); return n; }
+    var n = dazu(name.replace(/\s*\([^)]*\)/g, ''));                                   // Zusätze in Klammern weg
+    n = dazu(n.replace(/\s*,?\s*\b(GmbH\s*&\s*Co\.?\s*KG|gGmbH|GmbH|mbH|UG|GbR|OHG|KG|AG|e\.\s?K\.?|e\.\s?Kfm\.?|Inh\.?\s.*)$/i, ''));  // Rechtsform weg
+    n = dazu(n.split(/\s[–|·-]\s|,\s/)[0]);                                           // nur der Teil vor Gedankenstrich oder Komma
+    dazu(n.replace(/^(Institut|Praxis|Zentrum|Studio|Salon|Büro|Kanzlei|Firma)\s+(für\s+)?/i, ''));  // allgemeinen Vorsatz weg
+    var worte = n.split(' ');
+    while (worte.length > 1) { worte.pop(); if (!/^(&|und|für|am|im|an|der|die|das)$/i.test(worte[worte.length - 1])) dazu(worte.join(' ') + ' …'); }
+    return liste;
+  }
+
+  // Erst die Schrift verkleinern, dann die nächste Kurzform nehmen, bis der Name in die Zeile passt.
+  function nameEinpassen(el) {
+    if (!el.clientWidth) return;
+    var liste = kurzformen(FIRMA), gross = el.classList.contains('reihe--ihr') ? 15 : 16;
+    for (var i = 0; i < liste.length; i++) {
+      el.textContent = liste[i];
+      for (var g = gross; g >= 13; g--) { el.style.fontSize = g + 'px'; if (el.scrollWidth <= el.clientWidth) return; }
+    }
+  }
   var tipp = document.getElementById('tipp');
   var tipp2 = document.getElementById('tipp2');
   var tipp3 = document.getElementById('tipp3');
@@ -526,14 +550,13 @@ body { margin: 0; background: var(--grau); color: var(--tinte); font-family: var
     SUCHE.split('').forEach(function (z, i) { später(function () { feld.textContent = SUCHE.slice(0, i + 1); }, i * 85); });
   }
 
-  Array.prototype.forEach.call(document.querySelectorAll('[data-firma]'), function (el) { if (FIRMA) el.textContent = FIRMA; });
-
   function start(v) {
     if (v) aktuell = v;
     timer.forEach(clearTimeout); timer = [];
     tafel.className = 'vorspann';
     tafel.dataset.v = aktuell;
     tipp.textContent = ''; tipp2.textContent = ''; tipp3.textContent = '';
+    Array.prototype.forEach.call(document.querySelectorAll('[data-firma]'), nameEinpassen);
     Array.prototype.forEach.call(knoepfe, function (k) { k.setAttribute('aria-pressed', String(k.dataset.v === aktuell)); });
     kachelnBauen();
     void tafel.offsetWidth;                            // Animationen sauber neu starten

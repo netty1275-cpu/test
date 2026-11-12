@@ -13,6 +13,12 @@
    data-suche    Gewerbe und Ort für das Suchfeld. Fehlt er, entfällt die
                  Such-Szene.
    data-telefon  Optional, erscheint nur in der kurzen Fassung (Brief 2).
+   data-ohne-webseite   Optional, ohne Wert. Der Betrieb hat keine Webseite:
+                 „Ich habe Ihnen eine Webseite gebaut.“
+   data-neue-webseite   Optional, ohne Wert. Angebot ersetzt die alte Webseite:
+                 „Ich habe Ihnen einen Entwurf für eine neue Webseite gebaut.“
+                 Ohne beide: „… eine zweite Webseite gebaut. Ihre jetzige bleibt …“
+                 (ergänzt am 12.11.2026)
 
    Verhalten:
    - läuft beim ersten Öffnen der Seite auf einem Gerät, danach nicht mehr
@@ -202,7 +208,11 @@
         (kurz
           ? '<p class="cs-satz cs-auf cs-auf6">Ihr Entwurf ist noch online. Er hat weiterhin nur eine Aufgabe: <strong>Anfragen bringen.</strong></p>' +
             (daten.telefon ? '<p class="cs-tel cs-auf cs-auf6">Fragen dazu? <a href="tel:' + text(daten.telefon.replace(/[^\d+]/g, '')) + '">' + text(daten.telefon) + '</a></p>' : '')
-          : '<p class="cs-satz cs-auf cs-auf6">Ich habe Ihnen eine zweite Webseite gebaut. Ihre jetzige bleibt, wie sie ist. Die neue hat nur eine Aufgabe: <strong>Anfragen bringen.</strong></p>') +
+          : '<p class="cs-satz cs-auf cs-auf6">' + (
+              'ohneWebseite' in daten ? 'Ich habe Ihnen eine Webseite gebaut. Sie hat nur eine Aufgabe: '
+              : 'neueWebseite' in daten ? 'Ich habe Ihnen einen Entwurf für eine neue Webseite gebaut. Sie hat nur eine Aufgabe: '
+              : 'Ich habe Ihnen eine zweite Webseite gebaut. Ihre jetzige bleibt, wie sie ist. Die neue hat nur eine Aufgabe: '
+            ) + '<strong>Anfragen bringen.</strong></p>') +
         '<button class="cs-los cs-auf cs-auf9" type="button">Entwurf ansehen</button>' +
       '</div>';
 

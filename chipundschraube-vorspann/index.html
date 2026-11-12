@@ -44,6 +44,7 @@ body { margin: 0; background: var(--grau); color: var(--tinte); font-family: var
 /* Auswahl der Entwürfe (nur in dieser Vorschau) */
 .wahl { position: absolute; z-index: 2; top: calc(12px + env(safe-area-inset-top, 0px)); left: max(12px, env(safe-area-inset-left, 0px)); display: flex; gap: 5px; }
 .wahl button { width: 34px; height: 38px; border-radius: 8px; border: 1px solid var(--v-rand); background: none; color: var(--v-leise); font: inherit; font-weight: 700; cursor: pointer; }
+.kunde { position: absolute; z-index: 2; top: calc(56px + env(safe-area-inset-top, 0px)); left: max(12px, env(safe-area-inset-left, 0px)); width: 150px; height: 30px; padding: 0 6px; border-radius: 8px; border: 1px solid var(--v-rand); background: var(--v-bg2); color: var(--v-leise); font: inherit; font-size: 13px; }
 .wahl button[aria-pressed="true"] { background: var(--gelb); border-color: var(--gelb); color: var(--tinte); }
 
 /* ---------- 3D-Logo ---------- */
@@ -255,6 +256,14 @@ body { margin: 0; background: var(--grau); color: var(--tinte); font-family: var
     <button type="button" data-v="e" aria-label="Entwurf 5: Logo und Suche">5</button>
     <button type="button" data-v="f" aria-label="Entwurf 6: Logo, dann Suche, dann Aussage">6</button>
   </div>
+
+  <select class="kunde" id="kunde" aria-label="Beispiel-Kunde wählen">
+    <option value="Guido Pagenstecher Hausverwaltung|Hausverwaltung Berlin">Pagenstecher</option>
+    <option value="Rubin Umzüge|Umzugshelfer Berlin">Rubin Umzüge</option>
+    <option value="Institut für Podologie &amp; Beauty|Podologie Berlin-Mitte">Institut Podologie</option>
+    <option value="Locke &amp; Glatze (Salon Greifswalder Straße)|Friseur Prenzlauer Berg">Locke &amp; Glatze</option>
+    <option value="Podologie am Kreuzberg|Podologie Kreuzberg">Podologie Kreuzberg</option>
+  </select>
 
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <symbol id="cs" viewBox="4 2 56 60">
@@ -581,6 +590,10 @@ body { margin: 0; background: var(--grau); color: var(--tinte); font-family: var
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') schliessen(); });
   document.getElementById('nochmal').addEventListener('click', function () { start(); });
   Array.prototype.forEach.call(knoepfe, function (k) { k.addEventListener('click', function () { start(k.dataset.v); }); });
+  var kunde = document.getElementById('kunde');
+  function kundeSetzen() { var t = kunde.value.split('|'); FIRMA = t[0]; SUCHE = t[1]; }
+  kunde.addEventListener('change', function () { kundeSetzen(); start(); });
+  if (!angaben.get('firma')) kundeSetzen();
   start('f');
 })();
 </script>

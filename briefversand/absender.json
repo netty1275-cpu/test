@@ -1,0 +1,10 @@
+{
+  "firma": "[FIRMENNAME] Architekten",
+  "name": "[VORNAME NACHNAME]",
+  "strasse": "Musterstraße 12",
+  "plz_ort": "80331 München",
+  "telefon": "[TELEFON]",
+  "email": "[E-MAIL]",
+  "web": "[WEBSEITE]",
+  "ort_fuer_datum": "München"
+}

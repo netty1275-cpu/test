@@ -1,0 +1,17 @@
+Betreff: Ihr nächstes Bauvorhaben – wir planen es mit Ihnen
+
+{briefanrede}
+
+wir sind ein Architekturbüro aus München und planen Wohnungen, Einfamilienhäuser,
+Umbauten und Sanierungen – von der ersten Idee bis zur fertigen Baustelle.
+
+Gerne zeigen wir Ihnen in einem kostenlosen Erstgespräch, welche Möglichkeiten
+in Ihrem Vorhaben stecken und mit welchen Kosten und Zeiten Sie rechnen können.
+
+Rufen Sie uns einfach an unter {telefon} oder schreiben Sie uns an {email}.
+Ausgewählte Projekte finden Sie unter {web}.
+
+Mit freundlichen Grüßen
+
+{absender_name}
+{absender_firma}

@@ -2,6 +2,7 @@
 """Akquise-Briefe erzeugen und über onlinebrief24.de drucken und versenden.
 
 Befehle:
+  python3 brief.py einzelbrief --firma .. --strasse .. --plz .. --ort .. --text ..   einen Brief erzeugen
   python3 brief.py erzeugen            PDFs aus empfaenger.csv + vorlage.txt erzeugen (ausgabe/)
   python3 brief.py senden              PDFs im TESTMODUS übertragen (landen im Warenkorb)
   python3 brief.py senden --live       PDFs wirklich drucken und versenden lassen
@@ -148,6 +149,24 @@ def dateiname(nr, e):
     return f"{nr:03d}_{sicher}.pdf"
 
 
+def einzelbrief(args):
+    """Einen einzelnen Brief erzeugen, ohne CSV und Vorlage."""
+    absender = json.loads((BASIS / "absender.json").read_text(encoding="utf-8"))
+    e = {"anrede": args.anrede or "", "vorname": args.vorname or "", "nachname": args.nachname or "",
+         "firma": args.firma or "", "strasse": args.strasse, "plz": args.plz, "ort": args.ort, "land": args.land or ""}
+    text = Path(args.text_datei).read_text(encoding="utf-8") if args.text_datei else args.text
+    text = text.replace("{", "{{").replace("}", "}}")
+    vorlage = (f"Betreff: {args.betreff}\n\n" if args.betreff else "") + "{briefanrede}\n\n" + text.strip() + \
+        "\n\nMit freundlichen Grüßen\n\n{absender_name}\n{absender_firma}"
+    if args.ohne_anrede:
+        vorlage = vorlage.replace("{briefanrede}\n\n", "", 1)
+    AUSGABE.mkdir(exist_ok=True)
+    nr = len(list(AUSGABE.glob("*.pdf"))) + 1
+    pfad = AUSGABE / dateiname(nr, e)
+    brief_pdf(pfad, absender, e, vorlage)
+    print(pfad)
+
+
 def erzeugen(_args):
     absender = json.loads((BASIS / "absender.json").read_text(encoding="utf-8"))
     vorlage = (BASIS / "vorlage.txt").read_text(encoding="utf-8")
@@ -215,7 +234,10 @@ def senden(args):
             print(f"Bereits live versendet, übersprungen: {d.name}")
         if not dateien:
             return
-        antwort = input(f"{len(dateien)} Brief(e) werden WIRKLICH gedruckt und kostenpflichtig versendet. Fortfahren? (ja/nein) ")
+        if args.ja:
+            antwort = "ja"
+        else:
+            antwort = input(f"{len(dateien)} Brief(e) werden WIRKLICH gedruckt und kostenpflichtig versendet. Fortfahren? (ja/nein) ")
         if antwort.strip().lower() != "ja":
             sys.exit("Abgebrochen.")
     for d in dateien:
@@ -259,6 +281,13 @@ def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     s = p.add_subparsers(dest="befehl", required=True)
     s.add_parser("erzeugen").set_defaults(f=erzeugen)
+    eb = s.add_parser("einzelbrief", help="einen Brief direkt erzeugen (gibt den PDF-Pfad aus)")
+    for feld in ("anrede", "vorname", "nachname", "firma", "land", "betreff", "text", "text-datei"):
+        eb.add_argument(f"--{feld}")
+    for feld in ("strasse", "plz", "ort"):
+        eb.add_argument(f"--{feld}", required=True)
+    eb.add_argument("--ohne-anrede", action="store_true", help="Text enthält die Anrede bereits")
+    eb.set_defaults(f=einzelbrief)
     for name, f in (("senden", senden), ("preis", preis)):
         sp = s.add_parser(name)
         sp.add_argument("--farbe", action="store_true", help="Farbdruck statt schwarz/weiß")
@@ -268,6 +297,7 @@ def main():
             sp.add_argument("--live", action="store_true", help="wirklich versenden (sonst Testmodus/Warenkorb)")
             sp.add_argument("--versanddatum", help="JJJJ-MM-TT, muss in der Zukunft liegen")
             sp.add_argument("--kostenstelle")
+            sp.add_argument("--ja", action="store_true", help="Sicherheitsabfrage beim Liveversand überspringen")
             sp.add_argument("dateien", nargs="*", help="einzelne PDFs (Standard: alle in ausgabe/)")
         else:
             sp.add_argument("--seiten", type=int, default=1)

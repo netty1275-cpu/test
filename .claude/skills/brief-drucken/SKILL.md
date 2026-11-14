@@ -12,9 +12,12 @@ Umgebungsvariablen `OB24_API_KEY` und `OB24_API_SECRET`.
 ## Versandweg wählen
 
 - **Lokal auf dem Rechner des Nutzers mit installiertem onlinebrief24-Druckertreiber (bevorzugt):**
-  Kein API-Zugang nötig. Drucker suchen:
-  - macOS/Linux: `lpstat -p | grep -i brief`
-  - Windows (PowerShell): `Get-Printer | Where-Object Name -match "brief"`
+  Kein API-Zugang nötig. Der Treiber installiert ZWEI Drucker:
+  - `Als Brief versenden (onlinebrief24.de)` → echter, kostenpflichtiger Postversand. NUR diesen zum Versenden nehmen.
+  - `Als PDF-Datei speichern (onlinebrief24.de)` → erzeugt nur ein PDF, nichts wird verschickt. Nicht verwechseln!
+  Drucker suchen:
+  - macOS/Linux: `lpstat -p | grep -i "brief versenden"`
+  - Windows (PowerShell): `Get-Printer | Where-Object Name -like "Als Brief versenden*"`
   Gefunden → Schritte 1–4 unten, dann statt `brief.py senden` das PDF an diesen Drucker schicken:
   - macOS/Linux: `lp -d "<Druckername>" "<pdf>"`
   - Windows: `Start-Process -FilePath "<pdf>" -Verb PrintTo -ArgumentList '"<Druckername>"'`

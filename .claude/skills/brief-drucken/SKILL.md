@@ -6,7 +6,7 @@ description: Einen Brief über onlinebrief24.de drucken und per Post verschicken
 # Brief über onlinebrief24.de drucken
 
 Werkzeug zum Erzeugen der PDFs: `briefversand/brief.py` (Anleitung: `briefversand/ANLEITUNG.md`). Benötigt `reportlab`
-(`pip install reportlab`, falls der Import fehlschlägt) ; nur für den API-Versand zusätzlich die
+(`pip install reportlab`, falls der Import fehlschlägt); nur für den API-Versand zusätzlich die
 Umgebungsvariablen `OB24_API_KEY` und `OB24_API_SECRET`.
 
 ## Versandweg wählen

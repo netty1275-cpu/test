@@ -5,9 +5,23 @@ description: Einen Brief über onlinebrief24.de drucken und per Post verschicken
 
 # Brief über onlinebrief24.de drucken
 
-Werkzeug: `briefversand/brief.py` (Anleitung: `briefversand/ANLEITUNG.md`). Benötigt `reportlab`
-(`pip install reportlab`, falls der Import fehlschlägt) und die Umgebungsvariablen
-`OB24_API_KEY` und `OB24_API_SECRET`.
+Werkzeug zum Erzeugen der PDFs: `briefversand/brief.py` (Anleitung: `briefversand/ANLEITUNG.md`). Benötigt `reportlab`
+(`pip install reportlab`, falls der Import fehlschlägt) ; nur für den API-Versand zusätzlich die
+Umgebungsvariablen `OB24_API_KEY` und `OB24_API_SECRET`.
+
+## Versandweg wählen
+
+- **Lokal auf dem Rechner des Nutzers mit installiertem onlinebrief24-Druckertreiber (bevorzugt):**
+  Kein API-Zugang nötig. Drucker suchen:
+  - macOS/Linux: `lpstat -p | grep -i brief`
+  - Windows (PowerShell): `Get-Printer | Where-Object Name -match "brief"`
+  Gefunden → Schritte 1–4 unten, dann statt `brief.py senden` das PDF an diesen Drucker schicken:
+  - macOS/Linux: `lp -d "<Druckername>" "<pdf>"`
+  - Windows: `Start-Process -FilePath "<pdf>" -Verb PrintTo -ArgumentList '"<Druckername>"'`
+    (braucht einen PDF-Reader mit PrintTo-Unterstützung, z. B. Adobe Acrobat Reader; sonst das PDF
+    öffnen und den Nutzer im Druckdialog den onlinebrief24-Drucker wählen lassen).
+  Der Druckertreiber kann danach ein Fenster zur Auftragsbestätigung öffnen; den Nutzer darauf hinweisen.
+- **Cloud-Sitzung oder kein Druckertreiber:** API über `brief.py senden` (Schritte 4–5 unten).
 
 ## Ablauf für einen einzelnen Brief
 
